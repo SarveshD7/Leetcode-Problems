@@ -1,0 +1,38 @@
+Problem Statement - 
+
+Example - 
+
+------------------------------------------------------------------------------------------------------------------
+Solution - 
+int max(int a, int b){
+    return a>=b?a:b;
+}
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        int start = 0, end = 0, winSize = 0, ans=0;
+        unordered_map<char, int>m;
+        while(end<s.size()){
+            m[s[end]]++;
+            winSize = end-start+1;
+            if(m.size()==winSize){
+                ans = max(ans, winSize);
+            }
+            else if(m.size()<winSize){
+                
+                while(m.size()<winSize){
+                    m[s[start]]--;
+                    if(m[s[start]]==0){
+                        m.erase(s[start]);
+                    }
+                    start++;
+                    winSize--;
+                }
+                ans = max(ans, winSize);
+            }
+            // cout<<winSize<<" "<<m.size()<<" "<<start<<" "<<end<<" "<<ans<<endl;
+            end++;
+        }
+        return ans;
+    }
+};
