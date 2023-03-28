@@ -8,3 +8,5 @@ Problem Link - https://leetcode.com/problems/longest-substring-without-repeating
 Problem Link - https://leetcode.com/problems/longest-palindromic-substring/
 4. Palindrom Number - 
 Problem Link - https://leetcode.com/problems/palindrome-number/
+5. Next Permutation -
+Problem Link - https://leetcode.com/problems/next-permutation/
