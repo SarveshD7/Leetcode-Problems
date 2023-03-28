@@ -10,3 +10,5 @@ Problem Link - https://leetcode.com/problems/longest-palindromic-substring/
 Problem Link - https://leetcode.com/problems/palindrome-number/
 5. Next Permutation -
 Problem Link - https://leetcode.com/problems/next-permutation/
+6. Remove Duplicates from sorted array - 
+Problem Link - https://leetcode.com/problems/remove-duplicates-from-sorted-array/
