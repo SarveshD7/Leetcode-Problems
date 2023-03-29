@@ -16,3 +16,5 @@ Problem Link - https://leetcode.com/problems/remove-duplicates-from-sorted-array
 Problem Link - https://leetcode.com/problems/3sum/
 8. Permuatations - 
 Problem Link - https://leetcode.com/problems/permutations/
+9. Combinations - 
+Problem Link - https://leetcode.com/problems/combinations/
