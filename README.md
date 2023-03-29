@@ -12,3 +12,5 @@ Problem Link - https://leetcode.com/problems/palindrome-number/
 Problem Link - https://leetcode.com/problems/next-permutation/
 6. Remove Duplicates from sorted array - 
 Problem Link - https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+7. 3Sum - 
+Problem Link - https://leetcode.com/problems/3sum/
