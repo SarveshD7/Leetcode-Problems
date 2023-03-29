@@ -1,0 +1,40 @@
+Problem Statement - 
+Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
+
+Example - 
+Input: nums = [1,2,3]
+Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+
+---------------------------------------------------------------------------------------------------------------
+Solution - 
+class Solution {
+public:
+    void solve(vector<int>& nums, int j, vector<int> v, vector<vector<int>>&ans, vector<int>&free){
+        if(j>=nums.size()){
+            if(v.size()==nums.size())
+            ans.push_back(v);
+            return ;
+        }
+        for(int i = 0;i<nums.size();i++){
+            if(free[i]!=0){
+                int temp = nums[i];
+                v.push_back(nums[i]);
+                free[i] = 0;
+                // cout<<temp<<" "<<i<<" "<<nums[i]<<endl;
+                solve(nums, j+1, v,ans, free);
+                v.pop_back();
+                free[i] = 1;
+            }
+
+        }
+    }
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<int>v;
+        vector<vector<int>>ans;
+        int i = 0;
+        vector<int>free(nums.size(), 1);
+        solve(nums, i, v, ans, free);
+        // vector<vector<int>>res;
+        return ans;
+    }
+};
