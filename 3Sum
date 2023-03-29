@@ -1,0 +1,47 @@
+Problem Statement  - 
+Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+Notice that the solution set must not contain duplicate triplets.
+
+Example - 
+Input: nums = [-1,0,1,2,-1,-4]
+Output: [[-1,-1,2],[-1,0,1]]
+Explanation: 
+nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.
+nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.
+nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.
+The distinct triplets are [-1,0,1] and [-1,-1,2].
+Notice that the order of the output and the order of the triplets does not matter.
+
+----------------------------------------------------------------------------------------------------------------------
+Solution - 
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        vector<vector<int>>ans;
+        set<vector<int>>res;
+        sort(nums.begin(), nums.end());
+        int n = nums.size();
+        for(int i=0;i<n;i++){
+            int a = nums[i];
+            int start = i-1, end = i+1;
+            while(start>=0 && end<n){
+                int val = nums[start] + a + nums[end];
+                if(val>0)start--;
+                else if(val<0) end++;
+                else{
+                    vector<int>v(3,0);
+                    v[0] = nums[start];
+                    v[1] = a;
+                    v[2] = nums[end];
+                    // ans.push_back(v);
+                    res.insert(v);
+                    start--, end++;
+                }
+            }
+        }
+        // ans.erase(unique(ans.begin(), ans.end()), ans.end());
+        for(auto i:res)
+            ans.push_back(i);
+        return ans;
+    }
+};
