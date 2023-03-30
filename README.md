@@ -24,3 +24,5 @@ Problem Link - https://leetcode.com/problems/single-number/
 Problem Link - https://leetcode.com/problems/majority-element/
 12. Sort Colors - 
 Problem Link - https://leetcode.com/problems/sort-colors/
+13. Merge Intervals - 
+Problem Link - https://leetcode.com/problems/merge-intervals/
