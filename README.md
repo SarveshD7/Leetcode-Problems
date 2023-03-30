@@ -20,3 +20,5 @@ Problem Link - https://leetcode.com/problems/permutations/
 Problem Link - https://leetcode.com/problems/combinations/
 10. Single Number - 
 Problem Link - https://leetcode.com/problems/single-number/
+11. Majority Element - 
+Problem Link - https://leetcode.com/problems/majority-element/
