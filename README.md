@@ -22,3 +22,5 @@ Problem Link - https://leetcode.com/problems/combinations/
 Problem Link - https://leetcode.com/problems/single-number/
 11. Majority Element - 
 Problem Link - https://leetcode.com/problems/majority-element/
+12. Sort Colors - 
+Problem Link - https://leetcode.com/problems/sort-colors/
