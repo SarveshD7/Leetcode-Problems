@@ -26,3 +26,5 @@ Problem Link - https://leetcode.com/problems/majority-element/
 Problem Link - https://leetcode.com/problems/sort-colors/
 13. Merge Intervals - 
 Problem Link - https://leetcode.com/problems/merge-intervals/
+14. Rotate Image - 
+Problem Link - https://leetcode.com/problems/rotate-image/
