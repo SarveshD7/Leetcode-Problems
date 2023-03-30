@@ -1,0 +1,49 @@
+Problem Statement - 
+Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals. 
+Return an array of the non-overlapping intervals that cover all the intervals in the input.
+
+Example - 
+Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
+Output: [[1,6],[8,10],[15,18]]
+Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    static bool cmp(vector<int>v1, vector<int>v2){
+        return v1[0]<v2[0];
+    }
+    vector<vector<int>> merge(vector<vector<int>>& intervals) {
+        int i = 0, j = 0;
+        if(intervals.size()<=1) return intervals;
+        sort(intervals.begin(), intervals.end(), cmp);
+        vector<vector<int>>res;
+        while(i<intervals.size()){
+            if(res.empty()){
+                res.push_back(intervals[i]);
+            }
+            else{
+                if(res[j][1]>=intervals[i][0]){
+                    res[j][1] = max(res[j][1], intervals[i][1]);
+                }       
+                else{
+                    res.push_back(intervals[i]);
+                    j++;
+                }  
+            }
+        // cout<<i<<" "<<j<<endl;
+        // for(auto e:res){
+        //     for(auto ele:e)
+        //         cout<<ele<<" ";
+        //     cout<<endl;
+        // }
+            i++;
+        
+        }
+        
+
+        return res;
+    }
+};
