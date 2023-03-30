@@ -18,3 +18,5 @@ Problem Link - https://leetcode.com/problems/3sum/
 Problem Link - https://leetcode.com/problems/permutations/
 9. Combinations - 
 Problem Link - https://leetcode.com/problems/combinations/
+10. Single Number - 
+Problem Link - https://leetcode.com/problems/single-number/
