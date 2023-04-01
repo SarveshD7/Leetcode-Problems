@@ -46,3 +46,5 @@ Problem Link - https://leetcode.com/problems/product-of-array-except-self/
 Problem Link - https://leetcode.com/problems/longest-continuous-increasing-subsequence/
 23. Find Minimum in Rotated Sorted Array - 
 Problem Link - https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+24. Rotting Oranges - 
+Problem Link - https://leetcode.com/problems/rotting-oranges/
