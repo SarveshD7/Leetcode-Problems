@@ -115,7 +115,7 @@ int main(){
 	in(t)
 	while(t--){
 		in(n)
-		cout<<"All prblems are solved in C++"<<endl;
+		cout<<"All prOblems are solved in C++"<<endl;
 	}
 
 	return 0;
