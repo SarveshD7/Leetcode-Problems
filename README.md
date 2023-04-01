@@ -38,3 +38,5 @@ Problem Link - https://leetcode.com/problems/pascals-triangle-ii/
 Problem Link - https://leetcode.com/problems/spiral-matrix/
 19. Spiral Matrix II - 
 Problem Link - https://leetcode.com/problems/spiral-matrix-ii/
+20. Binary Search - 
+Problem Link - https://leetcode.com/problems/binary-search/
