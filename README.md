@@ -44,3 +44,5 @@ Problem Link - https://leetcode.com/problems/binary-search/
 Problem Link - https://leetcode.com/problems/product-of-array-except-self/
 22. Longest Common Increasing Subsequence - 
 Problem Link - https://leetcode.com/problems/longest-continuous-increasing-subsequence/
+23. Find Minimum in Rotated Sorted Array - 
+Problem Link - https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
