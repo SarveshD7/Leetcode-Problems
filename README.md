@@ -32,3 +32,5 @@ Problem Link - https://leetcode.com/problems/rotate-image/
 Problem Link - https://leetcode.com/problems/search-a-2d-matrix-ii/
 16. Design Hashmap - 
 Problem Link - https://leetcode.com/problems/design-hashmap/
+17. Pascal's Triangle II - 
+Problem Link - https://leetcode.com/problems/pascals-triangle-ii/
