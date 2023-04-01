@@ -42,3 +42,5 @@ Problem Link - https://leetcode.com/problems/spiral-matrix-ii/
 Problem Link - https://leetcode.com/problems/binary-search/
 21. Product of Array Except Self - 
 Problem Link - https://leetcode.com/problems/product-of-array-except-self/
+22. Longest Common Increasing Subsequence - 
+Problem Link - https://leetcode.com/problems/longest-continuous-increasing-subsequence/
