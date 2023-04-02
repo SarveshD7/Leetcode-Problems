@@ -48,3 +48,5 @@ Problem Link - https://leetcode.com/problems/longest-continuous-increasing-subse
 Problem Link - https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 24. Rotting Oranges - 
 Problem Link - https://leetcode.com/problems/rotting-oranges/
+25. Non Overlapping Intervals - 
+Problem Link - https://leetcode.com/problems/non-overlapping-intervals/
