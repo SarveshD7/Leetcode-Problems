@@ -54,3 +54,5 @@ Problem Link - https://leetcode.com/problems/non-overlapping-intervals/
 Problem Link - https://leetcode.com/problems/add-strings/
 27. Longest Palindrome - 
 Problem Link - https://leetcode.com/problems/longest-palindrome/
+28. Increasing Triplet Sequence - 
+Problem Link - https://leetcode.com/problems/increasing-triplet-subsequence/
