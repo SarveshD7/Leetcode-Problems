@@ -1,0 +1,25 @@
+Problem Statement - 
+Given an integer array nums, return true if there exists a triple of indices (i, j, k) such that i < j < k and nums[i] < nums[j] < nums[k].
+If no such indices exists, return false.
+
+Example - 
+Input: nums = [1,2,3,4,5]
+Output: true
+Explanation: Any triplet where i < j < k is valid.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool increasingTriplet(vector<int>& nums) {
+        int a=INT_MAX, b = INT_MAX;
+        for(int i= 0;i<nums.size();i++){
+            if(nums[i]>b)   return true;
+            else if(nums[i]>a && nums[i]<b)
+                b = nums[i];
+            else if(nums[i]<a) a = nums[i];
+        }
+        return false;
+    }
+};
