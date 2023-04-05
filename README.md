@@ -57,10 +57,12 @@ Problem Link - https://leetcode.com/problems/longest-palindrome/
 28. Increasing Triplet Sequence - 
 Problem Link - https://leetcode.com/problems/increasing-triplet-subsequence/
 29. Subarray Sum Equals k - 
-Problem Link - https://leetcode.com/problems/subarray-sum-equals-k/description/
+Problem Link - https://leetcode.com/problems/subarray-sum-equals-k/
 30. Word Pattern - 
-Problem Link - https://leetcode.com/problems/word-pattern/description/
+Problem Link - https://leetcode.com/problems/word-pattern/
 31. Partition Labels - 
-Problem Link - https://leetcode.com/problems/partition-labels/description/
+Problem Link - https://leetcode.com/problems/partition-labels/
 32. Group Anagrams - 
-Problem Link - https://leetcode.com/problems/group-anagrams/description/
+Problem Link - https://leetcode.com/problems/group-anagrams/
+33. Repeated DNA Sequence - 
+Problem Link - https://leetcode.com/problems/repeated-dna-sequences/
