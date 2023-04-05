@@ -1,0 +1,35 @@
+Problem Statement - 
+Given a pattern and a string s, find if s follows the same pattern.
+Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.
+
+Example - 
+Input: pattern = "abba", s = "dog cat cat dog"
+Output: true
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution:
+    def wordPattern(self, pattern: str, s: str) -> bool:
+
+        l = list(s.split(" "))
+        m = {}
+        m1 = {}
+        if(len(l)!=len(pattern)):
+            return False
+        st = "-101"
+        for i in pattern:
+            m[i] = st
+        for j in l:
+            m1[j] = 1
+        if len(m)!=len(m1):
+            return False
+        for i in range(len(l)):
+            if m[pattern[i]]==st:
+                m[pattern[i]] = l[i]
+            else:
+                if m[pattern[i]]!=l[i]:
+                    return False
+        return True
+                
+            
