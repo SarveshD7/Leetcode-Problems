@@ -56,3 +56,5 @@ Problem Link - https://leetcode.com/problems/add-strings/
 Problem Link - https://leetcode.com/problems/longest-palindrome/
 28. Increasing Triplet Sequence - 
 Problem Link - https://leetcode.com/problems/increasing-triplet-subsequence/
+29. Subarray Sum Equals k - 
+Problem Link - https://leetcode.com/problems/subarray-sum-equals-k/description/
