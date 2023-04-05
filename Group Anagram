@@ -1,0 +1,42 @@
+Problem Statement - 
+Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+Example - 
+Input: strs = ["eat","tea","tan","ate","nat","bat"]
+Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+------------------------------------------------------------------------------------------------------------------------
+ 
+ Solution - 
+ class Solution {
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        
+        vector<vector<string>>ans(strs.size(), vector<string>());
+        if(strs.size()==1){
+            vector<string>v(1);
+            v[0] = strs[0];
+            ans[0] = v;
+            return ans;
+        }
+        unordered_map<string, int>m;
+        int id = 0;
+        for(auto i:strs){
+            sort(i.begin(), i.end());
+            // cout<<i<<endl;
+            m[i] = -1;
+        }
+        for(auto i:strs){
+            string s = i;
+            sort(s.begin(), s.end());
+            if(m[s]==-1){
+                m[s] = id++;
+            }
+             ans[m[s]].push_back(i);
+        }
+        ans.resize(id);
+        return ans;
+
+    }
+};
