@@ -58,3 +58,5 @@ Problem Link - https://leetcode.com/problems/longest-palindrome/
 Problem Link - https://leetcode.com/problems/increasing-triplet-subsequence/
 29. Subarray Sum Equals k - 
 Problem Link - https://leetcode.com/problems/subarray-sum-equals-k/description/
+30. Word Pattern - 
+Problem Link - https://leetcode.com/problems/word-pattern/description/
