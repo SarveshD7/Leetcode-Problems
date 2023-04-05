@@ -60,3 +60,5 @@ Problem Link - https://leetcode.com/problems/increasing-triplet-subsequence/
 Problem Link - https://leetcode.com/problems/subarray-sum-equals-k/description/
 30. Word Pattern - 
 Problem Link - https://leetcode.com/problems/word-pattern/description/
+31. Partition Labels - 
+Problem Link - https://leetcode.com/problems/partition-labels/description/
