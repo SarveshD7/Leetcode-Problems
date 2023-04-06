@@ -72,3 +72,5 @@ Problem Link - https://leetcode.com/problems/linked-list-cycle-ii/
 Problem Link - https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
 36. Swap Nodes in Pairs - 
 Problem Link - https://leetcode.com/problems/swap-nodes-in-pairs/
+37. Longest Common Prefix - 
+Problem Link - https://leetcode.com/problems/longest-common-prefix/
