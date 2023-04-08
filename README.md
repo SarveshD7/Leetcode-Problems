@@ -76,3 +76,5 @@ Problem Link - https://leetcode.com/problems/swap-nodes-in-pairs/
 Problem Link - https://leetcode.com/problems/longest-common-prefix/
 38. Minimum Remove to make valid Paranthesis - 
 Problem Link - https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
+39. Binary Tree Zigzag Level Order Traversal - 
+Problem Link - https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
