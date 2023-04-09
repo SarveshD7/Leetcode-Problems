@@ -82,3 +82,5 @@ Problem Link - https://leetcode.com/problems/binary-tree-zigzag-level-order-trav
 Problem Link - https://leetcode.com/problems/n-queens/
 41. Intersection of Two Linked Lists - 
 Problem Link - https://leetcode.com/problems/intersection-of-two-linked-lists/
+42. Delete the Middle Node of a Linked List - 
+Problem Link - https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
