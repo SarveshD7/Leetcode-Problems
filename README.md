@@ -80,3 +80,5 @@ Problem Link - https://leetcode.com/problems/minimum-remove-to-make-valid-parent
 Problem Link - https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
 40. N-Queens - 
 Problem Link - https://leetcode.com/problems/n-queens/
+41. Intersection of Two Linked Lists - 
+Problem Link - https://leetcode.com/problems/intersection-of-two-linked-lists/
