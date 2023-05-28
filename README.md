@@ -88,3 +88,5 @@ Problem Link - https://leetcode.com/problems/delete-the-middle-node-of-a-linked-
 Problem Link - https://leetcode.com/problems/reorder-list/
 44. Find the Winner of the Circular Game - 
 Problem Link - https://leetcode.com/problems/find-the-winner-of-the-circular-game/
+45. Merge Strings Altenatively
+Problem Link - https://leetcode.com/problems/merge-strings-alternately/
