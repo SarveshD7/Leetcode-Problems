@@ -94,3 +94,5 @@ Problem Link - https://leetcode.com/problems/merge-strings-alternately/
 Problem Link - https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
 47. Generate Paranthesis - 
 Problem Link - https://leetcode.com/problems/generate-parentheses/
+48. Count Primes - 
+Problem Link - https://leetcode.com/problems/count-primes/
