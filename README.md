@@ -92,3 +92,5 @@ Problem Link - https://leetcode.com/problems/find-the-winner-of-the-circular-gam
 Problem Link - https://leetcode.com/problems/merge-strings-alternately/
 46. Find Index of First Occurrence in a String - 
 Problem Link - https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
+47. Generate Paranthesis - 
+Problem Link - https://leetcode.com/problems/generate-parentheses/
