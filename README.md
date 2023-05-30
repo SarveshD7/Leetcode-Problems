@@ -96,3 +96,5 @@ Problem Link - https://leetcode.com/problems/find-the-index-of-the-first-occurre
 Problem Link - https://leetcode.com/problems/generate-parentheses/
 48. Count Primes - 
 Problem Link - https://leetcode.com/problems/count-primes/
+49. Best Time to Buy and Sell Stocks II - 
+Problem Link - https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
