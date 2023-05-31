@@ -100,3 +100,5 @@ Problem Link - https://leetcode.com/problems/count-primes/
 Problem Link - https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
 50. Number of 1 Bits - 
 Problem Link - https://leetcode.com/problems/number-of-1-bits/
+51. Maximum Subarray - 
+Problem Link - https://leetcode.com/problems/maximum-subarray/
