@@ -1,0 +1,51 @@
+Problem Statement - 
+Given a list of non-negative integers nums, arrange them such that they form the largest number and return it.
+Since the result may be very large, so you need to return a string instead of an integer.
+
+Example - 
+Input: nums = [10,2]
+Output: "210"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+
+class Solution {
+public:
+    static int firstDig(int n, int &len){
+        int ans = 0;
+        while(n>0){
+            ans = n%10;
+            n/=10;
+            len++;
+        }
+        return ans;
+    }
+    static bool cmp(int a, int b){
+        int len1 = 0, len2 = 0, fd1 = 0, fd2 = 0;
+        fd1 = firstDig(a, len1);
+        fd2 = firstDig(b, len2);
+        if(fd1!=fd2)
+            return fd1>fd2;
+        else{
+            if(len1==len2)  return a>b;
+            else return a*pow(10, len2)+b>b*pow(10, len1)+a;
+            // else return a>b*pow(10, len1-len2);
+        }
+    }
+    string largestNumber(vector<int>& nums) {
+        sort(nums.begin(), nums.end(), cmp);
+        string res = "";
+        for(auto i:nums){
+            string add = to_string(i);
+            // cout<<i<<" ";
+            res+=add;
+        }
+        int i = 0;
+        while(i<res.size() && res[i]=='0')  i++;
+        if(i==res.size()) res = res.substr(res.size()-1,1);
+        else res = res.substr(i, res.size()-i);
+        // cout<<endl;
+        return res;
+    }
+};
