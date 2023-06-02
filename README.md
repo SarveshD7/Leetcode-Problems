@@ -104,3 +104,5 @@ Problem Link - https://leetcode.com/problems/number-of-1-bits/
 Problem Link - https://leetcode.com/problems/maximum-subarray/
 52. Largest Number - 
 Problem Link - https://leetcode.com/problems/largest-number/
+53. Reverse String - 
+Problem Link - https://leetcode.com/problems/reverse-string/
