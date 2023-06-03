@@ -110,3 +110,5 @@ Problem Link - https://leetcode.com/problems/reverse-string/
 Problem Link - https://leetcode.com/problems/jump-game/
 55. Jump Game II - 
 Problem Link - https://leetcode.com/problems/jump-game-ii/
+56. Find the Duplicate Number - 
+Problem Link - https://leetcode.com/problems/find-the-duplicate-number/
