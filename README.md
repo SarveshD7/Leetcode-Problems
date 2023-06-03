@@ -106,3 +106,5 @@ Problem Link - https://leetcode.com/problems/maximum-subarray/
 Problem Link - https://leetcode.com/problems/largest-number/
 53. Reverse String - 
 Problem Link - https://leetcode.com/problems/reverse-string/
+54. Jump Game - 
+Problem Link - https://leetcode.com/problems/jump-game/
