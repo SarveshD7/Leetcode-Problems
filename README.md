@@ -116,3 +116,5 @@ Problem Link - https://leetcode.com/problems/find-the-duplicate-number/
 Problem Link - https://leetcode.com/problems/4sum-ii/
 58. Reverse words in a String - 
 Problem Link - https://leetcode.com/problems/reverse-words-in-a-string/
+59. Move Zeros - 
+Problem Link - https://leetcode.com/problems/move-zeroes/
