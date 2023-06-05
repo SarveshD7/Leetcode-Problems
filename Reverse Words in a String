@@ -1,0 +1,43 @@
+Problem Statement - 
+Given an input string s, reverse the order of the words.
+A word is defined as a sequence of non-space characters. The words in s will be separated by at least one space.
+Return a string of the words in reverse order concatenated by a single space.
+Note that s may contain leading or trailing spaces or multiple spaces between two words. 
+The returned string should only have a single space separating the words. Do not include any extra spaces.
+
+Example - 
+Input: s = "the sky is blue"
+Output: "blue is sky the"
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    string reverseWords(string s) {
+        string res = "", temp = "", space = " ";
+        int i = 0, prev = 0;
+        while(i<s.size()){
+            if(s[i]==' '){
+                cout<<i<<" "<<temp<<endl;
+                if(temp!=" " && temp!=""){
+                if(res=="") res+=temp;
+                else res = temp + space + res;
+                }
+                temp = "";
+            }
+            else temp+=s[i];
+            i++;
+        }
+        if(temp!="" && temp!=" "){
+            if(res=="") res+=temp;
+            else
+                res = temp + space + res;
+        }
+        i = 0;
+        while(i<res.size() && res[i]==' ') i++;
+        res = res.substr(i, res.size()-i);
+        
+        return res;
+    }
+};
