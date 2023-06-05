@@ -15,6 +15,7 @@ There are no more pairs that sum up to 5, hence a total of 2 operations.
 -----------------------------------------------------------------------------------------------
 
 Solution - 
+---------------------Hashmap Approach------------------------
 class Solution {
 public:
     int maxOperations(vector<int>& nums, int k) {
@@ -37,6 +38,20 @@ public:
                 if(m[k-i]==0) m.erase(k -i);
                 }
             }
+        }
+        return ans;
+    }
+};
+--------------Two Pointer Approach-----------------
+class Solution {
+public:
+    int maxOperations(vector<int>& nums, int k) {
+        sort(nums.begin(), nums.end());
+        int i = 0, j = nums.size()-1, ans  = 0;
+        while(i<j){
+            if(nums[i]+nums[j]==k) i++, j--, ans++;
+            else if(nums[i]+nums[j]<k) i++;
+            else j--;
         }
         return ans;
     }
