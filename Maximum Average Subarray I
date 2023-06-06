@@ -1,0 +1,37 @@
+Problem Statement - 
+You are given an integer array nums consisting of n elements, and an integer k.
+Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value.
+Any answer with a calculation error less than 10-5 will be accepted.
+
+Example - 
+Input: nums = [1,12,-5,-6,50,3], k = 4
+Output: 12.75000
+Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    double findMaxAverage(vector<int>& nums, int k) {
+        int i = 0;
+        double ave = 0;
+        double ans = INT_MIN, s = 0, n = nums.size();
+        while(i<k){
+            s+=nums[i];
+            i++;
+        }
+        ave = s/k;
+        ans = max(ave, ans);
+        int start = nums[0], startid = 0;
+        while(i<n){
+            int newStart = nums[startid+1];
+            ave = (ave*k-nums[startid] + nums[i])/k;
+            ans = max(ave, ans);
+            startid++;
+            i++;
+            // cout<<ave<<" " <<ans<<endl;
+        }
+        return ans;
+    }
+};
