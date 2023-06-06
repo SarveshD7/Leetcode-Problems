@@ -1,0 +1,38 @@
+Problem Statement - 
+Given a string s and an integer k, return the maximum number of vowel letters in any substring of s with length k.
+Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
+
+Example - 
+Input: s = "abciiidef", k = 3
+Output: 3
+Explanation: The substring "iii" contains 3 vowel letters.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution -
+class Solution {
+public:
+    bool isVowel(char x){
+        if(x=='a' || x=='e' || x=='i' || x=='o' || x=='u') return true;
+        return false;
+    }
+    int maxVowels(string s, int k) {
+        int cnt = 0;
+        int ans = INT_MIN, n = s.size();
+        int i = 0;
+        while(i<k){
+            if(isVowel(s[i]))cnt++;
+            i++;
+        }
+        ans = max(ans, cnt);
+        int startid = 0;
+        while(i<n){
+            if(isVowel(s[startid]) && !isVowel(s[i])) cnt--;
+            else if(!isVowel(s[startid]) && isVowel(s[i])) cnt++;
+            ans = max(ans, cnt);
+            startid++;
+            i++;
+        }
+        return ans;
+    }
+};
