@@ -132,3 +132,5 @@ Problem Link - https://leetcode.com/problems/maximum-number-of-vowels-in-a-subst
 Problem Link - https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1
 66. M Coloring Problem - 
 Problem Link - https://practice.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1
+67. Set Matrix Zeros - 
+Problem Link - https://leetcode.com/problems/set-matrix-zeroes/
