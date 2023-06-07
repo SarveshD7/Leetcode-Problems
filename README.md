@@ -140,3 +140,6 @@ Problem Link - https://leetcode.com/problems/pascals-triangle/
 Problem Link - https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 70. Implement Stack using Queue - 
 Problem Link - https://leetcode.com/problems/implement-stack-using-queues/
+71. Implement Stack using 1 Queue - 
+Problem Link - https://leetcode.com/problems/implement-stack-using-queues/
+
