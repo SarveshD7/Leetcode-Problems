@@ -136,3 +136,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/m-coloring-problem-15
 Problem Link - https://leetcode.com/problems/set-matrix-zeroes/
 68. Pascals Triangle - 
 Problem Link - https://leetcode.com/problems/pascals-triangle/
+69. Best Time to Buy and Sell Stock - 
+Problem Link - https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
