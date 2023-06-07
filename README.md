@@ -138,3 +138,5 @@ Problem Link - https://leetcode.com/problems/set-matrix-zeroes/
 Problem Link - https://leetcode.com/problems/pascals-triangle/
 69. Best Time to Buy and Sell Stock - 
 Problem Link - https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+70. Implement Stack using Queue - 
+Problem Link - https://leetcode.com/problems/implement-stack-using-queues/
