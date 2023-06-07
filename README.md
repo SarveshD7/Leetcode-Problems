@@ -134,3 +134,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem
 Problem Link - https://practice.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1
 67. Set Matrix Zeros - 
 Problem Link - https://leetcode.com/problems/set-matrix-zeroes/
+68. Pascals Triangle - 
+Problem Link - https://leetcode.com/problems/pascals-triangle/
