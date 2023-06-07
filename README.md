@@ -130,3 +130,5 @@ Problem Link - https://leetcode.com/problems/maximum-average-subarray-i/
 Problem Link - https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/description/
 65. Rat in a Maze Problem I - 
 Problem Link - https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1
+66. M Coloring Problem - 
+Problem Link - https://practice.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1
