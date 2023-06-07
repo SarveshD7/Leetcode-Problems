@@ -128,3 +128,5 @@ Problem Link - https://leetcode.com/problems/max-number-of-k-sum-pairs/
 Problem Link - https://leetcode.com/problems/maximum-average-subarray-i/
 64. Maximum Vowels in a substring of given length - 
 Problem Link - https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/description/
+65. Rat in a Maze Problem I - 
+Problem Link - https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1
