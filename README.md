@@ -144,3 +144,5 @@ Problem Link - https://leetcode.com/problems/implement-stack-using-queues/
 Problem Link - https://leetcode.com/problems/implement-stack-using-queues/
 72. Implement Queue using Stacks - 
 Problem Link - https://leetcode.com/problems/implement-queue-using-stacks/
+73. Valid Paranthesis - 
+Problem Link - https://leetcode.com/problems/valid-parentheses/description/
