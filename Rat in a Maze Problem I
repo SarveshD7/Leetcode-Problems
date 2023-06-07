@@ -1,0 +1,74 @@
+Problem Statement - 
+Consider a rat placed at (0, 0) in a square matrix of order N * N. It has to reach the destination at (N - 1, N - 1).
+Find all possible paths that the rat can take to reach from source to destination.
+The directions in which the rat can move are 'U'(up), 'D'(down), 'L' (left), 'R' (right). 
+Value 0 at a cell in the matrix represents that it is blocked and rat cannot move to it while value 1 at a cell in the matrix represents
+that rat can be travel through it.
+Note: In a path, no cell can be visited more than one time. If the source cell is 0, the rat cannot move to any other cell.
+
+Example - 
+N = 4
+m[][] = {{1, 0, 0, 0},
+         {1, 1, 0, 1}, 
+         {1, 1, 0, 0},
+         {0, 1, 1, 1}}
+Output:
+DDRDRR DRDDRR
+Explanation:
+The rat can reach the destination at 
+(3, 3) from (0, 0) by two paths - DRDDRR 
+and DDRDRR, when printed in sorted order 
+we get DDRDRR DRDDRR.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution{
+    public:
+    void solve(int i, int j, vector<vector<int>>m, vector<vector<int>>&vis, vector<string>&ans, string s){
+        if(i>=m.size() || j>=m.size()) return ;
+        else if(i==m.size()-1 && j==m.size()-1){
+            ans.push_back(s);
+            return ;
+        }
+        int n = m.size();
+        int ele = m[i][j];
+        if(ele==0) return ;
+        
+        vis[i][j] = 1;
+        string l = "L", r = "R", u = "U", d = "D";
+        string temp  = s;
+        if(i+1<n && vis[i+1][j]==0 && m[i+1][j]==1){
+        s+=d;    
+        solve(i+1,j,m,vis, ans, s);
+        s = temp;
+        }
+        if(i-1>=0 && m[i-1][j]==1 && vis[i-1][j]==0){
+            s+=u;
+            solve(i-1, j, m, vis, ans, s);
+            s = temp;
+        }
+        if(j-1>=0 && m[i][j-1]==1 && vis[i][j-1]==0){
+            s+=l;
+            solve(i,j-1, m, vis, ans, s);
+            s = temp;
+        }
+        if(j+1<n && m[i][j+1]==1 && vis[i][j+1]==0){
+            s+=r;
+            solve(i,j+1, m, vis, ans, s);
+            s = temp;
+        }
+        vis[i][j] = 0;
+        return ;
+    }
+    
+    vector<string> findPath(vector<vector<int>> &m, int n) {
+        // Your code goes here
+        vector<string>ans;
+        vector<vector<int>>vis(n, vector<int>(n,0));
+        string s = "";
+        solve(0,0,m,vis, ans, s);
+        return ans;
+        
+    }
+};
