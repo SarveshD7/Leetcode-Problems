@@ -142,4 +142,5 @@ Problem Link - https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 Problem Link - https://leetcode.com/problems/implement-stack-using-queues/
 71. Implement Stack using 1 Queue - 
 Problem Link - https://leetcode.com/problems/implement-stack-using-queues/
-
+72. Implement Queue using Stacks - 
+Problem Link - https://leetcode.com/problems/implement-queue-using-stacks/
