@@ -148,3 +148,5 @@ Problem Link - https://leetcode.com/problems/implement-queue-using-stacks/
 Problem Link - https://leetcode.com/problems/valid-parentheses/description/
 74. Global and Local Inversions - 
 Problem Link - https://leetcode.com/problems/global-and-local-inversions/
+75. Sudoku Solver - 
+Problem Link - https://leetcode.com/problems/sudoku-solver/
