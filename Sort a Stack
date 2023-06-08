@@ -1,0 +1,44 @@
+Problem Statement - 
+Given a stack, the task is to sort it such that the top of the stack has the greatest element.
+
+Example - 
+Input:
+Stack: 3 2 1
+Output: 3 2 1
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+void sortedInsert(stack<int>& s, int x){
+    if(s.empty() || x>s.top()){
+        s.push(x);
+        return ;
+    }
+    int a = s.top();
+    s.pop();
+    sortedInsert(s, x);
+    s.push(a);
+    return ;
+}
+
+void pushAtBottom(stack<int>& s, int x){
+    if(s.empty()){
+        s.push(x);
+        return ;
+    }
+    int a = s.top();
+    s.pop();
+    pushAtBottom(s, x);
+    s.push(a);
+    return ;
+}
+
+void SortedStack :: sort()
+{
+   if(s.empty()) return ;
+   int a = s.top();
+   s.pop();
+   sort();
+   sortedInsert(s, a);
+   return ;   
+}
