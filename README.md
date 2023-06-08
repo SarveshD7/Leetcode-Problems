@@ -156,3 +156,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/subset-sums2234/1
 Problem Link - https://leetcode.com/problems/subsets-ii/
 78. Combination Sum - 
 Problem Link - https://leetcode.com/problems/combination-sum/
+79. Sort a Stack - 
+Problem Link - https://practice.geeksforgeeks.org/problems/sort-a-stack/1
