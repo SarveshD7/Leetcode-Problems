@@ -146,3 +146,5 @@ Problem Link - https://leetcode.com/problems/implement-stack-using-queues/
 Problem Link - https://leetcode.com/problems/implement-queue-using-stacks/
 73. Valid Paranthesis - 
 Problem Link - https://leetcode.com/problems/valid-parentheses/description/
+74. Global and Local Inversions - 
+Problem Link - https://leetcode.com/problems/global-and-local-inversions/
