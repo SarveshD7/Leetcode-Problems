@@ -161,4 +161,6 @@ Problem Link - https://practice.geeksforgeeks.org/problems/sort-a-stack/1
 80. Merge Sorted Array -
 Problem Link - https://leetcode.com/problems/merge-sorted-array/
 81. Missing Number - 
-https://leetcode.com/problems/missing-number/
+Problem Link - https://leetcode.com/problems/missing-number/
+82. Majority Element - 
+Problem Link - https://leetcode.com/problems/majority-element/
