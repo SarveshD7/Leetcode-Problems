@@ -1,0 +1,32 @@
+Problem Statement - 
+Given an array nums of size n, return the majority element.
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+Example -
+Input: nums = [3,2,3]
+Output: 3
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+INTUITION - 
+Since majority element occurs >n/2 times even if all rest elements are same the max freq of other element is n/2-1
+So if we increment a counter on a certain element and decrement it on other element and update answer everytime counter becomes = 0
+We will eventually end up cancelling out n/2-1 of both and end up with majority element
+Solution  -
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        // unordered_map<int,int>m;
+        // for(auto i:nums)
+        //     m[i]++;
+        // for(auto i:m)
+        //     if(i.second>nums.size()/2) return i.first;
+        // return -1;
+        int i = 0,ele,count = 0, n = nums.size();
+        while(i<n){
+            if(count==0)ele = nums[i];
+            count+= (nums[i]==ele)?1:-1;
+            i++;
+        }
+        return ele;
+    }
+};
