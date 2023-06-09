@@ -164,3 +164,5 @@ Problem Link - https://leetcode.com/problems/merge-sorted-array/
 Problem Link - https://leetcode.com/problems/missing-number/
 82. Majority Element - 
 Problem Link - https://leetcode.com/problems/majority-element/
+83. Longest Consecutive Sequence - 
+Problem Link - https://leetcode.com/problems/longest-consecutive-sequence/
