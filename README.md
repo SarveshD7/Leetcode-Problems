@@ -166,3 +166,5 @@ Problem Link - https://leetcode.com/problems/missing-number/
 Problem Link - https://leetcode.com/problems/majority-element/
 83. Longest Consecutive Sequence - 
 Problem Link - https://leetcode.com/problems/longest-consecutive-sequence/
+84. Reverse Linked List - 
+Problem Link - https://leetcode.com/problems/reverse-linked-list/
