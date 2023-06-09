@@ -168,3 +168,5 @@ Problem Link - https://leetcode.com/problems/majority-element/
 Problem Link - https://leetcode.com/problems/longest-consecutive-sequence/
 84. Reverse Linked List - 
 Problem Link - https://leetcode.com/problems/reverse-linked-list/
+85. Middle of Linked List - 
+Problem Link - https://leetcode.com/problems/middle-of-the-linked-list/
