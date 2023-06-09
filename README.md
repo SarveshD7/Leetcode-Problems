@@ -158,3 +158,5 @@ Problem Link - https://leetcode.com/problems/subsets-ii/
 Problem Link - https://leetcode.com/problems/combination-sum/
 79. Sort a Stack - 
 Problem Link - https://practice.geeksforgeeks.org/problems/sort-a-stack/1
+80. Merge Sorted Array -
+Problem Link - https://leetcode.com/problems/merge-sorted-array/
