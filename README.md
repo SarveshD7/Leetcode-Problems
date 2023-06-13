@@ -174,3 +174,5 @@ Problem Link - https://leetcode.com/problems/middle-of-the-linked-list/
 Problem Link - https://leetcode.com/problems/merge-two-sorted-lists/
 87. Valid Anagrams - 
 Problem Link - https://leetcode.com/problems/valid-anagram/
+88. String Compression - 
+Problem Link - https://leetcode.com/problems/string-compression/
