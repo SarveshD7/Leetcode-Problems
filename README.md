@@ -172,3 +172,5 @@ Problem Link - https://leetcode.com/problems/reverse-linked-list/
 Problem Link - https://leetcode.com/problems/middle-of-the-linked-list/
 86. Merge Two Sorted Lists - 
 Problem Link - https://leetcode.com/problems/merge-two-sorted-lists/
+87. Valid Anagrams - 
+Problem Link - https://leetcode.com/problems/valid-anagram/
