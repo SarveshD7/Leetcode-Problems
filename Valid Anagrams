@@ -1,0 +1,25 @@
+Problem Statement - 
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+Example - 
+Input: s = "anagram", t = "nagaram"
+Output: true
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        vector<int>v(26,0);
+        for(auto i:s)
+            v[i-'a']++;
+        for(auto i:t)
+            v[i-'a']--;
+        for(auto i:v) 
+            if(i!=0) return false;
+        return true;
+    }
+};
