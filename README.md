@@ -176,3 +176,5 @@ Problem Link - https://leetcode.com/problems/merge-two-sorted-lists/
 Problem Link - https://leetcode.com/problems/valid-anagram/
 88. String Compression - 
 Problem Link - https://leetcode.com/problems/string-compression/
+89. Check if Array is Sorted or Rotated - 
+Problem Link - https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/
