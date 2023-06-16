@@ -180,3 +180,5 @@ Problem Link - https://leetcode.com/problems/string-compression/
 Problem Link - https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/
 90. Detect a Cycle in a Linked List - 
 Problem Link - https://leetcode.com/problems/linked-list-cycle/
+91. Flattening a Linked List - 
+Problem Link - https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/1
