@@ -184,3 +184,5 @@ Problem Link - https://leetcode.com/problems/linked-list-cycle/
 Problem Link - https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/1
 92. Palindrome Linked List -
 Problem Link - https://leetcode.com/problems/palindrome-linked-list/
+93. Rotate List -
+Problem Link - https://leetcode.com/problems/rotate-list/
