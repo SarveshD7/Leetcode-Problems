@@ -186,3 +186,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/flattening-a-linked-l
 Problem Link - https://leetcode.com/problems/palindrome-linked-list/
 93. Rotate List -
 Problem Link - https://leetcode.com/problems/rotate-list/
+94. Delete Node from Linked List when Node is given -
+Problem Link - https://leetcode.com/problems/delete-node-in-a-linked-list/
