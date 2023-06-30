@@ -190,3 +190,5 @@ Problem Link - https://leetcode.com/problems/rotate-list/
 Problem Link - https://leetcode.com/problems/delete-node-in-a-linked-list/
 95. Single Element in Sorted Array -
 Problem Link - https://leetcode.com/problems/single-element-in-a-sorted-array/
+96. Sliding Window Maximum -
+Problem Link - https://leetcode.com/problems/sliding-window-maximum/
