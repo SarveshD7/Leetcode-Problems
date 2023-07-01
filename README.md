@@ -196,3 +196,5 @@ Problem Link - https://leetcode.com/problems/sliding-window-maximum/
 Problem Link - https://leetcode.com/problems/4sum/
 98. Largest Subarray with 0 Sum -
 Problem Link - https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1
+99. Max Consecutive Ones -
+Problem Link - https://leetcode.com/problems/max-consecutive-ones/
