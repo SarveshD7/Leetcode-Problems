@@ -194,3 +194,5 @@ Problem Link - https://leetcode.com/problems/single-element-in-a-sorted-array/
 Problem Link - https://leetcode.com/problems/sliding-window-maximum/
 97. 4 Sum -
 Problem Link - https://leetcode.com/problems/4sum/
+98. Largest Subarray with 0 Sum -
+Problem Link - https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1
