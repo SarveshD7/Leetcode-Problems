@@ -1,0 +1,33 @@
+Problem Statement - 
+Given a vector of vectors merge the arrays in a sorted manner.
+
+Example - 
+Input - 
+1
+2
+3 
+3 5 9 
+4 
+1 2 3 8   
+Output - 
+1 2 3 3 5 8 9 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+#include <bits/stdc++.h> 
+vector<int> mergeKSortedArrays(vector<vector<int>>&nums, int k)
+{
+    // Write your code here. 
+    vector<int>ans;
+    priority_queue<int>q;
+    for(auto i:nums){
+        for(auto j:i)
+            q.push(j);
+    }
+    while(!q.empty()){
+        ans.insert(ans.begin(), q.top());
+        q.pop();
+    }
+    return ans;
+}
