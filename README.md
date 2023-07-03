@@ -202,3 +202,5 @@ Problem Link - https://leetcode.com/problems/max-consecutive-ones/
 Problem Link - https://leetcode.com/problems/combination-sum-ii/
 101. Kth Largest Element in the Array -
 Problem Link - https://leetcode.com/problems/kth-largest-element-in-an-array/
+102. Merge K Sorted Arrays -
+Problem Link - https://www.codingninjas.com/studio/problems/merge-k-sorted-arrays_975379
