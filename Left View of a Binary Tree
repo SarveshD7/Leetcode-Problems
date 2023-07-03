@@ -1,0 +1,67 @@
+Problem Statement - 
+Given a Binary Tree, return Left view of it. Left view of a Binary Tree is set of nodes visible when tree is visited from Left side. 
+The task is to complete the function leftView(), which accepts root of the tree as argument.
+Left view of following tree is 1 2 4 8.
+
+          1
+       /     \
+     2        3
+   /     \    /    \
+  4     5   6    7
+   \
+     8
+
+Example - 
+Input:
+   1
+ /  \
+3    2
+Output: 1 3
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+
+*****************************NOTE - THE SOLUTION WORKS EVEN WITHOUT THE INTERNAL FOR LOOP OVER THE SIZE OF THE QUEUE*********************************
+
+/* A binary tree node
+
+struct Node
+{
+    int data;
+    struct Node* left;
+    struct Node* right;
+    
+    Node(int x){
+        data = x;
+        left = right = NULL;
+    }
+};
+ */
+
+//Function to return a list containing elements of left view of the binary tree.
+vector<int> leftView(Node *root)
+{
+   // Your code here
+   vector<int>ans;
+   if(!root) return ans;
+   queue<pair<Node* , int>>q;
+   q.push({root, 1});
+//   unordered_map<int, int>m;
+   while(!q.empty()){
+       
+      int s = q.size();
+      for(int i = 0;i<s;i++){
+            Node* f = q.front().first;
+            int level = q.front().second;
+            if(f->left) q.push({f->left, level+1});
+            if(f->right) q.push({f->right, level+1});
+            if(level>ans.size()){
+              ans.push_back(f->data);
+              level++;
+            }     
+            q.pop();
+      }
+   }
+   return ans;
+}
