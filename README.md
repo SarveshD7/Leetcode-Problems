@@ -204,3 +204,5 @@ Problem Link - https://leetcode.com/problems/combination-sum-ii/
 Problem Link - https://leetcode.com/problems/kth-largest-element-in-an-array/
 102. Merge K Sorted Arrays -
 Problem Link - https://www.codingninjas.com/studio/problems/merge-k-sorted-arrays_975379
+103. Left View of Binary Tree -
+Problem Link - https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1
