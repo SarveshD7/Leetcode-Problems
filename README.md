@@ -208,3 +208,5 @@ Problem Link - https://www.codingninjas.com/studio/problems/merge-k-sorted-array
 Problem Link - https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1
 104. Maximum Depth of Binary Tree -
 Problem Link - https://leetcode.com/problems/maximum-depth-of-binary-tree/
+105. Balanced Binary Tree -
+Problem Link - https://leetcode.com/problems/balanced-binary-tree/
