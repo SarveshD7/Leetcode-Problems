@@ -210,3 +210,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/left-view-of-binary-t
 Problem Link - https://leetcode.com/problems/maximum-depth-of-binary-tree/
 105. Balanced Binary Tree -
 Problem Link - https://leetcode.com/problems/balanced-binary-tree/
+106. Binary Tree Level Order Traversal -
+Problem Link - https://leetcode.com/problems/binary-tree-level-order-traversal/
