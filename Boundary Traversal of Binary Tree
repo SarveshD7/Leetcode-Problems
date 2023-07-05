@@ -1,0 +1,93 @@
+Problem Statement - 
+Given a Binary Tree, find its Boundary Traversal. The traversal should be in the following order: 
+Left boundary nodes: defined as the path from the root to the left-most node ie- the leaf node you could reach when you always travel preferring
+the left subtree over the right subtree. 
+Leaf nodes: All the leaf nodes except for the ones that are part of left or right boundary.
+Reverse right boundary nodes: defined as the path from the right-most node to the root. 
+The right-most node is the leaf node you could reach when you always travel preferring the right subtree over the left subtree. 
+Exclude the root from this as it was already included in the traversal of left boundary nodes.
+Note: If the root doesn't have a left subtree or right subtree, then the root itself is the left or right boundary. 
+
+Example - 
+Input:
+        1 
+      /   \
+     2     3  
+    / \   / \ 
+   4   5 6   7
+      / \
+     8   9
+   
+Output: 1 2 4 8 9 6 7 3
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+
+    void left(Node* root, vector<int>&v){
+        if(!root) return ;
+        v.push_back(root->data);
+        if(root->left) left(root->left, v);
+        else left(root->right, v);
+        return ;
+    }
+    
+    void right(Node* root, stack<int>&x){
+        if(!root) return ;
+        x.push(root->data);
+        if(root->right) right(root->right, x);
+        else right(root->left, x);
+        return ;
+    }
+    
+    void rightFun(stack<int> &x, vector<int>&v){
+        
+        if(!x.empty())
+            x.pop();
+        while(!x.empty()){
+            v.push_back(x.top());
+            x.pop();
+        }
+        return ;
+    }
+    
+    void leaf(Node* root, vector<int>&v){
+        if(!root) return ;
+        if(!root->left && !root->right){
+            v.push_back(root->data);
+            return ;
+        }
+        leaf(root->left, v);
+        leaf(root->right, v);
+        return ;
+    }
+
+
+    vector <int> boundary(Node *root)
+    {
+        
+        //Your code here
+        vector<int>ans;
+        
+        if(!root) return ans;
+        if(!root->left && !root->right){
+            ans.push_back(root->data);
+            return ans;
+        }
+        stack<int>x;
+        ans.push_back(root->data);
+        if(root->left){
+            left(root->left, ans);
+            ans.pop_back();
+        }
+        leaf(root, ans);
+        if(root->right){
+            right(root->right, x);
+            rightFun(x, ans);
+        }
+        return ans;
+        
+    }
+};
