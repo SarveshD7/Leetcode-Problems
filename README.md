@@ -216,3 +216,5 @@ Problem Link - https://leetcode.com/problems/binary-tree-level-order-traversal/\
 Problem Link - https://practice.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1
 108. Same Tree -
 Problem Link - https://leetcode.com/problems/same-tree/
+109. Search in a BST -
+Problem Link - https://leetcode.com/problems/search-in-a-binary-search-tree/
