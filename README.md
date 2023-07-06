@@ -224,3 +224,5 @@ Problem Link - https://leetcode.com/problems/diameter-of-binary-tree/
 Problem Link - https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1
 112. Top View of Binary Tree -
 Problem Link - https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1
+113. Vertical Order Traversal of a Binary Tree -
+Problem Link - https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
