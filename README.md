@@ -222,3 +222,5 @@ Problem Link - https://leetcode.com/problems/search-in-a-binary-search-tree/
 Problem Link - https://leetcode.com/problems/diameter-of-binary-tree/
 111. Bottom View of Binary Tree -
 Problem Link - https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1
+112. Top View of Binary Tree -
+Problem Link - https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1
