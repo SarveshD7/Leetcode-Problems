@@ -218,3 +218,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/boundary-traversal-of
 Problem Link - https://leetcode.com/problems/same-tree/
 109. Search in a BST -
 Problem Link - https://leetcode.com/problems/search-in-a-binary-search-tree/
+110. Diameter of Binary Tree -
+Problem Link - https://leetcode.com/problems/diameter-of-binary-tree/
