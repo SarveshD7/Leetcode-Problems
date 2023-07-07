@@ -226,3 +226,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/bottom-view-of-binary
 Problem Link - https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1
 113. Vertical Order Traversal of a Binary Tree -
 Problem Link - https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
+114. Flatten Binary Tree to Linked List -
+Problem Link - https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
