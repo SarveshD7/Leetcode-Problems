@@ -236,3 +236,5 @@ Problem Link - https://leetcode.com/problems/construct-binary-tree-from-inorder-
 Problem Link - https://leetcode.com/problems/symmetric-tree/
 118. Mirror Tree -
 Problem Link - https://practice.geeksforgeeks.org/problems/mirror-tree/1
+119. Child Sum Property -
+Problem Link - https://www.codingninjas.com/studio/problems/children-sum-property_8357239?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
