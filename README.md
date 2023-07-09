@@ -230,3 +230,5 @@ Problem Link - https://leetcode.com/problems/vertical-order-traversal-of-a-binar
 Problem Link - https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
 115. Construct Binary Tree from Inorder and Preorder-
 Problem Link - https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+116. Construct Binary Tree from Inorder and Postorder -
+Problem Link - https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
