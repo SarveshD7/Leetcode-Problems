@@ -240,3 +240,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/mirror-tree/1
 Problem Link - https://www.codingninjas.com/studio/problems/children-sum-property_8357239?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
 120. Construct Binary Search Tree from Preorder Traversal -
 Problem Link - https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/
+121. Validate Binary Search Tree -
+Problem Link - https://leetcode.com/problems/validate-binary-search-tree/
