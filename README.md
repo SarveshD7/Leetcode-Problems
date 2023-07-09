@@ -234,3 +234,5 @@ Problem Link - https://leetcode.com/problems/construct-binary-tree-from-preorder
 Problem Link - https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
 117. Symmetric Tree -
 Problem Link - https://leetcode.com/problems/symmetric-tree/
+118. Mirror Tree -
+Problem Link - https://practice.geeksforgeeks.org/problems/mirror-tree/1
