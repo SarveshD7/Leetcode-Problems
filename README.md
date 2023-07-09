@@ -242,3 +242,5 @@ Problem Link - https://www.codingninjas.com/studio/problems/children-sum-propert
 Problem Link - https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/
 121. Validate Binary Search Tree -
 Problem Link - https://leetcode.com/problems/validate-binary-search-tree/
+122. Floor in a BST -
+Problem Link - https://www.codingninjas.com/studio/problems/floor-from-bst_920457
