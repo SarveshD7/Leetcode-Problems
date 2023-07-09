@@ -1,0 +1,36 @@
+Problem Statement - 
+Given a BST and a value x find greatest element smaller than x.
+
+Example - 
+Sample Input 1:
+2
+10 5 15 2 6 -1 -1 -1 -1 -1 -1
+7
+2 1 3 -1 -1 -1 -1
+2
+Sample Output 1:
+6
+2
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+void solve(TreeNode<int>* root, int x, int &ans){
+    if(!root) return ;
+    if(root->val==x){
+        ans = x;
+        return ;
+    }
+    if(root->val<=x){
+        ans = root->val;
+        solve(root->right,x, ans);
+    }else if(root->val>x) solve(root->left, x, ans);
+    return ;
+}
+int floorInBST(TreeNode<int> * root, int X)
+{
+    // Write your code here.
+    int ans = 0;
+    solve(root, X, ans);
+    return ans;
+}
