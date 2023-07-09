@@ -228,3 +228,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/top-view-of-binary-tr
 Problem Link - https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
 114. Flatten Binary Tree to Linked List -
 Problem Link - https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
+115. Construct Binary Tree from Inorder and Preorder-
+Problem Link - https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
