@@ -1,0 +1,50 @@
+Problem Statement - 
+Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder
+is the inorder traversal of the same tree, construct and return the binary tree.
+
+Example - 
+Input: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
+Output: [3,9,20,null,null,15,7]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int search(vector<int>a,int k){
+       int i=0;
+       while(i<a.size()){
+           if(a[i]==k)
+                return i;
+            i++;
+       }
+       return -1;
+    }
+    TreeNode* solve(vector<int> preorder,vector<int> inorder, int inStart,int inEnd, int& i){
+        if(i>=preorder.size() || inStart>inEnd)
+            return  NULL;
+        TreeNode* root = new TreeNode(preorder[i]);
+        int pos = search(inorder,preorder[i]);
+        i++;
+        TreeNode* l = solve(preorder,inorder,inStart,pos-1,i);
+        TreeNode* r = solve(preorder,inorder,pos+1,inEnd,i);
+        root->left = l;
+        root->right = r;
+        return root;
+    }
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+        int i=0;
+        return solve(preorder,inorder,0,inorder.size()-1,i);
+    }
+};
