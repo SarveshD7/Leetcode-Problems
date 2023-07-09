@@ -1,0 +1,20 @@
+Problem Statement - 
+Return true if all the non leaf nodes are equal to the sum of the values of their child nodes
+
+Example -
+4
+5 3 2 3 -1 -1 -1 -1 -1
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+bool isParentSum(Node *root){
+    // Write your code here.
+    if(!root || (!root->left && !root->right)) return true;
+    int l = 0, r = 0;
+    if(root->left) l = root->left->data;
+    if(root->right) r = root->right->data;
+    if(root->data!=l+r) return false;
+    return isParentSum(root->left) && isParentSum(root->right);
+    
+}
