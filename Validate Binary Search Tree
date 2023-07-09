@@ -1,0 +1,60 @@
+Problem Statement - 
+Given the root of a binary tree, determine if it is a valid binary search tree (BST).
+A valid BST is defined as follows:
+The left subtree  of a node contains only nodes with keys less than the node's key.
+The right subtree of a node contains only nodes with keys greater than the node's key.
+Both the left and right subtrees must also be binary search trees.
+
+Example - 
+Input: root = [2,1,3]
+Output: true
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int findMin(TreeNode* root)
+    {
+        if(!root) return INT_MAX;
+        int lmin = findMin(root->left);
+        int rmin = findMin(root->right);
+        return min(root->val, min(lmin, rmin));
+    }
+    int findMax(TreeNode* root)
+    {
+        if(!root) return INT_MIN;
+        int lmax = findMax(root->left);
+        int rmax = findMax(root->right);
+        return max(root->val, max(lmax, rmax));
+    }
+    bool isValidBST(TreeNode* root) {
+        if(!root || (!root->left && !root->right)) return true;
+        int val = root->val;
+        int rmin, lmax;
+        bool f1 = true, f2 = true;
+        if(root->left){
+            lmax = findMax(root->left);
+            if(val<=lmax) f1 = false;
+        }
+        
+        if(root->right){
+            rmin = findMin(root->right);
+            if(val>=rmin) f2 = false;
+        }
+        
+        if(!(f1 && f2)) return false;
+        return isValidBST(root->left) && isValidBST(root->right);
+    }
+};
