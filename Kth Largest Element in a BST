@@ -1,0 +1,36 @@
+Problem Statement - 
+Given a Binary search tree. Your task is to complete the function which will 
+return the Kth largest element without doing any modification in Binary Search Tree.
+
+Example - 
+Input:
+      4
+    /   \
+   2     9
+k = 2 
+Output: 4
+
+--------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution
+{
+    public:
+    vector<int>v;
+    void inorder(Node* root){
+        if(root==NULL)
+        return ;
+        inorder(root->left);
+        v.push_back(root->data);
+        inorder(root->right);
+        return ;
+    }
+    int kthLargest(Node *root, int K)
+    {
+        inorder(root);
+        // cout<<v.size()<<endl;
+        int ans=v[v.size()-K];
+        v.clear();
+        return ans;
+    }
+};
