@@ -252,3 +252,5 @@ Problem Link - https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 Problem Link - https://practice.geeksforgeeks.org/problems/kth-largest-element-in-bst/1
 126. Two Sum IV - Input is a BST -
 Problem Link - https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
+127. BST Iterator -
+Problem Link - https://leetcode.com/problems/binary-search-tree-iterator/
