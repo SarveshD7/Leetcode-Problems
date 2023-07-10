@@ -250,3 +250,5 @@ Problem Link - https://www.codingninjas.com/studio/problems/ceil-from-bst_920464
 Problem Link - https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 125. Kth Largest Element in a BST -
 Problem Link - https://practice.geeksforgeeks.org/problems/kth-largest-element-in-bst/1
+126. Two Sum IV - Input is a BST -
+Problem Link - https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
