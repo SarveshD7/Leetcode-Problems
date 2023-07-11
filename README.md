@@ -258,3 +258,5 @@ Problem Link - https://leetcode.com/problems/binary-search-tree-iterator/
 Problem Link - https://www.interviewbit.com/problems/distinct-numbers-in-window/
 129. Flood Fill -
 Problem Link - https://leetcode.com/problems/flood-fill/
+130. DFS of a Graph -
+Problem Link - https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1
