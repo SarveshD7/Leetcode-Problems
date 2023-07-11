@@ -254,3 +254,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/kth-largest-element-i
 Problem Link - https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
 127. BST Iterator -
 Problem Link - https://leetcode.com/problems/binary-search-tree-iterator/
+128. Distince Numbers in a Window -
+Problem Link - https://www.interviewbit.com/problems/distinct-numbers-in-window/
