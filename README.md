@@ -264,3 +264,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/depth-first-traversal
 Problem Link - https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1
 132. Detect Cycle in Directed Graph - DFS -
 Problem Link - https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1
+133. Topological Sort - Kahns - BFS -
+Problem Link - https://practice.geeksforgeeks.org/problems/topological-sort/1
