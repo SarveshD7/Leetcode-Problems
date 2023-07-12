@@ -267,4 +267,6 @@ Problem Link - https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-dir
 133. Topological Sort - Kahns - BFS -
 Problem Link - https://practice.geeksforgeeks.org/problems/topological-sort/1
 134. Detect Cycle in Directed Graph - BFS -
-Problem Link - https://leetcode.com/problems/course-schedule/
+Problem Link - https://leetcode.com/problems/course-schedule/\
+135. Detect Cycle in Undirected Graph - DFS -
+Problem Link - https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1
