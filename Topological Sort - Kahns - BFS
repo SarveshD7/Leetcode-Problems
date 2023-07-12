@@ -1,0 +1,87 @@
+Problem Statement - 
+Given a Directed Acyclic Graph (DAG) with V vertices and E edges, Find any Topological Sorting of that Graph.
+
+Example - 
+Input:
+
+Output:
+1
+Explanation:
+The output 1 denotes that the order is
+valid. So, if you have, implemented
+your function correctly, then output
+would be 1 for all test cases.
+One possible Topological order for the
+graph is 3, 2, 1, 0.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution
+{
+	public:
+	//Function to return list containing vertices in Topological order. 
+	vector<int> indegree(vector<int>adj[],int V){
+	    vector<int>ind(V,0);
+	    for(int i = 0;i<V;i++){
+	        for(auto j:adj[i]){
+	            ind[j]++;
+	        }
+	    }
+	    return ind;
+	}
+	
+	vector<int> kahns(vector<int>adj[], int V,vector<int>ind){
+	    queue<int>q;
+	    vector<int>res;
+	    for(int i=0;i<V;i++){
+	        if(ind[i]==0)
+	            q.push(i);
+	    }
+	    while(!q.empty()){
+	        int a = q.front();
+	        for(auto i:adj[a]){
+	            ind[i]--;
+	            if(ind[i]==0)
+	                q.push(i);
+	        }
+	        q.pop();
+	        res.push_back(a);
+	    }
+	    
+	    return res;
+	}
+	
+	
+	
+	void solve(vector<int>adj[],int i,vector<int>& vis,stack<int>& x){
+	    vis[i] = 1;
+	    for(auto a : adj[i]){
+	        if(vis[a]==0)
+	            solve(adj,a,vis,x);
+	    }
+	    x.push(i);
+	}
+	vector<int> topoSort(int V, vector<int> adj[]) 
+	{
+	   // stack<int>x;
+	   // vector<int>vis(V,0);
+	   // for(int i=0;i<V;i++){
+	   //     if(vis[i]==0)
+	   //         solve(adj,i,vis,x);
+	   // }
+	   // int i = 0;
+	   // while(!x.empty()){
+	   //     vis[i] = x.top();
+	   //     x.pop();
+	   //     i++;
+	   // }
+	   // for(int i = 0;i<V;i++){
+	   //     cout<<vis[i]<<" ";
+	   // }
+	   // cout<<endl;
+	   vector<int>ind = indegree(adj,V);
+	    return kahns(adj,V,ind);
+	}
+};
