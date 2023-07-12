@@ -262,3 +262,5 @@ Problem Link - https://leetcode.com/problems/flood-fill/
 Problem Link - https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1
 131. BFS of a Graph -
 Problem Link - https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1
+132. Detect Cycle in Directed Graph - DFS -
+Problem Link - https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1
