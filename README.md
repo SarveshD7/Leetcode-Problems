@@ -266,3 +266,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/bfs-traversal-of-grap
 Problem Link - https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1
 133. Topological Sort - Kahns - BFS -
 Problem Link - https://practice.geeksforgeeks.org/problems/topological-sort/1
+134. Detect Cycle in Directed Graph - BFS -
+Problem Link - https://leetcode.com/problems/course-schedule/
