@@ -1,0 +1,75 @@
+Problem Statement - 
+There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where
+prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.
+For example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.
+Return true if you can finish all courses. Otherwise, return false.
+
+Example -
+Input: numCourses = 2, prerequisites = [[1,0]]
+Output: true
+Explanation: There are a total of 2 courses to take. 
+To take course 1 you should have finished course 0. So it is possible.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+
+    void Indegree(int v, vector<int>adj[], vector<int>&indegree){
+        for(int i = 0;i<v;i++){
+            for(auto j:adj[i]) indegree[j]++;
+        }
+    }
+
+    bool solve2(int v, vector<int>adj[]){
+        vector<int>ind(v,0);
+        Indegree(v, adj, ind);
+        queue<int>q;
+        for(int i = 0;i<v;i++)  
+            if(ind[i]==0) q.push(i);
+        while(!q.empty()){
+            int a = q.front();
+            for(auto i:adj[a]){
+                ind[i]--;
+                if(ind[i]==0) q.push(i);
+            }
+            q.pop();
+        }
+        for(auto i:ind) if(i!=0)return false;
+        return true;
+    }
+
+    bool solve(int i, vector<int>adj[], vector<int>&vis, vector<int>&pathVis,int v){
+
+        vis[i] = 1;
+        pathVis[i] = 1;
+        for(auto a:adj[i]){
+            if(vis[a]==1 && pathVis[a]==1)  return false;
+            if(vis[a]==0)
+                if(!solve(a,adj, vis, pathVis, v)) return false;
+        }
+        pathVis[i] = 0;
+        return true;
+       
+    }
+    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+        vector<int>adj[numCourses];
+        vector<int>vis(numCourses, 0), pathVis(numCourses, 0);
+        for(auto i:prerequisites)
+                adj[i[0]].push_back(i[1]);
+
+        // ------------------DFS APPROACH-------------------------
+        // for(int i = 0;i<numCourses;i++){
+        //     if(vis[i]==0)
+        //         if(!solve(i,adj, vis,pathVis, numCourses))
+        //             return false;            
+        // }
+        // return true;
+
+        // ---------------------BFS APPROACH-------------------------
+        return solve2(numCourses, adj);
+
+    }   
+};
+
