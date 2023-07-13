@@ -274,3 +274,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-un
 Problem Link - https://leetcode.com/problems/number-of-islands/
 137. Bipartite Graph - BFS -
 Problem Link - https://leetcode.com/problems/is-graph-bipartite/
+138. Bipartite Graph - DFS -
+Problem Link - https://leetcode.com/problems/is-graph-bipartite/
