@@ -270,3 +270,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/topological-sort/1
 Problem Link - https://leetcode.com/problems/course-schedule/\
 135. Detect Cycle in Undirected Graph - DFS -
 Problem Link - https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1
+136. Number of Islands -
+Problem Link - https://leetcode.com/problems/number-of-islands/
