@@ -278,3 +278,5 @@ Problem Link - https://leetcode.com/problems/is-graph-bipartite/
 Problem Link - https://leetcode.com/problems/is-graph-bipartite/
 139. Topological Sort - DFS -
 Problem Link - https://practice.geeksforgeeks.org/problems/topological-sort/1
+140. Detect Cycle in Undirected Graph - BFS -
+Problem Link - https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1
