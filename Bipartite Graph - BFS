@@ -20,32 +20,35 @@ Explanation: There is no way to partition the nodes into two independent sets su
 Solution - 
 class Solution {
 public:
-
+    // bool solveDFS(Int i, vector<vector<int>>&adj, vector<int>&vis){
+        
+    // }
     bool solveBFS(int i, vector<vector<int>>&adj, vector<int>&vis){
-        vector<int>clr(vis.size(), -1);
+        // vector<int>clr(vis.size(), -1);
         queue<pair<int, int>>q;
         q.push({i,1});
+        vis[i] = 1;
         while(!q.empty()){
             int node = q.front().first;
             int color = q.front().second;
             for(auto a:adj[node]){
-                if(vis[a]==1) if(clr[a]==color) return false;
-                if(vis[a]==0){
-                    clr[a] = 1-color;
-                    vis[a] = 1;
+                if(vis[a]!=-1) if(vis[a]==color) return false;
+                if(vis[a]==-1){
+                    // clr[a] = 1-color;
+                    vis[a] = 1-color;
                     q.push({a, 1-color});
                 }
             }
-            vis[node] = 1;
+            // vis[node] = 1;
             q.pop();
         }
         return true;
     }
 
     bool isBipartite(vector<vector<int>>& graph) {
-        vector<int>vis(graph.size(), 0);
+        vector<int>vis(graph.size(), -1);
         for(int i = 0;i<graph.size();i++)
-            if(vis[i]==0) if(!solveBFS(i,graph, vis)) return false;
+            if(vis[i]==-1) if(!solveBFS(i,graph, vis)) return false;
         return true;
     }
 };
