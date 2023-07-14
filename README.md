@@ -280,3 +280,5 @@ Problem Link - https://leetcode.com/problems/is-graph-bipartite/
 Problem Link - https://practice.geeksforgeeks.org/problems/topological-sort/1
 140. Detect Cycle in Undirected Graph - BFS -
 Problem Link - https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1
+141. All Root to Leaf Paths -
+Problem Link - https://www.codingninjas.com/studio/problems/all-root-to-leaf-paths-in-binary-tree._983599
