@@ -1,0 +1,65 @@
+Problem Statement - 
+Given a tree find all the root to leaf paths.
+
+Example - 
+Sample Input 1 :
+1
+5
+1 2 3 4 5 -1 -1 -1 -1 -1 -1
+Sample Output 1 :
+1 2 4
+1 2 5 
+1 3
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+#include <bits/stdc++.h> 
+/********************************************************************
+
+    Following is the Binary Tree node structure:
+
+    class BinaryTreeNode {
+        public :
+        T data;
+        BinaryTreeNode<T> *left;
+        BinaryTreeNode<T> *right;
+
+        BinaryTreeNode(T data) {
+            this -> data = data;
+            left = NULL;
+            right = NULL;
+        }
+    };
+    
+********************************************************************/
+void solve(BinaryTreeNode<int>*root, string v, vector<string>&ans){
+    if(!root->left && !root->right){
+        string s = to_string(root->data), s1 = " ";
+        v+=s+s1;
+        if(v.size()>0) 
+            ans.push_back(v);
+        return ;
+    }
+    string s = to_string(root->data), s1 = " ";
+    v+=s+s1;
+    // v+=s1;
+    if(root->left)
+        solve(root->left, v, ans);
+    if(root->right)
+        solve(root->right, v, ans);
+    v.pop_back();
+    return ;
+}
+vector < string > allRootToLeaf(BinaryTreeNode < int > * root) {
+    // Write your code here.
+    vector<string>ans;
+    string s = "";
+    solve(root, s, ans);
+    // for(auto i:ans)cout<<i<<endl;
+    // cout<<"Size-> "<<ans.size()<<endl;
+    return ans;
+
+
+}
+
