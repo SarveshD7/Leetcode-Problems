@@ -1,0 +1,57 @@
+Problem Statement - 
+Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in 
+T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+
+Example - 
+Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree
+According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that
+has both p and q as descendants (where we allow a node to be a descendant of itself).”
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    TreeNode* solve(TreeNode* root, TreeNode* p, TreeNode* q, TreeNode*&ans){
+        if(!root) return NULL;
+        if(root==p || root==q){
+            // cout<<root->val<<endl;
+            ans = root;
+            return root;
+        } 
+        TreeNode* a1 = NULL, *a2 = NULL;
+        a1 = solve(root->left, p, q, ans);
+        a2 = solve(root->right, p, q, ans);
+        // if(!a1 && root==p) a1 = p;
+        // if(!a1 && root==q) a1 = q;
+        // if(!a2 && root==p) a2 = p;
+        // if(!a2 && root==q) a2 = q;
+        // cout<<root->val<<endl;
+        if(a1) cout<<"a1 for root-> "<<root->val<<" - "<<a1->val<<endl;
+        if(a2) cout<<"a2 for root-> "<<root->val<<" - "<<a2->val<<endl;
+
+        if(!a1 && !a2) return NULL;
+        else if(a1 && a2){
+            cout<<root->val<<" "<<a1->val<<" "<<a2->val<<endl;
+            ans = root;
+            return ans;
+        }
+        else if(a1) return a1;
+        else return a2;
+    }
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        TreeNode* ans = NULL;
+        solve(root, p, q, ans);
+        return ans;
+    }
+};
