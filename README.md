@@ -282,3 +282,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/topological-sort/1
 Problem Link - https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1
 141. All Root to Leaf Paths -
 Problem Link - https://www.codingninjas.com/studio/problems/all-root-to-leaf-paths-in-binary-tree._983599
+142. Least Common Ancestor (LCA) of a Binary Tree -
+Problem Link - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
