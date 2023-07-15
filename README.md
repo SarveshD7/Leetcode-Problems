@@ -284,3 +284,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-un
 Problem Link - https://www.codingninjas.com/studio/problems/all-root-to-leaf-paths-in-binary-tree._983599
 142. Least Common Ancestor (LCA) of a Binary Tree -
 Problem Link - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+143. Least Common Ancestor (LCA) of a Binary Search Tree -
+Problem Link - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
