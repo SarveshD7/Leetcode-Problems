@@ -286,3 +286,5 @@ Problem Link - https://www.codingninjas.com/studio/problems/all-root-to-leaf-pat
 Problem Link - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
 143. Least Common Ancestor (LCA) of a Binary Search Tree -
 Problem Link - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
+144. All Tree Traversals together -
+Problem Link - https://www.codingninjas.com/studio/problems/981269
