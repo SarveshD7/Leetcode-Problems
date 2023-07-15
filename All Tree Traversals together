@@ -1,0 +1,34 @@
+Problem statement - 
+Find the Inorder, Preorder and Postorder Traversals of the given Binary Tree - 
+
+Example - 
+Sample Input 1 :
+2
+1 2 3 -1 -1 -1  6 -1 -1
+1 2 3 -1 -1 -1 -1
+Sample Output 1 :
+2 1 3 6 
+1 2 3 6 
+2 6 3 1
+2 1 3 
+1 2 3 
+2 3 1
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution -
+void solve(BinaryTreeNode<int> *root, vector<vector<int>>&ans){
+    if(!root) return ;
+    ans[1].push_back(root->data);
+    solve(root->left, ans);
+    ans[0].push_back(root->data);
+    solve(root->right, ans);
+    ans[2].push_back(root->data);
+    return ; 
+}
+vector<vector<int>> getTreeTraversal(BinaryTreeNode<int> *root){
+    // Write your code here.
+    vector<vector<int>>ans(3, vector<int>());
+    solve(root, ans);
+    return ans;
+}
