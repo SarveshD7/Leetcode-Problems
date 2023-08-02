@@ -290,3 +290,5 @@ Problem Link - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-
 Problem Link - https://www.codingninjas.com/studio/problems/981269
 145. Celebrity Problem -
 Problem Link - https://practice.geeksforgeeks.org/problems/the-celebrity-problem/1
+146. Search in Roatated Sorted Array -
+Problem Link - https://leetcode.com/problems/search-in-rotated-sorted-array/
