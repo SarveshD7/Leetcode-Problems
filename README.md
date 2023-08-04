@@ -302,3 +302,5 @@ Problem Link - https://leetcode.com/problems/can-place-flowers/
 Problem Link - https://leetcode.com/problems/reverse-vowels-of-a-string/
 151. Odd Even Linked List -
 Problem Link - https://leetcode.com/problems/odd-even-linked-list/
+152. Maximum Twin Sum of a Linked List -
+Problem Link - https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/
