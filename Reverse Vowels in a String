@@ -1,0 +1,30 @@
+Problem Statement - 
+Given a string s, reverse only all the vowels in the string and return it.
+The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both lower and upper cases, more than once.
+
+Example - 
+Input: s = "hello"
+Output: "holle"
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool isVowel(char x){
+        return (x=='a' || x=='e' || x=='i' || x=='o' || x=='u' || x=='A' || x=='E' || x=='I' || x=='O' || x=='U');
+    }
+    string reverseVowels(string s) {
+        int i = 0, j = s.size()-1;
+        while(i<j){
+            while(i<s.size() && !isVowel(s[i])) i++;
+            while(j>=0 && !isVowel(s[j])) j--;
+            if(i>j) break;
+            char temp = s[i];
+            s[i] = s[j];
+            s[j] = temp;
+            i++, j--;
+        }
+        return s;
+    }
+};
