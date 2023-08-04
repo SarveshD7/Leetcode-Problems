@@ -294,3 +294,5 @@ Problem Link - https://practice.geeksforgeeks.org/problems/the-celebrity-problem
 Problem Link - https://leetcode.com/problems/search-in-rotated-sorted-array/
 147. Maximum number of balloons -
 Problem Link - https://leetcode.com/problems/maximum-number-of-balloons/
+148. Greatest Common Divisor of Strings -
+Problem Link - https://leetcode.com/problems/greatest-common-divisor-of-strings/
