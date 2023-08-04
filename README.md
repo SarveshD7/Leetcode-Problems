@@ -296,3 +296,5 @@ Problem Link - https://leetcode.com/problems/search-in-rotated-sorted-array/
 Problem Link - https://leetcode.com/problems/maximum-number-of-balloons/
 148. Greatest Common Divisor of Strings -
 Problem Link - https://leetcode.com/problems/greatest-common-divisor-of-strings/
+149. Can Place Flowers -
+Problem Link - https://leetcode.com/problems/can-place-flowers/
