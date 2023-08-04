@@ -292,3 +292,5 @@ Problem Link - https://www.codingninjas.com/studio/problems/981269
 Problem Link - https://practice.geeksforgeeks.org/problems/the-celebrity-problem/1
 146. Search in Roatated Sorted Array -
 Problem Link - https://leetcode.com/problems/search-in-rotated-sorted-array/
+147. Maximum number of balloons -
+Problem Link - https://leetcode.com/problems/maximum-number-of-balloons/
