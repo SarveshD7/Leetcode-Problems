@@ -306,3 +306,5 @@ Problem Link - https://leetcode.com/problems/odd-even-linked-list/
 Problem Link - https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/
 153. Max Consecutive Ones - III -
 Problem Link - https://leetcode.com/problems/max-consecutive-ones-iii/
+154. Largest Subarray of 1s After Deleing One Element -
+Problem Link - https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/
