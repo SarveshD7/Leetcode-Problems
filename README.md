@@ -310,3 +310,5 @@ Problem Link - https://leetcode.com/problems/max-consecutive-ones-iii/
 Problem Link - https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/
 155. Find the Highest Altitude -
 Problem Link - https://leetcode.com/problems/find-the-highest-altitude/
+156. Find Pivot Index -
+Problem Link - https://leetcode.com/problems/find-pivot-index/
