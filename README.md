@@ -320,3 +320,5 @@ Problem Link - https://leetcode.com/problems/unique-number-of-occurrences/
 Problem Link - https://leetcode.com/problems/determine-if-two-strings-are-close/
 160. Equal Row and Column Pairs -
 Problem Link - https://leetcode.com/problems/equal-row-and-column-pairs/
+161. Removing Stars from a String -
+Problem Link - https://leetcode.com/problems/removing-stars-from-a-string/
