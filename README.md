@@ -318,3 +318,5 @@ Problem Link - https://leetcode.com/problems/find-the-difference-of-two-arrays/
 Problem Link - https://leetcode.com/problems/unique-number-of-occurrences/
 159. Determine if Two Strings are Equal -
 Problem Link - https://leetcode.com/problems/determine-if-two-strings-are-close/
+160. Equal Row and Column Pairs -
+Problem Link - https://leetcode.com/problems/equal-row-and-column-pairs/
