@@ -312,3 +312,5 @@ Problem Link - https://leetcode.com/problems/longest-subarray-of-1s-after-deleti
 Problem Link - https://leetcode.com/problems/find-the-highest-altitude/
 156. Find Pivot Index -
 Problem Link - https://leetcode.com/problems/find-pivot-index/
+157. Find the Difference of Two Arrays -
+Problem Link - https://leetcode.com/problems/find-the-difference-of-two-arrays/
