@@ -314,3 +314,5 @@ Problem Link - https://leetcode.com/problems/find-the-highest-altitude/
 Problem Link - https://leetcode.com/problems/find-pivot-index/
 157. Find the Difference of Two Arrays -
 Problem Link - https://leetcode.com/problems/find-the-difference-of-two-arrays/
+158. Unique Number of Occurrences -
+Problem Link - https://leetcode.com/problems/unique-number-of-occurrences/
