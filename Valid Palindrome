@@ -1,0 +1,29 @@
+Problem Statement - 
+A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward.
+Alphanumeric characters include letters and numbers.
+Given a string s, return true if it is a palindrome, or false otherwise.
+
+Example - 
+Example 1:
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool isPalindrome(string s) {
+        int st = 0, en = s.size()-1;
+        while(st<en){
+            while(st<s.size() && !isalpha(s[st]) && !isdigit(s[st])) st++;
+            while(en>=0 && !isalpha(s[en]) && !isdigit(s[en])) en--;
+            // cout<<s[st]<<" "<<s[en]<<endl;
+            if(st>=s.size() || en<0) return true;
+            if(tolower(s[st])!=tolower(s[en])) return false;
+            st++, en--;
+        }
+        return true;
+    }
+};
