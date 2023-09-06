@@ -330,3 +330,5 @@ Problem Link - https://leetcode.com/problems/leaf-similar-trees/
 Problem Link - https://leetcode.com/problems/count-good-nodes-in-binary-tree/
 165. Valid Palindrome -
 Problem Link - https://leetcode.com/problems/valid-palindrome/
+166. Split Linked List in Parts -
+Problem Link - https://leetcode.com/problems/split-linked-list-in-parts/
