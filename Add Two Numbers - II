@@ -1,0 +1,76 @@
+Problem Statement - 
+You are given two non-empty linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contains a single digit. 
+Add the two numbers and return the sum as a linked list.
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+Example - 
+Input: l1 = [7,2,4,3], l2 = [5,6,4]
+Output: [7,8,0,7]
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    void reverse(ListNode* &h){
+        ListNode* curr = h, *prev = NULL, *n=NULL;
+        while(curr){
+            n =  curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = n;
+        }
+        h = prev;
+    }
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        // reverse(l1);
+        // reverse(l2);
+        stack<int>x1, x2;
+        ListNode* temp = l1;
+        while(temp){
+            x1.push(temp->val);
+            temp=temp->next;
+        }
+        temp = l2;
+        while(temp){
+            x2.push(temp->val);
+            temp=temp->next;
+        }
+        int c = 0, t1,t2, add, val;
+        ListNode* tail = NULL;
+        while(!x1.empty() || !x2.empty()){
+            t1 = !x1.empty()?x1.top():0;
+            t2 = !x2.empty()?x2.top():0;
+            add = t1+t2+c;
+            val = add%10;
+            c = add/10;
+            ListNode* newN  = new ListNode(val);
+            if(tail==NULL) tail = newN;
+            else{
+                newN->next = tail;
+                tail = newN;
+            }
+            if(!x1.empty())
+            x1.pop();
+            if(!x2.empty())
+            x2.pop();
+        }
+        if(c>0){
+            ListNode* newN  = new ListNode(c);
+            newN->next = tail;
+            tail = newN;
+        }        
+
+        return tail;
+    }
+};
