@@ -338,3 +338,5 @@ Problem Link - https://leetcode.com/problems/add-two-numbers-ii/
 Problem Link - https://leetcode.com/problems/relative-ranks/
 169. Rotate Array -
 Problem Link - https://leetcode.com/problems/rotate-array/
+170. Minimum Moves to Capture the Queen -
+Problem Link - https://leetcode.com/problems/minimum-moves-to-capture-the-queen/
