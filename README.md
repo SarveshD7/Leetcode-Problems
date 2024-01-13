@@ -340,3 +340,5 @@ Problem Link - https://leetcode.com/problems/relative-ranks/
 Problem Link - https://leetcode.com/problems/rotate-array/
 170. Minimum Moves to Capture the Queen -
 Problem Link - https://leetcode.com/problems/minimum-moves-to-capture-the-queen/
+171. Path Sum III -
+Problem Link - https://leetcode.com/problems/path-sum-iii/description/?envType=study-plan-v2&envId=leetcode-75
