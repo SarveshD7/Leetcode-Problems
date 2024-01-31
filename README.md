@@ -346,3 +346,5 @@ Problem Link - https://leetcode.com/problems/path-sum-iii/description/?envType=s
 Problem Link - https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/description/?envType=study-plan-v2&envId=leetcode-75
 173. Remove Element -
 Problem Link - https://leetcode.com/problems/remove-element/description/?envType=study-plan-v2&envId=top-interview-150
+174. Two Sum -
+Problem Link - https://leetcode.com/problems/two-sum/
