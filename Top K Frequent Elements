@@ -1,0 +1,30 @@
+Problem Statement - 
+Given an integer array nums and an integer k, return the k most frequent elements.
+You may return the answer in any order.
+
+Example - 
+Input: nums = [1,1,1,2,2,3], k = 2
+Output: [1,2]
+
+---------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    vector<int> topKFrequent(vector<int>& nums, int k) {
+        vector<int>ans;
+        vector<vector<int>>v(nums.size()+1,vector<int>());
+        unordered_map<int ,int>m;
+        for(auto i:nums) m[i]++;
+        for(auto i:m){
+            // cout<<i.first<<" "<<i.second<<endl;
+            v[i.second].push_back(i.first);
+        }
+        for(int i = v.size()-1;i>=0 && ans.size()<k;i--){
+            if(!v[i].empty()){
+                for(auto j:v[i]) ans.push_back(j);  
+            } 
+        }
+        return ans;
+    }
+};
