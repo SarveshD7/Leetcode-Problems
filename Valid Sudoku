@@ -1,0 +1,83 @@
+Problem Statement - 
+Determine if a 9 x 9 Sudoku board is valid. 
+Only the filled cells need to be validated according to the following rules:
+Each row must contain the digits 1-9 without repetition.
+Each column must contain the digits 1-9 without repetition.
+Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+Note:
+A Sudoku board (partially filled) could be valid but is not necessarily solvable.
+Only the filled cells need to be validated according to the mentioned rules.
+
+Example - 
+Input: board = 
+[["5","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]]
+Output: true
+
+---------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool horizontal(vector<vector<char>>& board){
+        vector<int>v(10, 0);
+        for(int i = 0;i<9;i++){
+            for(int j = 0;j<9;j++){
+                // cout<<j[i]-'0'<<endl;
+                if(board[i][j]!='.'){
+                if(v[board[i][j]-'0']==0) v[board[i][j]-'0'] = 1;
+                else return false;
+                }
+            }
+            v = vector<int>(10, 0);
+        }
+        return true;
+    }
+    bool vertical(vector<vector<char>>& board){
+        vector<int>v(10, 0);
+        for(int i = 0;i<9;i++){
+            for(int j = 0;j<9;j++){
+                // cout<<j[i]-'0'<<endl;
+                if(board[j][i]!='.'){
+                if(v[board[j][i]-'0']==0) v[board[j][i]-'0'] = 1;
+                else return false;
+                }
+            }
+            v = vector<int>(10, 0);
+        }
+        return true;
+    }
+    bool grid(vector<vector<char>>& board){
+        vector<int>ids = {0,3, 6};
+        vector<int>v(10, 0);
+        for(int iId=0;iId<3;iId++){
+            int i = ids[iId];
+            for(int jId=0;jId<3;jId++){
+                int j = ids[jId];
+                for(int k = i;k<i+3;k++){
+                    for(int l = j;l<j+3;l++){
+                        // cout<<board[k][l]-'0'<<endl;
+                        if(board[k][l]!='.'){
+                        if(v[board[k][l]-'0']==0) v[board[k][l]-'0'] = 1;
+                        else return false;
+                        }
+                    }
+                }
+                v = vector<int>(10, 0);
+            }
+        }
+        return true;
+        
+    }
+    bool isValidSudoku(vector<vector<char>>& board) {
+        // cout<<vertical(board)<<" "<<horizontal(board)<<" "<<grid(board)<<endl;
+        return vertical(board) && horizontal(board) && grid(board);
+    }
+};
