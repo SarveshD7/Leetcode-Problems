@@ -17,31 +17,28 @@ Solution -
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
-        vector<vector<int>>ans;
-        set<vector<int>>res;
-        sort(nums.begin(), nums.end());
         int n = nums.size();
-        for(int i=0;i<n;i++){
-            int a = nums[i];
-            int start = i-1, end = i+1;
-            while(start>=0 && end<n){
-                int val = nums[start] + a + nums[end];
-                if(val>0)start--;
-                else if(val<0) end++;
+        set<vector<int>>s;
+        sort(nums.begin(), nums.end());
+        vector<vector<int>>ans;
+        vector<int>v(3,0);
+        int v1, v2, rem, rep=0, siz=0;
+        for(int i = 0;i<n;i++){
+            int j = i+1;
+            int k = n-1;
+            while(j<k){
+                if(nums[i]+nums[j]+nums[k]>0) k--;
+                else if(nums[i]+nums[j]+nums[k
+                ]<0) j++;
                 else{
-                    vector<int>v(3,0);
-                    v[0] = nums[start];
-                    v[1] = a;
-                    v[2] = nums[end];
-                    // ans.push_back(v);
-                    res.insert(v);
-                    start--, end++;
+                    v[0] = nums[i], v[1] = nums[j], v[2] = nums[k];
+                    s.insert(v);
+                    j++, k--;
                 }
             }
         }
-        // ans.erase(unique(ans.begin(), ans.end()), ans.end());
-        for(auto i:res)
-            ans.push_back(i);
+        // cout<<siz<<endl;
+        for(auto i:s)ans.push_back(i);
         return ans;
     }
 };
