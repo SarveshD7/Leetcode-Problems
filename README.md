@@ -356,3 +356,5 @@ Problem Link - https://leetcode.com/problems/valid-sudoku/
 Problem Link - https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 178. Ant on the Boundary -
 Problem Link - https://leetcode.com/problems/ant-on-the-boundary/
+179. Minimum Time to Revert Word to Initial State I -
+Problem Link - https://leetcode.com/problems/minimum-time-to-revert-word-to-initial-state-i/
