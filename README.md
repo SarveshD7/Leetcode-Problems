@@ -362,3 +362,5 @@ Problem Link - https://leetcode.com/problems/minimum-time-to-revert-word-to-init
 Problem Link - https://leetcode.com/problems/evaluate-reverse-polish-notation/
 181. Daily Temperature -
 Problem Link - https://leetcode.com/problems/daily-temperatures/
+182. First Letter to Appear Twice -
+Problem Link - https://leetcode.com/problems/first-letter-to-appear-twice/
