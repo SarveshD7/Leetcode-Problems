@@ -1,0 +1,21 @@
+Problem Statement - 
+You are given a string s and a character c. Return the total number of substrings of s that start and end with c.
+
+Example - 
+Input: s = "abada", c = "a"
+Output: 6
+Explanation: Substrings starting and ending with "a" are: "abada", "abada", "abada", "abada", "abada", "abada".
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    long long countSubstrings(string s, char c) {
+        long long int cnt = 0;
+        for(auto i:s)
+            if(i==c)
+                cnt++;
+        return (cnt)*(cnt-1)/2+cnt;
+    }
+}; 
