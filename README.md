@@ -368,3 +368,5 @@ Problem Link - https://leetcode.com/problems/first-letter-to-appear-twice/
 Problem Link - https://leetcode.com/problems/search-a-2d-matrix/
 184. Merge In Between Linked Lists -
 Problem Statement - https://leetcode.com/problems/merge-in-between-linked-lists/
+185. Counting Substrings Starting and Ending with the Same Character
+Problem Statement - https://leetcode.com/problems/count-substrings-starting-and-ending-with-given-character/
