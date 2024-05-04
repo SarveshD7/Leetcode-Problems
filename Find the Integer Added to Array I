@@ -1,0 +1,25 @@
+Problem Statement - 
+You are given two arrays of equal length, nums1 and nums2.
+Each element in nums1 has been increased (or decreased in the case of negative) by an integer, represented by the variable x.
+As a result, nums1 becomes equal to nums2. Two arrays are considered equal when they contain the same integers with the same frequencies.
+Return the integer x.
+
+Example -
+Input: nums1 = [2,6,4], nums2 = [9,7,5]
+Output: 3
+Explanation:
+The integer added to each element of nums1 is 3.
+
+Solution - 
+class Solution {
+public:
+    int findMin(vector<int>v){
+        int ans = INT_MAX;
+        for(auto i:v)
+            ans = min(ans, i);
+        return ans;
+    }
+    int addedInteger(vector<int>& nums1, vector<int>& nums2) {
+        return findMin(nums2) - findMin(nums1);
+    }
+};
