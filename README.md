@@ -367,8 +367,10 @@ Problem Link - https://leetcode.com/problems/first-letter-to-appear-twice/
 183. Search in 2D Matrix -
 Problem Link - https://leetcode.com/problems/search-a-2d-matrix/
 184. Merge In Between Linked Lists -
-Problem Statement - https://leetcode.com/problems/merge-in-between-linked-lists/
+Problem Link - https://leetcode.com/problems/merge-in-between-linked-lists/
 185. Counting Substrings Starting and Ending with the Same Character - 
-Problem Statement - https://leetcode.com/problems/count-substrings-starting-and-ending-with-given-character/
+Problem Link - https://leetcode.com/problems/count-substrings-starting-and-ending-with-given-character/
 186. Find the Integer Added to Array I - 
-Problem Statement - https://leetcode.com/problems/find-the-integer-added-to-array-i/
+Problem Link - https://leetcode.com/problems/find-the-integer-added-to-array-i/
+187. Zigzag Conversion -
+Problem Link - https://leetcode.com/problems/zigzag-conversion/
