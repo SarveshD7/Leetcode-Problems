@@ -1,0 +1,40 @@
+Problem Statement - 
+Given the root of a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
+
+Example - 
+Input: root = [1,2,3,null,5,null,4]
+Output: [1,3,4]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    void solve(TreeNode* root, int lev, int& thresh, vector<int>&ans){
+        if(!root){
+            thresh = max(thresh, lev-1);
+            return ;
+        }
+        if(lev>thresh) ans.push_back(root->val);
+        solve(root->right, lev+1, thresh, ans);
+        solve(root->left, lev+1, thresh, ans);
+        return ;
+    }
+    vector<int> rightSideView(TreeNode* root) {
+        vector<int>ans;
+        int lev=-1;
+        solve(root, 0, lev, ans);
+        return ans;
+    }
+};
