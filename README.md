@@ -378,3 +378,5 @@ Problem Link - https://leetcode.com/problems/zigzag-conversion/
 Problem Link - https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 189. Binary Tree Right Side View -
 Problem Link - https://leetcode.com/problems/binary-tree-right-side-view/
+190. Delete Node in a BST -
+Problem Link - https://leetcode.com/problems/delete-node-in-a-bst/
