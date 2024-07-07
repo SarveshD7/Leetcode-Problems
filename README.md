@@ -382,3 +382,5 @@ Problem Link - https://leetcode.com/problems/binary-tree-right-side-view/
 Problem Link - https://leetcode.com/problems/delete-node-in-a-bst/
 191. Number of Provinces -
 Problem Link - https://leetcode.com/problems/number-of-provinces/
+192. Generate Binary Strings Without Adjacent Zeros -
+Problem Link - https://leetcode.com/problems/generate-binary-strings-without-adjacent-zeros/
