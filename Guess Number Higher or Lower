@@ -1,0 +1,43 @@
+Problem Statement - 
+We are playing the Guess Game. The game is as follows:
+I pick a number from 1 to n. You have to guess which number I picked.
+Every time you guess wrong, I will tell you whether the number I picked is higher or lower than your guess.
+You call a pre-defined API int guess(int num), which returns three possible results:
+-1: Your guess is higher than the number I picked (i.e. num > pick).
+1: Your guess is lower than the number I picked (i.e. num < pick).
+0: your guess is equal to the number I picked (i.e. num == pick).
+Return the number that I picked.
+
+Example - 
+Input: n = 10, pick = 6
+Output: 6
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+/** 
+ * Forward declaration of guess API.
+ * @param  num   your guess
+ * @return 	     -1 if num is higher than the picked number
+ *			      1 if num is lower than the picked number
+ *               otherwise return 0
+ * int guess(int num);
+ */
+
+class Solution {
+public:
+    int solve(int start, int end){
+        if(start==end)return start;
+        else if(start>end) return -1;
+        else{
+            int mid = (end-start)/2+start;
+            int v = guess(mid);
+            if(v==0) return mid;
+            else if(v==-1) return solve(start, mid);
+            else return solve(mid+1, end);
+        }
+    }
+    int guessNumber(int n) {
+        return solve(1, n);
+    }
+};
