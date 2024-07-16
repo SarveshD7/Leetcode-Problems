@@ -386,3 +386,5 @@ Problem Link - https://leetcode.com/problems/number-of-provinces/
 Problem Link - https://leetcode.com/problems/generate-binary-strings-without-adjacent-zeros/
 193. Keys and Rooms -
 Problem Link - https://leetcode.com/problems/keys-and-rooms/
+194. Guess Number Higher or Lower -
+Problem Link - https://leetcode.com/problems/guess-number-higher-or-lower/
