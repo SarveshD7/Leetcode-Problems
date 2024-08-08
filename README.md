@@ -388,3 +388,5 @@ Problem Link - https://leetcode.com/problems/generate-binary-strings-without-adj
 Problem Link - https://leetcode.com/problems/keys-and-rooms/
 194. Guess Number Higher or Lower -
 Problem Link - https://leetcode.com/problems/guess-number-higher-or-lower/
+195. Shortest Distance After Road Addition Queries I -
+Problem Link - https://leetcode.com/problems/shortest-distance-after-road-addition-queries-i/
