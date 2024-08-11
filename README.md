@@ -390,3 +390,5 @@ Problem Link - https://leetcode.com/problems/keys-and-rooms/
 Problem Link - https://leetcode.com/problems/guess-number-higher-or-lower/
 195. Shortest Distance After Road Addition Queries I -
 Problem Link - https://leetcode.com/problems/shortest-distance-after-road-addition-queries-i/
+196. Count the Number of Good Nodes -
+Problem Link - https://leetcode.com/problems/count-the-number-of-good-nodes/
