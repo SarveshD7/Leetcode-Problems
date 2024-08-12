@@ -394,3 +394,5 @@ Problem Link - https://leetcode.com/problems/shortest-distance-after-road-additi
 Problem Link - https://leetcode.com/problems/count-the-number-of-good-nodes/
 197. Find the Number of Winning Players -
 Problem Link - https://leetcode.com/problems/find-the-number-of-winning-players/
+198. Minimum Number of Flips to Make Binary Grid Palindromic I -
+Problem Link - https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-grid-palindromic-i/
