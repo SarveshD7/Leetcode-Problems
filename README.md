@@ -392,3 +392,5 @@ Problem Link - https://leetcode.com/problems/guess-number-higher-or-lower/
 Problem Link - https://leetcode.com/problems/shortest-distance-after-road-addition-queries-i/
 196. Count the Number of Good Nodes -
 Problem Link - https://leetcode.com/problems/count-the-number-of-good-nodes/
+197. Find the Number of Winning Players -
+Problem Link - https://leetcode.com/problems/find-the-number-of-winning-players/
