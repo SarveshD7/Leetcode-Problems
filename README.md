@@ -396,3 +396,5 @@ Problem Link - https://leetcode.com/problems/count-the-number-of-good-nodes/
 Problem Link - https://leetcode.com/problems/find-the-number-of-winning-players/
 198. Minimum Number of Flips to Make Binary Grid Palindromic I -
 Problem Link - https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-grid-palindromic-i/
+199. Maximum Distance in Arrays -
+Problem Link - https://leetcode.com/problems/maximum-distance-in-arrays/
