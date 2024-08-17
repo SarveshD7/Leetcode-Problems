@@ -1,0 +1,37 @@
+Problem Statement - 
+You are given m arrays, where each array is sorted in ascending order.
+You can pick up two integers from two different arrays (each array picks one) and calculate the distance. We define the distance between two integers a and b to be their absolute difference |a - b|.
+Return the maximum distance.
+
+Example - 
+Input: arrays = [[1,2,3],[4,5],[1,2,3]]
+Output: 4
+Explanation: One way to reach the maximum distance 4 is to pick 1 in the first or third array and pick 5 in the second array.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int maxDistance(vector<vector<int>>& arrays) {
+     int max1=-100001, max2=-100001, min1=100001, min2=100001;
+     int max1id, max2id, min1id, min2id, ans = INT_MIN;
+        for(int i = 0;i<arrays.size();i++){
+            if(arrays[i][0]<=min1){
+                min2=min1, min2id=min1id;
+                min1 = arrays[i][0], min1id = i;
+            }
+            else if(arrays[i][0]<=min2) min2 = arrays[i][0], min2id = i;
+            if(arrays[i][arrays[i].size()-1]>=max1){
+                max2=max1, max2id=max1id;
+                max1 = arrays[i][arrays[i].size()-1], max1id = i;
+            }
+            else if(arrays[i][arrays[i].size()-1]>=max2) max2 = arrays[i][arrays[i].size()-1], max2id = i;
+        }
+        if(min1id!=max1id) ans = max(ans, abs(min1-max1));
+        if(min2id!=max2id) ans = max(ans, abs(min2-max2));
+        if(max1id!=min2id) ans = max(ans, abs(max1-min2));
+        if(max2id!=min1id) ans = max(ans, abs(max2-min1));
+        return ans;
+    }
+};
