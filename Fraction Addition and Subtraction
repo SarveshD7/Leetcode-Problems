@@ -1,0 +1,41 @@
+Problem Statement - 
+Given a string expression representing an expression of fraction addition and subtraction, return the calculation result in string format.
+The final result should be an irreducible fraction. If your final result is an integer, change it to the format of a fraction that has a denominator 1. So in this case, 2 should be converted to 2/1.
+
+Example - 
+Input: expression = "-1/2+1/2"
+Output: "0/1"
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    string fractionAddition(string e) {
+        int num, den, cnum, cden, fnum, fden=-1;
+        int i = 0, g;
+        bool minus = false;
+        while(i<e.size()){
+            if(e[i]=='-') minus = true, i++;
+            else if(i>0) i++;
+            if(e[i+1]!='/') cnum = 10, i++;
+            else cnum = e[i]-48;
+            if(i+3<e.size() && e[i+3]!='+' && e[i+3]!='-') cden = 10, i++;
+            else cden = e[i+2]-48;
+            if(minus) cnum*=-1, minus = false;
+            cout<<"Curr-> "<<i<<" "<<cnum<<" "<<cden<<endl;
+            if(fden==-1) fnum = cnum, fden = cden;
+            else{
+                num = fnum*cden+cnum*fden;
+                den = fden*cden;
+                fnum = num, fden = den;
+            }
+            cout<<i<<" "<<fnum<<" "<<fden<<endl;
+            i+=3;
+        }
+        g = gcd(fnum, fden);
+        fnum/=g, fden/=g;
+        string ans = to_string(fnum) + '/' + to_string(fden);
+        return ans;
+    }
+};
