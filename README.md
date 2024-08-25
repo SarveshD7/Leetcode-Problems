@@ -408,3 +408,5 @@ Problem Link - https://leetcode.com/problems/fraction-addition-and-subtraction/
 Problem Link - https://leetcode.com/problems/binary-tree-postorder-traversal/
 204. Roman to Integer -
 Problem Link - https://leetcode.com/problems/roman-to-integer/
+205. Search Insert Position -
+Problem Link - https://leetcode.com/problems/search-insert-position/
