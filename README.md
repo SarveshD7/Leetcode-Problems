@@ -414,3 +414,5 @@ Problem Link - https://leetcode.com/problems/search-insert-position/
 Problem Link - https://leetcode.com/problems/length-of-last-word/
 207. Plus One -
 Problem Link - https://leetcode.com/problems/plus-one/
+208. Add Binary -
+Problem Link - https://leetcode.com/problems/add-binary/
