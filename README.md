@@ -416,3 +416,5 @@ Problem Link - https://leetcode.com/problems/length-of-last-word/
 Problem Link - https://leetcode.com/problems/plus-one/
 208. Add Binary -
 Problem Link - https://leetcode.com/problems/add-binary/
+209. Final Array State After K Multiplication Operations I -
+Problem Link - https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/
