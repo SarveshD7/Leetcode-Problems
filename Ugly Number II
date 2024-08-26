@@ -1,0 +1,33 @@
+Problem Statement - 
+An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.
+Given an integer n, return the nth ugly number.
+
+Example - 
+Input: n = 10
+Output: 12
+Explanation: [1, 2, 3, 4, 5, 6, 8, 9, 10, 12] is the sequence of the first 10 ugly numbers.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+
+    int nthUglyNumber(int n) {
+        vector<long long>v1, v2, v3;
+        unordered_map<long long, int>m;
+        m[1]++;
+        long long id = 0,a =1, b=INT_MAX, i1=0, i2=0, i3=0,size =1;
+        while(size<n){
+            if(m.find(a*2)==m.end()) v1.push_back(a*2), m[a*2]=1;
+            if(m.find(a*3)==m.end()) v2.push_back(a*3), m[a*3]=1;
+            if(m.find(a*5)==m.end()) v3.push_back(a*5), m[a*5]=1;
+            if(v1[i1]<v2[i2] && v1[i1]<v3[i3]) a = v1[i1++];
+            else if(v2[i2]<v1[i1] && v2[i2]<v3[i3]) a = v2[i2++];
+            else if(v3[i3]<v1[i1] && v3[i3]<v2[i2]) a = v3[i3++];
+            // cout<<a<<endl;
+            size++;
+        }
+        return a;
+    }
+};
