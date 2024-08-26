@@ -418,3 +418,5 @@ Problem Link - https://leetcode.com/problems/plus-one/
 Problem Link - https://leetcode.com/problems/add-binary/
 209. Final Array State After K Multiplication Operations I -
 Problem Link - https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/
+210. Ugly Number II -
+Problem Link - https://leetcode.com/problems/ugly-number-ii/
