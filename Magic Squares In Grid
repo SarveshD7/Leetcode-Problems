@@ -1,0 +1,55 @@
+Problem Statement - 
+A 3 x 3 magic square is a 3 x 3 grid filled with distinct numbers from 1 to 9 such that each row, column, and both diagonals all have the same sum.
+Given a row x col grid of integers, how many 3 x 3 magic square subgrids are there?
+Note: while a magic square can only contain numbers from 1 to 9, grid may contain numbers up to 15.
+
+Example - 
+Input: grid = [[4,3,8,4],[9,5,1,9],[2,7,6,2]]
+Output: 1
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool chk(vector<vector<int>>grid, int row, int col){
+        vector<int>vis(10, -1);
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                if(grid[row+i][col+j]<1 || grid[row+i][col+j]>9 || vis[grid[row+i][col+j]]!=-1) return false;
+                else vis[grid[row+i][col+j]]=1;
+            }
+        }
+        return true;
+    }
+    bool isMagic(vector<vector<int>>&grid, int row, int col){
+        if(row+3>grid.size() || col+3>grid[0].size() || !chk(grid, row, col)) return false;
+        int rsum = 0, csum = 0, d1sum = 0, d2sum = 0, tr=0, tc=0;
+        for(int i = 0;i<3;i++){
+            rsum+=grid[row][col+i];
+            csum+=grid[row+i][col];
+            d1sum+=grid[row+i][col+i];
+            d2sum+=grid[row+2-i][col+i];
+        }
+        cout<<row<<" "<<col<<" "<<rsum<<" "<<csum<<" "<<d1sum<<" "<<d2sum<<endl;
+        if(!(d1sum==d2sum && d2sum==rsum && rsum==csum)) return false;
+        for(int i=0;i<3;i++){
+            tr=0, tc=0;
+            for(int j=0;j<3;j++){
+                tr+=grid[row+i][col+j];
+                tc+=grid[row+j][col+i];
+            }
+            if(tr!=rsum || tc!=csum) return false;
+        }
+        return true;
+    }
+    int numMagicSquaresInside(vector<vector<int>>& grid) {
+        int ans = 0;
+        for(int i = 0;i<grid.size();i++){
+            for(int j=0;j<grid[i].size();j++){
+                if(isMagic(grid, i, j)) ans++;
+            }
+        }
+        return ans;
+    }
+};
