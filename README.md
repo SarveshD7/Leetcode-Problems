@@ -420,3 +420,5 @@ Problem Link - https://leetcode.com/problems/add-binary/
 Problem Link - https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/
 210. Ugly Number II -
 Problem Link - https://leetcode.com/problems/ugly-number-ii/
+211. Magic Squares In Grid -
+Problem Link - https://leetcode.com/problems/magic-squares-in-grid/
