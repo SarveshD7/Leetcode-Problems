@@ -422,3 +422,5 @@ Problem Link - https://leetcode.com/problems/final-array-state-after-k-multiplic
 Problem Link - https://leetcode.com/problems/ugly-number-ii/
 211. Magic Squares In Grid -
 Problem Link - https://leetcode.com/problems/magic-squares-in-grid/
+212. Path with Maximum Probability -
+Problem Link - https://leetcode.com/problems/path-with-maximum-probability/
