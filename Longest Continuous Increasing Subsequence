@@ -15,19 +15,19 @@ Even though [1,3,5,7] is an increasing subsequence, it is not continuous as elem
 Solution - 
 class Solution {
 public:
-    int findLengthOfLCIS(vector<int>& nums) {
-        int i = 0;
-        int ans = 1, cnt = 1;
-        while(i<nums.size()-1){
-            if(nums[i+1]>nums[i]) cnt++;
-            else{
-                ans = max(ans, cnt);
-                cnt = 1;
+    int longestConsecutive(vector<int>& nums) {
+        int ans=0, i=0, cnt=0, val;
+        unordered_map<int, int>m;
+        for(auto j:nums) m[j]++;
+        while(i<nums.size()){
+            if(m.find(nums[i]-1)==m.end()){
+                cnt=1;
+                val=nums[i]+1;
+                while(m.find(val)!=m.end()) cnt++, val++;
+                ans=max(ans, cnt);
             }
-            // cout<<nums[i+1]<<" "<<nums[i]<<" "<<ans<<endl;
             i++;
         }
-        ans = max(cnt, ans);
         return ans;
     }
 };
