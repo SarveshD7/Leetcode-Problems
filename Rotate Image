@@ -12,33 +12,29 @@ Solution -
 class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
-        int n = matrix.size();
-        for(int i = 0;i<n;i++){
-            vector<int>v;
-            for(int j = n-1;j>=0;j--){
-                v.push_back(matrix[j][i]);
+        int m=matrix.size(), n=matrix[0].size(), temp, st, en;
+        for(int i=0;i<m;i++){
+            for(int j=i;j<n;j++){
+                // if(i==3 && j==4) cout<<"Before swapping-> "<<matrix[i][j]<<endl;
+                temp=matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i]=temp;
+                // if(i==3 && j==4) cout<<"After swapping-> "<<matrix[i][j]<<endl;
             }
-            matrix.push_back(v);
         }
-        matrix.erase(matrix.begin(), matrix.begin()+n);
-    }
-};
-------------O(1) Space Solution--------------------
-class Solution {
-public:
-    void rotate(vector<vector<int>>& matrix) {
-        int n = matrix.size();
-        for(int i = 0;i<n;i++){
-            // vector<int>v;
-            for(int j = i+1;j<n;j++){
-                // v.push_back(matrix[j][i]);
-                swap(matrix[i][j], matrix[j][i]);
+        // for(auto i:matrix){
+        //     for(auto j:i) cout<<j<<" ";
+        //     cout<<endl;
+        // }
+        for(int i=0;i<m;i++){
+            st=0, en=n-1;
+            while(st<en){
+                temp=matrix[i][st];
+                matrix[i][st]=matrix[i][en];
+                matrix[i][en]=temp;
+                st++, en--;
             }
-            // matrix.push_back(v);
         }
-        // matrix.erase(matrix.begin(), matrix.begin()+n);
-        for(int i = 0;i<n;i++){
-            reverse(matrix[i].begin(), matrix[i].end());
-        }
+        return ;
     }
 };
