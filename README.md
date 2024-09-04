@@ -438,3 +438,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/leaders-in-an-array-158711
 Problem Link - https://leetcode.com/problems/sum-of-digits-of-string-after-convert/
 219. Walking Robot Simulation -
 Problem Link - https://leetcode.com/problems/walking-robot-simulation/
+220. 2 Sum -
+Problem Link - https://leetcode.com/problems/two-sum/
