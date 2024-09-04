@@ -440,3 +440,5 @@ Problem Link - https://leetcode.com/problems/sum-of-digits-of-string-after-conve
 Problem Link - https://leetcode.com/problems/walking-robot-simulation/
 220. 2 Sum -
 Problem Link - https://leetcode.com/problems/two-sum/
+221. Fruit Into Baskets -
+Problem Link - https://www.geeksforgeeks.org/problems/fruit-into-baskets-1663137462/1
