@@ -1,0 +1,32 @@
+Problem Statement - 
+You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
+Return the length of the longest substring containing the same letter you can get after performing the above operations.
+
+Example - 
+Input: s = "ABAB", k = 2
+Output: 4
+Explanation: Replace the two 'A's with two 'B's or vice versa.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution -
+class Solution {
+public:
+    int findMaxFreq(vector<int>v){
+        int ans=INT_MIN;
+        for(auto i:v) ans=max(ans, i);
+        return ans;
+    }
+    int characterReplacement(string s, int k) {
+        int st=0, en=0, ans=0, f;
+        vector<int>v(27, 0);
+        while(en<s.size()){
+            v[s[en++]-'A']++;
+            f=findMaxFreq(v);
+            while((en-st-f)>k) v[s[st++]-'A']--;
+            ans=max(ans, en-st);
+        }
+        return ans;
+    }
+};
+
