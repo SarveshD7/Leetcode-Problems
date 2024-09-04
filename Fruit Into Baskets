@@ -1,0 +1,33 @@
+Problem Statement - 
+You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array of arr[], where arr[i]  is the type of fruit the ith tree produces.
+You want to collect as much fruit as possible. However, the owner has some strict rules that you must follow :
+You only have two baskets, and each basket can only hold a single type of fruit. There is no limit on the amount of fruit each basket can hold.
+Starting from any tree of your choice, you must pick exactly one fruit from every tree (including the start tree) while moving to the right. The picked fruits must fit in one of the baskets.
+Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
+Given the integer array of fruits, return the maximum number of fruits you can pick.
+
+Example - 
+Input: arr[]= [2, 1, 2]
+Output: 3
+Explanation: We can pick one fruit from all three trees. Please note that the type of fruits is same in the 1st and 3rd baskets.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+  public:
+    int totalFruits(vector<int> &arr) {
+        unordered_map<int, int>s;
+        int st=0, ans=0, e=0;
+        while(e<arr.size()){
+            s[arr[e++]]++;
+            while(st<e && s.size()>2){ 
+                s[arr[st]]--;
+                if(s[arr[st]]==0) s.erase(arr[st]);
+                st++;
+            }
+            ans=max(ans, e-st);   
+        }
+        return ans;
+    }
+};
