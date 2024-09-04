@@ -442,3 +442,5 @@ Problem Link - https://leetcode.com/problems/walking-robot-simulation/
 Problem Link - https://leetcode.com/problems/two-sum/
 221. Fruit Into Baskets -
 Problem Link - https://www.geeksforgeeks.org/problems/fruit-into-baskets-1663137462/1
+222. Longest Repeating Character Replacement -
+Problem Link - https://leetcode.com/problems/longest-repeating-character-replacement/
