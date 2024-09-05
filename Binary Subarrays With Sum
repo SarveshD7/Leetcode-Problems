@@ -1,0 +1,41 @@
+Problem Statement - 
+Given a binary array nums and an integer goal, return the number of non-empty subarrays with a sum goal.
+A subarray is a contiguous part of the array.
+
+Example - 
+Input: nums = [1,0,1,0,1], goal = 2
+Output: 4
+Explanation: The 4 subarrays are bolded and underlined below:
+[1,0,1,0,1]
+[1,0,1,0,1]
+[1,0,1,0,1]
+[1,0,1,0,1]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Soluton - 
+class Solution {
+public:
+    int numSubarraysWithSum(vector<int>& nums, int goal) {
+        
+        int s=0, e=0, ans=0, st=0, zeros=0;
+        unordered_map<int, int>m;
+        while(e<nums.size()){
+            s+=nums[e];
+            if(s==goal){ 
+                ans++;
+                // cout<<"Here1-> "<<e<<" "<<s<<endl;
+            }
+            if(m.find(s-goal)!=m.end()){
+                ans+=m[s-goal];`
+                // cout<<"Here2-> "<<e<<" "<<s<<" "<<m[s-goal]<<endl;
+            }
+            m[s]++;
+            e++;
+        }       
+
+        // Two pointer approach to be solved
+        
+        return ans;
+    }
+};
