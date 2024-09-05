@@ -446,3 +446,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/fruit-into-baskets-1663137
 Problem Link - https://leetcode.com/problems/longest-repeating-character-replacement/
 223. Count Number of Nice Subarrays -
 Problem Link - https://leetcode.com/problems/count-number-of-nice-subarrays/
+224. Binary Subarrays With Sum -
+Problem Link - https://leetcode.com/problems/binary-subarrays-with-sum/
