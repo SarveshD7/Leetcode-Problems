@@ -1,0 +1,40 @@
+Problem Statement - 
+Given an array of integers nums and an integer k. A continuous subarray is called nice if there are k odd numbers on it.
+Return the number of nice sub-arrays.
+
+Example - 
+Input: nums = [1,1,2,1,1], k = 3
+Output: 2
+Explanation: The only sub-arrays with 3 odd numbers are [1,1,2,1] and [1,2,1,1].
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int numberOfSubarrays(vector<int>& nums, int k) {
+        int s=0, e=0, ans=0, cnt=0, firstEvens=0;
+        while(e<nums.size()){
+            if(nums[e]%2!=0){
+                cnt++;
+            }else{
+                if(firstEvens==e)
+                    firstEvens++;
+            }
+            if(cnt>k){
+            firstEvens=0;
+            while(cnt>k){
+                if(nums[s]%2!=0) cnt--;
+                // else firstEvens--;
+                s++;
+            }
+            while(s<e && nums[s]%2==0) firstEvens++, s++;
+        }
+            if(cnt==k)
+                ans+=firstEvens+1;
+            // cout<<cnt<<" "<<ans<<endl;
+            e++;
+        }
+        return ans;
+    }
+};
