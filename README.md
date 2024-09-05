@@ -444,3 +444,5 @@ Problem Link - https://leetcode.com/problems/two-sum/
 Problem Link - https://www.geeksforgeeks.org/problems/fruit-into-baskets-1663137462/1
 222. Longest Repeating Character Replacement -
 Problem Link - https://leetcode.com/problems/longest-repeating-character-replacement/
+223. Count Number of Nice Subarrays -
+Problem Link - https://leetcode.com/problems/count-number-of-nice-subarrays/
