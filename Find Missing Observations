@@ -22,6 +22,7 @@ public:
         vector<int>v;
         for(auto i:rolls) s+=i;
         rsum=(mean*(rolls.size()+n))-s;
+        if(rsum<n || rsum>6*n) return {};
         while(rsum>0 && n>0){
             if(rsum-mx>=n-1) rsum-=mx, v.push_back(mx), n--;
             else mx=rsum-n+1;
@@ -29,4 +30,5 @@ public:
         if(rsum>0) return {};
         return v;
     }
+};
 };
