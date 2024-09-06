@@ -452,3 +452,5 @@ Problem Link - https://leetcode.com/problems/binary-subarrays-with-sum/
 Problem Link - https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/
 226. Find Missing Observations -
 Problem Link - https://leetcode.com/problems/find-missing-observations/
+227. Find the Student that Will Replace the Chalk -
+Problem Link - https://leetcode.com/problems/find-the-student-that-will-replace-the-chalk/
