@@ -26,9 +26,7 @@ public:
             if(rsum-mx>=n-1) rsum-=mx, v.push_back(mx), n--;
             else mx=rsum-n+1;
         }
-        if(rsum>0){ 
-            while(!v.empty()) v.pop_back();
-        }
+        if(rsum>0) return {};
         return v;
     }
 };
