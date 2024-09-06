@@ -450,3 +450,5 @@ Problem Link - https://leetcode.com/problems/count-number-of-nice-subarrays/
 Problem Link - https://leetcode.com/problems/binary-subarrays-with-sum/
 225. Delete Nodes From Linked List Present in Array -
 Problem Link - https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/
+226. Find Missing Observations -
+Problem Link - https://leetcode.com/problems/find-missing-observations/
