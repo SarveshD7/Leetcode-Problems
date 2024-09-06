@@ -448,3 +448,5 @@ Problem Link - https://leetcode.com/problems/longest-repeating-character-replace
 Problem Link - https://leetcode.com/problems/count-number-of-nice-subarrays/
 224. Binary Subarrays With Sum -
 Problem Link - https://leetcode.com/problems/binary-subarrays-with-sum/
+225. Delete Nodes From Linked List Present in Array -
+Problem Link - https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/
