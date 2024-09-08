@@ -464,3 +464,5 @@ Problem Link - https://leetcode.com/problems/linked-list-in-binary-tree/
 Problem Link - https://leetcode.com/problems/count-and-say/
 232. Subarray with given XOR -
 Problem Link - https://www.interviewbit.com/problems/subarray-with-given-xor/
+233. Missing And Repeating -
+Problem Link - https://www.geeksforgeeks.org/problems/find-missing-and-repeating2512/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=find-missing-and-repeating
