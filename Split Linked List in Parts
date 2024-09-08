@@ -25,49 +25,28 @@ Solution -
  */
 class Solution {
 public:
-    int len(ListNode* head){
-        int l = 0;
-        ListNode* temp = head;
-        while(temp){
-            l++;
-            temp = temp->next;
-        }
-        return l;
-    }
     vector<ListNode*> splitListToParts(ListNode* head, int k) {
-        int l = len(head);
-        vector<ListNode* > ans;
-        ListNode* temp = head;
-        if(k>=l){
-
-            while(temp){
-                ListNode* n = temp->next;
-                temp->next = NULL;
-                ans.push_back(temp);
-                temp = n;
-                k--;   
-            }
-            while(k){
-                ans.push_back(NULL);
-                k--;
-            }
+        vector<ListNode*>ans;
+        ListNode* t=head, *t1=NULL, *nxt=NULL;
+        int siz=0,s,cnt=0,rem;
+        while(t){
+            siz++;
+            t=t->next;
         }
-        else{
-            int rem = l%k;
-            int div = l/k;
-            while(temp){
-                ListNode* curHead = temp;
-                for(int i =0;i<div-1;i++) temp = temp->next;
-                if(rem>0){
-                    temp = temp->next;
-                    rem--;
-                }
-                ListNode* n = temp->next;
-                temp->next = NULL;
-                ans.push_back(curHead);
-                temp = n;
-            }
+        s=1, rem=0;
+        if(siz>k) s=siz/k, rem=siz%k;      
+        t=head;
+        while(t){
+            t1=t;
+            cnt=0;
+            while(t && cnt<s-1) cnt++, t=t->next;
+            if(rem>0) t=t->next, rem--;
+            nxt=t->next;
+            t->next=NULL;
+            ans.push_back(t1);
+            t=nxt;
         }
+        while(ans.size()<k) ans.push_back({});
         return ans;
     }
 };
