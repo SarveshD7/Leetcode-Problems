@@ -466,3 +466,5 @@ Problem Link - https://leetcode.com/problems/count-and-say/
 Problem Link - https://www.interviewbit.com/problems/subarray-with-given-xor/
 233. Missing And Repeating -
 Problem Link - https://www.geeksforgeeks.org/problems/find-missing-and-repeating2512/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=find-missing-and-repeating
+234. Count Inversions -
+Problem Link - https://www.geeksforgeeks.org/problems/inversion-of-array-1587115620/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=inversion-of-array
