@@ -462,3 +462,5 @@ Problem Link - https://leetcode.com/problems/minimum-add-to-make-parentheses-val
 Problem Link - https://leetcode.com/problems/linked-list-in-binary-tree/
 231. Count and Say -
 Problem Link - https://leetcode.com/problems/count-and-say/
+232. Subarray with given XOR -
+Problem Link - https://www.interviewbit.com/problems/subarray-with-given-xor/
