@@ -458,3 +458,5 @@ Problem Link - https://leetcode.com/problems/find-the-student-that-will-replace-
 Problem Link - https://leetcode.com/problems/convert-1d-array-into-2d-array/
 229. Minimum Add to Make Parentheses Valid -
 Problem Link - https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/
+230. Linked List in Binary Tree -
+Problem Link - https://leetcode.com/problems/linked-list-in-binary-tree/
