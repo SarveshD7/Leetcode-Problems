@@ -488,3 +488,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/floor-in-a-sorted-array-15
 Problem Link - https://www.geeksforgeeks.org/problems/ceil-the-floor2802/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=ceil-the-floor
 274. Ceil and Floor in Sorted Array -
 Problem Link - https://www.naukri.com/code360/problems/ceiling-in-a-sorted-array_1825401?leftPanelTabValue=PROBLEM
+275. Find First and Last Position of Element in Sorted Array -
+Problem Link - https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
