@@ -1,0 +1,28 @@
+Problem Statement - 
+Given an unsorted array arr[] of integers and an integer x, find the floor and ceiling of x in arr[].
+Floor of x is the largest element which is smaller than or equal to x. Floor of x doesn’t exist if x is smaller than smallest element of arr[].
+Ceil of x is the smallest element which is greater than or equal to x. Ceil of x doesn’t exist if x is greater than greatest element of arr[].
+Return an array of integers denoting the [floor, ceil]. Return -1 for floor or ceiling if the floor or ceiling is not present.
+
+Example - 
+Input: x = 7 , arr[] = [5, 6, 8, 9, 6, 5, 5, 6]
+Output: 6, 8
+Explanation: Floor of 7 is 6 and ceil of 7 is 8.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+  public:
+    vector<int> getFloorAndCeil(int x, vector<int> &nums) {
+        int l=0, r=nums.size()-1, m, flr=INT_MIN, cl=INT_MAX;
+        for(auto i:nums){
+            if(i==x) return {i, i};
+            else if(i>x) cl=min(cl, i);
+            else flr=max(flr, i);
+        }
+        flr=flr!=INT_MIN?flr:-1;
+        cl=cl!=INT_MAX?cl:-1;
+        return {flr, cl};
+    }
+};
