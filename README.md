@@ -472,3 +472,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/inversion-of-array-1587115
 Problem Link - https://leetcode.com/problems/reverse-pairs/
 236. Spiral Matrix IV -
 Problem Link - https://leetcode.com/problems/spiral-matrix-iv/
+267. Longest Sub-Array with Sum K -
+Problem Link - https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=longest-sub-array-with-sum-k
