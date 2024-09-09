@@ -486,3 +486,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/merge-sort/1?utm_source=yo
 Problem Link - https://www.geeksforgeeks.org/problems/floor-in-a-sorted-array-1587115620/1?track=DSASP-Searching&amp%253BbatchId=154&utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=floor-in-a-sorted-array
 273. Ceil The Floor -
 Problem Link - https://www.geeksforgeeks.org/problems/ceil-the-floor2802/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=ceil-the-floor
+274. Ceil and Floor in Sorted Array -
+Problem Link - https://www.naukri.com/code360/problems/ceiling-in-a-sorted-array_1825401?leftPanelTabValue=PROBLEM
