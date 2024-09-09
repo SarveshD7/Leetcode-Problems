@@ -1,0 +1,29 @@
+Problem Statement - 
+Given an array arr containing n integers and an integer k. Your task is to find the length of the longest Sub-Array with the sum of the elements equal to the given value k.
+
+Example -
+Input : n = 6, arr[] = {10, 5, 2, 7, 1, 9}, k = 15
+Output : 4
+Explanation: The sub-array is {5, 2, 7, 1}.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution{
+    public:
+    int lenOfLongSubarr(int A[],  int N, int K) 
+    { 
+        // Complete the function
+        unordered_map<int, int>m;
+        int i=0, ans=0, s=0, e=0;
+        while(e<N){
+            s+=A[e];
+            if(s==K)  ans=max(ans, e+1); // cout<<"h1 "<<e<<" "<<s<<" "<<ans<<endl,
+            if(m.find(s-K)!=m.end())  ans=max(ans, e-m[s-K]); //, cout<<" "<<ans<<endl; //, cout<<"h2 "<<e<<" "<<s<<" "<<s-K<<" "<<m[s-K]<<" "<<ans,
+            if(m.find(s)==m.end()) m[s]=e;
+            e++;
+        }
+        return ans;
+    } 
+
+};
