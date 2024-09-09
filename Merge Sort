@@ -1,0 +1,44 @@
+Problem Statement - 
+Given an array arr[], its starting position l and its ending position r. Sort the array using merge sort algorithm
+
+Example - 
+Input:
+N = 5
+arr[] = {4 1 3 9 7}
+Output:
+1 3 4 7 9
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution
+{
+    public:
+    void merge(int arr[], int l, int m, int r)
+    {
+         // Your code here
+         int i=l, a=l, b=m+1, id=0;
+         vector<int>v;
+         while(a<=m && b<=r){
+             if(arr[b]<arr[a]) v.push_back(arr[b++]);
+             else v.push_back(arr[a++]);
+         }
+         while(a<=m) v.push_back(arr[a++]);
+         while(b<=r) v.push_back(arr[b++]);
+         i=l, id=0;
+         while(id<v.size())
+             arr[i++]=v[id++];
+         return ;
+    }
+    public:
+    void mergeSort(int arr[], int l, int r)
+    {
+        //code here
+        if(l>=r) return ;
+        int m=(r-l)/2+l;
+        mergeSort(arr, l, m);
+        mergeSort(arr, m+1, r);
+        merge(arr, l, m, r);
+        return ;
+    }
+};
