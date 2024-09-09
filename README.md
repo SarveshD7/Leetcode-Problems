@@ -492,3 +492,5 @@ Problem Link - https://www.naukri.com/code360/problems/ceiling-in-a-sorted-array
 Problem Link - https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 276. Number of occurrence -
 Problem Link - https://www.geeksforgeeks.org/problems/number-of-occurrence2259/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=number-of-occurrence
+277. Search in Rotated Sorted Array II -
+Problem Link - https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
