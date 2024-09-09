@@ -1,0 +1,41 @@
+Problem Statement - 
+Given array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. 
+If target exists, then return its index. Otherwise, return -1.
+You must write an algorithm with O(log n) runtime complexity.
+
+Example - 
+Input: nums = [-1,0,3,5,9,12], target = 9
+Output: 4
+Explanation: 9 exists in nums and its index is 4
+
+------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int recursiveBinarySearch(vector<int>&nums, int l, int r, int target){
+        if(l>r) return -1;
+        if(l==r && nums[l]==target)return l;
+        int m=(r-l)/2+l;
+        if(nums[m]==target) return m;
+        else if(nums[m]>target) return recursiveBinarySearch(nums, l, m-1, target);
+        return recursiveBinarySearch(nums, m+1, r, target);
+    }
+    int iterativeBinarySearch(vector<int>& nums, int target){
+        int l=0, r=nums.size()-1;
+        int m=(r-l)/2+l;
+        while(l<r){
+            m=(r-l)/2+l;
+            if(nums[m]==target) return m;
+            else if(nums[m]>target) r=m-1;
+            else l=m+1;
+        }
+        if(l==r && nums[l]==target) return l;
+        return -1;
+    }
+    int search(vector<int>& nums, int target) {
+        // return recursiveBinarySearch(nums, 0, nums.size()-1, target);
+        return iterativeBinarySearch(nums, target);
+
+    }
+};
