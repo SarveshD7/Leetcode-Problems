@@ -470,3 +470,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/find-missing-and-repeating
 Problem Link - https://www.geeksforgeeks.org/problems/inversion-of-array-1587115620/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=inversion-of-array
 235. Reverse Pairs -
 Problem Link - https://leetcode.com/problems/reverse-pairs/
+236. Spiral Matrix IV -
+Problem Link - https://leetcode.com/problems/spiral-matrix-iv/
