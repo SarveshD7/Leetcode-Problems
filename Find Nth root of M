@@ -1,0 +1,30 @@
+Problem Statement - 
+You are given 2 numbers (n , m); the task is to find n√m (nth root of m).
+
+Example - 
+Input: n = 2, m = 9
+Output: 3
+Explanation: 32 = 9
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution{
+	public:
+	int NthRoot(int n, int m)
+	{
+        long long int l=1, r=m/n+1,md, ans=1, v=1, mx=INT_MAX;
+        while(l<=r){
+            md=(r-l)/2+l;
+            
+            v=1;
+            for(int i=0;i<n;i++) v=min((v*md), mx);
+            // cout<<l<<" "<<md<<" "<<r<<" "<<v<<endl;
+            if(v==m){
+                return md;
+            }else if(v>m) r=md-1; 
+            else l=md+1;
+        }
+        return -1;
+	}  
+};
