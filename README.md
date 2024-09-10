@@ -503,4 +503,6 @@ Problem Link - https://www.geeksforgeeks.org/problems/square-root/0?utm_source=y
 282. Find Nth root of M -
 Problem Link - https://www.geeksforgeeks.org/problems/find-nth-root-of-m5843/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=find-nth-root-of-m
 283. Koko Eating Bananas -
-Problem Link -https://leetcode.com/problems/koko-eating-bananas/
+Problem Link - https://leetcode.com/problems/koko-eating-bananas/
+284. Minimum Number of Days to Make m Bouquets -
+Problem Link - https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/
