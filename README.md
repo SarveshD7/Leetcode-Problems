@@ -497,4 +497,6 @@ Problem Link - https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
 278. Insert Greatest Common Divisor in Linked List -
 Problem Link - https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list/
 279. Find Kth Rotation -
-Problem Link - https://www.geeksforgeeks.org/problems/rotation4723/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=rotation
+Problem Link - https://www.geeksforgeeks.org/problems/rotation4723/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=rotation4 
+281. Square root of a number -
+Problem Link - https://www.geeksforgeeks.org/problems/square-root/0?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=square-root
