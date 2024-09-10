@@ -508,3 +508,5 @@ Problem Link - https://leetcode.com/problems/koko-eating-bananas/
 Problem Link - https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/
 285. Find the Smallest Divisor Given a Threshold -
 Problem Link - https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/
+286. Capacity To Ship Packages Within D Days -
+Problem Link - https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
