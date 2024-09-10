@@ -496,3 +496,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/number-of-occurrence2259/1
 Problem Link - https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
 278. Insert Greatest Common Divisor in Linked List -
 Problem Link - https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list/
+279. Find Kth Rotation -
+Problem Link - https://www.geeksforgeeks.org/problems/rotation4723/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=rotation
