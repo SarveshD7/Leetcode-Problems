@@ -506,3 +506,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/find-nth-root-of-m5843/1?u
 Problem Link - https://leetcode.com/problems/koko-eating-bananas/
 284. Minimum Number of Days to Make m Bouquets -
 Problem Link - https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/
+285. Find the Smallest Divisor Given a Threshold -
+Problem Link - https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/
