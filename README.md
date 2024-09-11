@@ -512,3 +512,5 @@ Problem Link - https://leetcode.com/problems/find-the-smallest-divisor-given-a-t
 Problem Link - https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
 287. Minimum Bit Flips to Convert Number -
 Problem Link - https://leetcode.com/problems/minimum-bit-flips-to-convert-number/
+288. Aggressive Cows -
+Problem Link - https://www.spoj.com/problems/AGGRCOW/
