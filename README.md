@@ -510,3 +510,5 @@ Problem Link - https://leetcode.com/problems/minimum-number-of-days-to-make-m-bo
 Problem Link - https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/
 286. Capacity To Ship Packages Within D Days -
 Problem Link - https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
+287. Minimum Bit Flips to Convert Number -
+Problem Link - https://leetcode.com/problems/minimum-bit-flips-to-convert-number/
