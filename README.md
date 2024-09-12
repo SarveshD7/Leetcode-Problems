@@ -520,3 +520,5 @@ Problem Link - https://www.naukri.com/code360/problems/allocate-books_1090540?ut
 Problem Link - https://leetcode.com/problems/count-the-number-of-consistent-strings/
 291. Remove Outermost Parentheses -
 Problem Link - https://leetcode.com/problems/remove-outermost-parentheses/
+292. Largest Odd Number in String -
+Problem Link - https://leetcode.com/problems/largest-odd-number-in-string/
