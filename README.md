@@ -514,3 +514,5 @@ Problem Link - https://leetcode.com/problems/capacity-to-ship-packages-within-d-
 Problem Link - https://leetcode.com/problems/minimum-bit-flips-to-convert-number/
 288. Aggressive Cows -
 Problem Link - https://www.spoj.com/problems/AGGRCOW/
+289. Allocate Books -
+Problem Link - https://www.naukri.com/code360/problems/allocate-books_1090540?utm_source=youtube&utm_medium=affiliate&utm_campaign=codestudio_Striver_BinarySeries&leftPanelTabValue=PROBLEM
