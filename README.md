@@ -516,3 +516,5 @@ Problem Link - https://leetcode.com/problems/minimum-bit-flips-to-convert-number
 Problem Link - https://www.spoj.com/problems/AGGRCOW/
 289. Allocate Books -
 Problem Link - https://www.naukri.com/code360/problems/allocate-books_1090540?utm_source=youtube&utm_medium=affiliate&utm_campaign=codestudio_Striver_BinarySeries&leftPanelTabValue=PROBLEM
+290. Count the Number of Consistent Strings -
+Problem Link - https://leetcode.com/problems/count-the-number-of-consistent-strings/
