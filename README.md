@@ -522,3 +522,5 @@ Problem Link - https://leetcode.com/problems/count-the-number-of-consistent-stri
 Problem Link - https://leetcode.com/problems/remove-outermost-parentheses/
 292. Largest Odd Number in String -
 Problem Link - https://leetcode.com/problems/largest-odd-number-in-string/
+293. Isomorphic Strings -
+Problem Link - https://leetcode.com/problems/isomorphic-strings/
