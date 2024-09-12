@@ -9,35 +9,26 @@ Example -
 Input: s = "the sky is blue"
 Output: "blue is sky the"
 
-------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
 class Solution {
 public:
     string reverseWords(string s) {
-        string res = "", temp = "", space = " ";
-        int i = 0, prev = 0;
-        while(i<s.size()){
-            if(s[i]==' '){
-                cout<<i<<" "<<temp<<endl;
-                if(temp!=" " && temp!=""){
-                if(res=="") res+=temp;
-                else res = temp + space + res;
-                }
-                temp = "";
+        int i=0, n=s.size();
+        string t="", ans="";
+        while(i<n && s[i]==' ')i++;
+        while(i<n){
+            if(s[i]!=' ') t+=s[i];
+            else if(t!=""){ 
+                if(ans.empty()) ans=t+ans;
+                else t+=" ", ans=t+ans;
+                t="";
             }
-            else temp+=s[i];
             i++;
         }
-        if(temp!="" && temp!=" "){
-            if(res=="") res+=temp;
-            else
-                res = temp + space + res;
-        }
-        i = 0;
-        while(i<res.size() && res[i]==' ') i++;
-        res = res.substr(i, res.size()-i);
-        
-        return res;
+        if(ans=="") return t;
+        if(t!="") t+=" ", ans=t+ans;
+        return ans;
     }
 };
