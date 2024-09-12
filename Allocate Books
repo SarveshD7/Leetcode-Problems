@@ -1,0 +1,44 @@
+Problem Statement - 
+Given an array ‘arr’ of integer numbers, ‘arr[i]’ represents the number of pages in the ‘i-th’ book.
+There are ‘m’ number of students, and the task is to allocate all the books to the students.
+Allocate books in such a way that:
+1. Each student gets at least one book.
+2. Each book should be allocated to only one student.
+3. Book allocation should be in a contiguous manner.
+You have to allocate the book to ‘m’ students such that the maximum number of pages assigned to a student is minimum.
+If the allocation of books is not possible, return -1.
+
+Example - 
+Input: ‘n’ = 4 ‘m’ = 2 
+‘arr’ = [12, 34, 67, 90]
+Output: 113
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+int findPages(vector<int>& arr, int n, int m) {
+    // Write your code here.
+    // binay seach from mx to sum
+    if(m>n) return -1;
+    int l, r, md, ans, cnt, cnt2, sm=0, mx=INT_MIN, i;
+    for(auto i:arr) sm+=i, mx=max(mx, i);
+    ans=sm;
+    l=mx, r=sm;
+    while(l<=r){
+        md=(r-l)/2+l;
+        cnt=cnt2=i=0;
+        cnt2=md, cnt=0;
+        while(i<n){
+            while(i<n && cnt2>=arr[i]) cnt2-=arr[i++];
+            cnt++;
+            cnt2=md;
+            if(i<n && cnt2<arr[i]){ 
+                cnt=INT_MAX;
+                break;
+            }
+        }
+        if(cnt>m)  l=md+1;
+        else r=md-1, ans=min(ans, md);
+    }
+    return ans;
+}
