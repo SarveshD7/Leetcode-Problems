@@ -11,29 +11,21 @@ Output: "fl"
 Solution - 
 class Solution {
 public:
-int min(int a, int b){
-    if(a<=b) return a;
-    return b;
-}
     string longestCommonPrefix(vector<string>& strs) {
-        string res = "";
-        int siz = INT_MAX;
-        for(auto i:strs)
-            siz = min(siz, i.size());
-        for(int i = 0;i<siz;i++){
-            char x = strs[0][i];
-            bool flag = true;
+        // if(strs.size()==1) return strs[0];
+        int id=-1, i=0, n=INT_MAX;
+        char chk;
+        for(auto i:strs) n=min(n, (int)i.size());
+        while(i<n){
+            chk='*';
             for(auto j:strs){
-                if(j[i]!=x)
-                {
-                    flag = false;
-                    break;
-                }
-
+                if(chk=='*') chk=j[i];
+                else if(j[i]!=chk) return strs[0].substr(0, id+1);
             }
-            if(flag) res+=x;
-            else break;
+            id=i;
+            i++;
         }
-        return res;
+        if(id==-1) return "";
+        return strs[0].substr(0, id+1);
     }
 };
