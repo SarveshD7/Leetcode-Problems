@@ -526,3 +526,5 @@ Problem Link - https://leetcode.com/problems/largest-odd-number-in-string/
 Problem Link - https://leetcode.com/problems/isomorphic-strings/
 294. XOR Queries of a Subarray -
 Problem Link - https://leetcode.com/problems/xor-queries-of-a-subarray/
+295. Delete Node in a Linked List -
+Problem Link - https://leetcode.com/problems/delete-node-in-a-linked-list/
