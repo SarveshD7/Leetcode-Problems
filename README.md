@@ -528,3 +528,5 @@ Problem Link - https://leetcode.com/problems/isomorphic-strings/
 Problem Link - https://leetcode.com/problems/xor-queries-of-a-subarray/
 295. Delete Node in a Linked List -
 Problem Link - https://leetcode.com/problems/delete-node-in-a-linked-list/
+296. Doubly linked list Insertion at given position -
+Problem Link - https://www.geeksforgeeks.org/problems/insert-a-node-in-doubly-linked-list/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=insert-a-node-in-doubly-linked-list
