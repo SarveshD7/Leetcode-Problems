@@ -13,41 +13,17 @@ Explanation: There is a cycle in the linked list, where tail connects to the sec
 ------------------------------------------------------------------------------------------------------------
 
 Solution - 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
-        ListNode* slow= head;
-    ListNode* fast= head;
-    ListNode* inters;
-        if(head==NULL)
-            return NULL;
-        if(head->next==NULL)
-            return NULL;
-    do{
-        slow=slow->next;
-        fast=fast->next->next;
-    }while(fast!=NULL && fast->next!=NULL && slow!=fast);
-                // cout<<fast->val<<" "<<slow->val<<endl;
-    if(fast==NULL || fast->next==NULL)
-    return NULL;
-    else {
-    inters=fast;
-    slow=head;
-    while(slow!=inters){
-        slow=slow->next;
-        inters=inters->next;
-    }
-                // cout<<inters->val<<" "<<slow->val<<endl;
-    ListNode* start=inters;
-        return start;
-    }
+        ListNode* s=head, *f=head;
+        if(!head || !f->next) return NULL;
+        do{
+            s=s->next, f=f->next->next;
+        }while(s && f && f->next && f!=s);
+        if(s!=f) return NULL;
+        s=head;
+        while(s!=f) s=s->next, f=f->next;
+        return s;
     }
 };
