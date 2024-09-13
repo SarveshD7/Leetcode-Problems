@@ -524,3 +524,5 @@ Problem Link - https://leetcode.com/problems/remove-outermost-parentheses/
 Problem Link - https://leetcode.com/problems/largest-odd-number-in-string/
 293. Isomorphic Strings -
 Problem Link - https://leetcode.com/problems/isomorphic-strings/
+294. XOR Queries of a Subarray -
+Problem Link - https://leetcode.com/problems/xor-queries-of-a-subarray/
