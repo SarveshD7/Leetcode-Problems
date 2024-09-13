@@ -1,0 +1,42 @@
+Problem Statement - 
+Given a doubly-linked list, a position p, and an integer x. The task is to add a new node with value x at the position just after pth node in the doubly linked list.
+
+Example - 
+Input:
+LinkedList: 2<->4<->5
+p = 2, x = 6 
+Output: 2 4 5 6
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+/* a Node of the doubly linked list 
+struct Node
+{
+  int data;
+  struct Node *next;
+  struct Node *prev;
+  Node(int x) { data = x; next = prev = NULL; }
+}; */
+
+//Function to insert a new node at given position in doubly linked list.
+void addNode(Node *head, int pos, int data)
+{
+   // Your code here
+   int p=0, i=0;
+   Node* t=head, *nw=NULL, *nxt=NULL;
+   while(t){
+       if(pos==p){
+           nxt=t->next;
+           nw=new Node(data);
+           t->next=nw;
+           nw->prev=t;
+           nw->next=nxt;
+           if(nxt) nxt->prev=nw;
+           return ;
+       }
+    //   cout<<t->data<<endl;
+       t=t->next;
+       p++;
+   }  
+}
