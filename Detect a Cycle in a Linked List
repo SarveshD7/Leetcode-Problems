@@ -12,23 +12,14 @@ Explanation: There is a cycle in the linked list, where the tail connects to the
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        ListNode* slow = head, *fast = head;
-        if(!fast || !fast->next || !slow) return false;
+        ListNode* slow=head, *fast=head;
+        if(!head || !fast->next) return false;
         do{
-            slow = slow->next;
-            fast = fast->next->next;
+            slow=slow->next, fast=fast->next->next;
         }while(fast && fast->next && slow && fast!=slow);
-        return (fast == slow);
+        return slow==fast;
     }
 };
