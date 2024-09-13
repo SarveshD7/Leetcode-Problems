@@ -530,3 +530,5 @@ Problem Link - https://leetcode.com/problems/xor-queries-of-a-subarray/
 Problem Link - https://leetcode.com/problems/delete-node-in-a-linked-list/
 296. Doubly linked list Insertion at given position -
 Problem Link - https://www.geeksforgeeks.org/problems/insert-a-node-in-doubly-linked-list/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=insert-a-node-in-doubly-linked-list
+297. Delete node in Doubly Linked List -
+Problem Link - https://www.geeksforgeeks.org/problems/delete-node-in-doubly-linked-list/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=delete-node-in-doubly-linked-list
