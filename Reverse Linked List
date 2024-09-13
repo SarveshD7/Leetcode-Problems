@@ -8,44 +8,28 @@ Output: [5,4,3,2,1]
 ---------------------------------------------------------------------------------------------
 
 Solution - 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
 class Solution {
 public:
-    
-    void reverse(ListNode* &head, ListNode* curr, ListNode* prev){
-        
-        ListNode* t1;
-        if(curr==NULL)
-        {
+    void reverseLL(ListNode* &head, ListNode* &curr, ListNode* &prev){
+        if(!curr){ 
             head=prev;
             return ;
-        }     
-        else{
-            t1=curr->next;
-            curr->next=prev;
-            prev=curr;
-            curr=t1;
-            reverse(head,curr,prev);
-            
-            // t1=curr;
-            // reverse(head,curr->next,curr);
-            // curr->next=prev;
         }
+        ListNode* nxt=curr->next;
+        reverseLL(head, curr->next, curr);
+        curr->next=prev;
+        if(nxt) nxt->next=curr;
+        return ;
     }
-    
-    ListNode* reverseList(ListNode* head) {        
-      ListNode* curr=head;
-    ListNode* prev=NULL;
-    reverse(head,curr,prev);        
+    ListNode* reverseList(ListNode* head) {
+        ListNode* curr=head, *prev=NULL, *nxt=NULL;
+        // reverseLL(head, curr, prev);
+        while(curr){
+            nxt=curr->next;
+            curr->next=prev;
+            prev=curr,curr=nxt;
+        }
+        head=prev;
         return head;
     }
 };
