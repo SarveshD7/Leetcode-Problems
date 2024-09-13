@@ -1,0 +1,24 @@
+Problem Statement - 
+Given the head of a linked list, determine whether the list contains a loop. If a loop is present, return the number of nodes in the loop, otherwise return 0.
+
+Example - 
+Input: LinkedList: 25->14->19->33->10->21->39->90->58->45, c = 4
+Output: 7
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    ListNode *detectCycle(ListNode *head) {
+        ListNode* s=head, *f=head;
+        if(!head || !f->next) return NULL;
+        do{
+            s=s->next, f=f->next->next;
+        }while(s && f && f->next && f!=s);
+        if(s!=f) return NULL;
+        s=head;
+        while(s!=f) s=s->next, f=f->next;
+        return s;
+    }
+};
