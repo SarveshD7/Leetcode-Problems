@@ -1,0 +1,35 @@
+Problem Statement - 
+Given a linked list where nodes can contain values 0s, 1s, and 2s only. 
+The task is to segregate 0s, 1s, and 2s linked list such that all zeros segregate to the head side, 2s at the end of the linked list, and 1s in the middle of 0s and 2s.
+
+Example - 
+Input: LinkedList: 1->2->2->1->2->0->2->2
+Output: 0->1->1->2->2->2->2->2
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+  public:
+    // Function to sort a linked list of 0s, 1s and 2s.
+    Node* segregate(Node* head) {
+
+        // Add code here
+        int z=0, o=0, t=0;
+        Node* tm=head;
+        while(tm){
+            if(tm->data==0) z++;
+            else if(tm->data==1) o++;
+            else t++;
+            tm=tm->next;
+        }
+        tm=head;
+        while(tm){
+            if(z>0) tm->data=0, z--;
+            else if(o>0) tm->data=1, o--;
+            else tm->data=2, t--;
+            tm=tm->next;
+        }
+        return head;
+    }
+};
