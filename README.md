@@ -536,3 +536,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/delete-node-in-doubly-link
 Problem Link - https://www.geeksforgeeks.org/problems/find-length-of-loop/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=find-length-of-loop
 299. Longest Subarray With Maximum Bitwise AND -
 Problem Link - https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/
+300. Remove Nth Node From End of List -
+Problem Link - https://leetcode.com/problems/remove-nth-node-from-end-of-list/
