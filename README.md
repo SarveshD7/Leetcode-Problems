@@ -546,3 +546,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/given-a-linked-list-of-0s-
 Problem Link - https://www.geeksforgeeks.org/problems/add-1-to-a-number-represented-as-linked-list/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=add-1-to-a-number-represented-as-linked-list
 304. Find the Longest Substring Containing Vowels in Even Counts -
 Problem Link - https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/
+305. Delete all occurrences of a given key in a doubly linked list -
+Problem Link - https://www.geeksforgeeks.org/problems/delete-all-occurrences-of-a-given-key-in-a-doubly-linked-list/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=delete-all-occurrences-of-a-given-key-in-a-doubly-linked-list
