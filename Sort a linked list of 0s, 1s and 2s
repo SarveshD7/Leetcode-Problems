@@ -9,27 +9,36 @@ Output: 0->1->1->2->2->2->2->2
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
+****************POINTERS HANDLING METHOD******************
 class Solution {
   public:
     // Function to sort a linked list of 0s, 1s and 2s.
     Node* segregate(Node* head) {
-
+        if(!head || !head->next) return head;
         // Add code here
-        int z=0, o=0, t=0;
-        Node* tm=head;
-        while(tm){
-            if(tm->data==0) z++;
-            else if(tm->data==1) o++;
-            else t++;
-            tm=tm->next;
+        Node* o=NULL, *z=NULL, *t=NULL, *temp=head, *nxt=NULL, *zh=NULL, *oh=NULL, *th=NULL, *ans=NULL;
+        while(temp){
+            nxt=temp->next;
+            if(temp->next) temp->next=NULL;
+            if(temp->data==0){
+                if(!z) z=temp, zh=z;
+                else z->next=temp, z=temp;
+                
+            }else if(temp->data==1){
+                if(!o) o=temp, oh=o;
+                else o->next=temp, o=temp;
+                
+            }else if(temp->data==2){
+                if(!t) t=temp, th=t;
+                else t->next=temp, t=temp;
+                
+            }
+            temp=nxt;
         }
-        tm=head;
-        while(tm){
-            if(z>0) tm->data=0, z--;
-            else if(o>0) tm->data=1, o--;
-            else tm->data=2, t--;
-            tm=tm->next;
-        }
-        return head;
+        if(zh && oh) z->next=oh, o->next=th;
+        else if(!oh && zh) z->next=th;
+        else if(!zh && oh) o->next=th, zh=oh;
+        else return th;
+        return zh;
     }
 };
