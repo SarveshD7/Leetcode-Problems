@@ -548,3 +548,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/add-1-to-a-number-represen
 Problem Link - https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/
 305. Delete all occurrences of a given key in a doubly linked list -
 Problem Link - https://www.geeksforgeeks.org/problems/delete-all-occurrences-of-a-given-key-in-a-doubly-linked-list/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=delete-all-occurrences-of-a-given-key-in-a-doubly-linked-list
+306. Remove duplicates from a sorted doubly linked list -
+Problem Link - https://www.geeksforgeeks.org/problems/remove-duplicates-from-a-sorted-doubly-linked-list/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=remove-duplicates-from-a-sorted-doubly-linked-list
