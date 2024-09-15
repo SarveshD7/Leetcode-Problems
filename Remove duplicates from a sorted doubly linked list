@@ -1,0 +1,30 @@
+Problem Statement -
+Given a doubly linked list of n nodes sorted by values, the task is to remove duplicate nodes present in the linked list.
+
+Example - 
+Input:
+n = 6
+1<->1<->1<->2<->3<->4
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution
+{
+public:
+  Node * removeDuplicates(struct Node *head)
+    {
+        // Your code here
+        Node* t=head, *n=NULL, *p=NULL, *n2=NULL;
+        while(t){
+            n=t->next, p=t->prev;
+            if(n && n->data==t->data){
+                n2=n->next;
+                t->next=n2;
+                if(n2) n2->prev=t;
+                n->prev=NULL, n->next=NULL;
+            }else t=t->next;
+        }
+        return head;
+    }
+};
