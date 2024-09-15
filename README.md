@@ -544,3 +544,5 @@ Problem Link - https://leetcode.com/problems/sort-list/
 Problem Link - https://www.geeksforgeeks.org/problems/given-a-linked-list-of-0s-1s-and-2s-sort-it/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=given-a-linked-list-of-0s-1s-and-2s-sort-it
 303. Add 1 to a Linked List Number -
 Problem Link - https://www.geeksforgeeks.org/problems/add-1-to-a-number-represented-as-linked-list/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=add-1-to-a-number-represented-as-linked-list
+304. Find the Longest Substring Containing Vowels in Even Counts -
+Problem Link - https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/
