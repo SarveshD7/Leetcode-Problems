@@ -5,42 +5,24 @@ Example -
 Input: head = [1,2,3,4,5], k = 2
 Output: [4,5,1,2,3]
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
 class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
         if(!head || !head->next) return head;
-        vector<int>v;
-        ListNode* temp = head;
-        int len = 0;
-        while(temp){
-            v.push_back(temp->val);
-            temp = temp->next;
-            len++;
-        }
-        // cout<<v[0]<<endl;
-       temp = head;
-        int i = 0;
-        k%=len;
-        k = (len - k)%len;
-        // if(k<0) k+=len;
-        while(temp){
-            temp->val = v[(i+k)%len];
-            // cout<<(i+k)%len<<endl;
-            i++;
-            temp = temp->next;
+        ListNode* t=head, *nxt=NULL, *tl=NULL;
+        int s=0;
+        while(t) s++, tl=t, t=t->next;
+        k=s-k%s-1;
+        t=head;
+        while(k>0) t=t->next, k--;
+        nxt=t->next;
+        if(nxt){
+            tl->next=head;
+            head=nxt;
+            t->next=NULL;
         }
         return head;
     }
