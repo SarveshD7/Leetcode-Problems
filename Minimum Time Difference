@@ -1,0 +1,23 @@
+Problem Statement - 
+Given a list of 24-hour clock time points in "HH:MM" format, return the minimum minutes difference between any two time-points in the list.
+
+Example - 
+Input: timePoints = ["23:59","00:00"]
+Output: 1
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int findMinDifference(vector<string>& timePoints) {
+        priority_queue<int>pq;
+        int ans=INT_MAX, m1, m2, mx;
+        for(auto i:timePoints) pq.push(60*(stoi(i.substr(0,2)))+stoi(i.substr(3,2)));
+        mx=m1=pq.top();
+        pq.pop();
+        while(!pq.empty()) m2=pq.top(), ans=min(ans, m1-m2), ans=min(ans, 60*23+60-m1+m2), m1=m2, pq.pop();
+        ans=min(ans, mx-m2) ,ans=min(ans, 60*23+60-mx+m2);
+        return ans;
+    }
+};
