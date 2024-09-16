@@ -7,17 +7,19 @@ Output: 1
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Solution - 
 class Solution {
 public:
     int findMinDifference(vector<string>& timePoints) {
-        priority_queue<int>pq;
-        int ans=INT_MAX, m1, m2, mx;
-        for(auto i:timePoints) pq.push(60*(stoi(i.substr(0,2)))+stoi(i.substr(3,2)));
-        mx=m1=pq.top();
-        pq.pop();
-        while(!pq.empty()) m2=pq.top(), ans=min(ans, m1-m2), ans=min(ans, 60*23+60-m1+m2), m1=m2, pq.pop();
-        ans=min(ans, mx-m2) ,ans=min(ans, 60*23+60-mx+m2);
+        vector<int>v;
+        int ans=INT_MAX, m1, m2, mn, i=1;
+        for(auto i:timePoints) v.push_back(60*(stoi(i.substr(0,2)))+stoi(i.substr(3,2))); 
+        sort(v.begin(), v.end());
+        mn=m1=v[0]; 
+        while(i<v.size()){
+            ans=min(ans, v[i]-m1) ,ans=min(ans, 60*23+60-v[i]+m1);
+            m1=v[i++];
+        }
+        ans=min(ans, v[v.size()-1]-mn) ,ans=min(ans, 60*23+60-v[v.size()-1]+mn);
         return ans;
     }
 };
