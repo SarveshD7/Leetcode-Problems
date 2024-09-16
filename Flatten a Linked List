@@ -27,62 +27,29 @@ node in a single level.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
-void InsertSorted(Node* &root,int k){
-    Node* n = new Node(k);
-    if(root->data>k){
-        n->bottom = root;
-        root=n;
-        return;
-    }
-    else{
-        
-        Node * t=root;
-        Node * end=NULL;
-        while(t->bottom!=NULL)
-        t=t->bottom;
-        end=t;
-        t=root;
-        while(t!=NULL && t->bottom!=NULL && t->bottom->data<k){
-            t=t->bottom;
-        }
-        if(t->bottom!=NULL){
-            
-            Node* temp=t->bottom;
-            t->bottom=n;
-            n->bottom=temp;
-            return;
-        }
-        else{
-            end->bottom= n;
-            return; 
-            
-        }
-       
-    }
-}
-Node *flatten(Node *root)
-{
-       Node* t=root->next;
-       Node* p=root;
-       Node* de=NULL;
-       while(t!=NULL){
-           Node * a=t;
-           while(a->bottom!=NULL){
-               de= a->bottom;
-               a->bottom= de->bottom;
-                de->bottom=NULL;
-               InsertSorted(root,de->data);
-            //   a=a->bottom;
-           }
-           de=t;
-           Node * temp=t->next;
-           root->next=root->next->next;
-            t->next=NULL;
-           InsertSorted(root,de->data);
-           t=temp;
-           
-       }
-       return root;
-       
-}
 
+class Solution {
+  public:
+    // Function which returns the  root of the flattened linked list.
+    Node *flatten(Node *root) {
+        Node* t=root->next, *n=NULL, *b=NULL, *p=NULL, *h=root, *n2=NULL, *t1=NULL, *tb=NULL;
+        root->next=NULL;
+        while(t){
+            n=t->next;
+            b=t;
+            while(b){
+                h=root, p=NULL;
+                tb=b->bottom;
+                while(h && h->data<b->data) p=h, h=h->bottom;
+                if(h && h==root)  n2=h->bottom, b->bottom=h, root=b;
+                else n2=p->bottom, p->bottom=b, b->bottom=n2;
+                
+                // cout<<p->data<<" "<<b->data<<endl;
+                b=tb;
+            }
+            t->next=NULL, t->bottom;
+            t=n;
+        }
+        return root;
+    }
+};
