@@ -8,6 +8,27 @@ Output: 1 3 4 7 9
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
+---------------------------------- RECURSIVE ---------------------------------
+class Solution {
+  public:
+    // Function to sort the array using bubble sort algorithm.
+    void solve(int nums[], int i, int n){
+        if(i>=n) return ;
+        int j=n-1;
+        while(j>i){
+            if(nums[j-1]>nums[j]) nums[j-1]^=nums[j], nums[j]^=nums[j-1], nums[j-1]^=nums[j];
+            j--;
+        }
+        solve(nums, i+1, n);
+        return ;
+    }
+    void bubbleSort(int arr[], int n) {
+        // Your code here
+        solve(arr, 0, n);
+        return ;
+    }
+};
+---------------------------------- ITERATIVE ---------------------------------
 class Solution {
   public:
     // Function to sort the array using bubble sort algorithm.
