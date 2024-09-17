@@ -558,3 +558,6 @@ Problem Link - https://leetcode.com/problems/minimum-time-difference/
 Problem Link - https://www.geeksforgeeks.org/problems/bit-manipulation-1666686020/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=bit-manipulation
 310. Uncommon Words from Two Sentences -
 Problem Link - https://leetcode.com/problems/uncommon-words-from-two-sentences/
+311. Power of Two -
+Problem Link - https://leetcode.com/problems/power-of-two/
+Problem Link - https://leetcode.com/problems/uncommon-words-from-two-sentences/
