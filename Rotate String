@@ -1,0 +1,31 @@
+Problem Statement - 
+Given two strings s and goal, return true if and only if s can become goal after some number of shifts on s.
+A shift on s consists of moving the leftmost character of s to the rightmost position.
+
+Example - 
+Input: s = "abcde", goal = "cdeab"
+Output: true
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool rotateString(string s, string goal) {
+        if(s==goal) return true;
+        if(goal.size()!=s.size()) return false;
+        unordered_set<string>s1, s2;
+        int n=s.size();
+        string t="", t1="";
+        for(int i=0;i<s.size();i++) t+=s[i], t1=s[n-i-1]+t1, s1.insert(t), s2.insert(t1); //, cout<<t<<" "<<t1<<endl;
+        t="", t1="";
+        for(int i=0;i<s.size();i++){ 
+            t+=goal[i], t1=goal[n-i-1]+t1; //, cout<<t<<" "<<t1<<endl;;
+            if(s2.find(t)!=s2.end()){
+                if(s1.find(goal.substr(i+1, n-i-1))!=s1.end()) return true;
+                else return false;
+            }
+        }
+        return false;
+    }
+};
