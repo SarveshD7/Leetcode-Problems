@@ -560,4 +560,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/bit-manipulation-166668602
 Problem Link - https://leetcode.com/problems/uncommon-words-from-two-sentences/
 311. Power of Two -
 Problem Link - https://leetcode.com/problems/power-of-two/
-Problem Link - https://leetcode.com/problems/uncommon-words-from-two-sentences/
+312. Rotate String -
+Problem Link - https://leetcode.com/problems/rotate-string/
