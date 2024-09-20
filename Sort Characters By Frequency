@@ -1,0 +1,37 @@
+Problem Statement - 
+Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.
+Return the sorted string. If there are multiple answers, return any of them.
+
+Example - 
+Input: s = "tree"
+Output: "eert"
+Explanation: 'e' appears twice while 'r' and 't' both appear once.
+So 'e' must appear before both 'r' and 't'. Therefore "eetr" is also a valid answer.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    static bool cmp(const pair<int, int>&p1, const pair<int, int>&p2){
+        if(p1.second==p2.second) return p1.first<p2.first;
+        return p1.second>p2.second;
+    }
+    string frequencySort(string s) {
+        vector<int>v(75, 0);
+        vector<pair<int, int>>p(75, pair<int, int>(2, INT_MIN));
+        for(auto i:s) v[i-'0']++;
+        for(int i=0;i<75;i++){
+            if(v[i]!=0) p[i].first=i, p[i].second=v[i];
+        }
+        s="";
+        sort(p.begin(), p.end(), cmp);
+        string s1;
+        char x;
+        for(auto i:p){ 
+            if(i.second!=INT_MIN) s1.assign(i.second, i.first+'0'), s+=s1;
+        }
+        return s;
+    }
+};
