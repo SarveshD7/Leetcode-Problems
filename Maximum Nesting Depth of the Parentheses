@@ -1,0 +1,22 @@
+Problem Statement - 
+Given a valid parentheses string s, return the nesting depth of s. The nesting depth is the maximum number of nested parentheses.
+
+Example - 
+Input: s = "(1+(2*3)+((8)/4))+1"
+Output: 3
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int maxDepth(string s) {
+        int open=0, close=0, ans=INT_MIN;
+        for(auto i:s){
+            if(i=='(') open++;
+            else if(i==')') open--;
+            ans=max(ans, open);
+        }
+        return ans;
+    }
+};
