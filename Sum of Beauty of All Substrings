@@ -1,0 +1,32 @@
+Problem Statement - 
+The beauty of a string is the difference in frequencies between the most frequent and least frequent characters.
+For example, the beauty of "abaacc" is 3 - 1 = 2.
+Given a string s, return the sum of beauty of all of its substrings.
+
+Example - 
+Input: s = "aabcb"
+Output: 5
+Explanation: The substrings with non-zero beauty are ["aab","aabc","aabcb","abcb","bcb"], each with beauty equal to 1.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int solve(vector<int>&v){
+        int mn=INT_MAX, mx=INT_MIN;
+        for(int i=0;i<27;i++) if(v[i]!=0) mx=max(mx, v[i]), mn=min(mn, v[i]);
+        return mx-mn;
+    }
+    int beautySum(string s) {
+        vector<int>v(27, 0);
+        int i=0, j, ans=0;
+        while(i<s.size()){
+            j=i;
+            v.assign(27, 0);
+            while(j>=0) v[s[j]-'a']++, ans+=solve(v), j--; 
+            i++;
+        }
+        return ans;
+    }
+};
