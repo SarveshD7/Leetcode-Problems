@@ -568,3 +568,5 @@ Problem Link - https://leetcode.com/problems/sort-characters-by-frequency/
 Problem Link - https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
 315. String to Integer (atoi) -
 Problem Link - https://leetcode.com/problems/string-to-integer-atoi/
+316. Find the Length of the Longest Common Prefix -
+Problem Link - https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix/
