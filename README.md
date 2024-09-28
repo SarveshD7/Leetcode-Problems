@@ -572,3 +572,5 @@ Problem Link - https://leetcode.com/problems/string-to-integer-atoi/
 Problem Link - https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix/
 317. Sum of Beauty of All Substrings -
 Problem Link - https://leetcode.com/problems/sum-of-beauty-of-all-substrings/
+318 Pow(x, n)
+Problem Link - https://leetcode.com/problems/powx-n/
