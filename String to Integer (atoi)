@@ -16,6 +16,18 @@ Output: 42
 Solution - 
 class Solution {
 public:
+RECURSIVE SOLUTION ADDED
+    long long solve(string&s, long long &ans, int i){
+        if(i>=s.size()) return ans;
+        int a=s[i]-'0';
+        if(a>9 || a<0) return ans;
+        ans*=10;
+        ans+=a;
+        // cout<<i<<" "<<ans<<endl;
+        if(ans>=INT_MAX) return ans;
+        return solve(s, ans, i+1);
+    }
+
     int myAtoi(string s) {
         bool minus=false;
         long long i=0, ans=0, a;
@@ -24,20 +36,26 @@ public:
         else if(s[i]=='+') i++;
         while(i<s.size() && s[i]=='0') i++;
         // cout<<i<<" "<<minus<<endl;
-        while(i<s.size()){
-            a=s[i]-'0';
-            if(a>9 || a<0){ 
-                if(minus) return -1*ans;
-                return ans;
-            }            
-            ans = ((ans)*10);
-            ans = (ans+a);
-            if(ans>=INT_MAX){ 
-                if(minus) return -1*ans>INT_MIN?-1*ans:INT_MIN;
-                return INT_MAX;
-            }
-            i++;
+        ans=solve(s, ans, i);
+        // cout<<ans<<endl;
+        if(ans>=INT_MAX){ 
+            if(minus) return -1*ans>INT_MIN?-1*ans:INT_MIN;
+            return INT_MAX;
         }
+        // while(i<s.size()){
+        //     a=s[i]-'0';
+        //     if(a>9 || a<0){ 
+        //         if(minus) return -1*ans;
+        //         return ans;
+        //     }            
+        //     ans = ((ans)*10);
+        //     ans = (ans+a);
+        //     if(ans>=INT_MAX){ 
+        //         if(minus) return -1*ans>INT_MIN?-1*ans:INT_MIN;
+        //         return INT_MAX;
+        //     }
+        //     i++;
+        // }
         // cout<<ans<<endl;
         ans=minus?(-1*ans):ans;
         return ans;
