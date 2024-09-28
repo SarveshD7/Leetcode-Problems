@@ -1,0 +1,29 @@
+Problem Statement - 
+Implement pow(x, n), which calculates x raised to the power n (i.e., xn).
+
+Example - 
+Input: x = 2.00000, n = 10
+Output: 1024.00000
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    long double solve(double&x, int &n, int i, long double &ans){
+        if(i>=n/2) return ans;
+        ans*=x*x;
+        if((double)ans==0 || (double)ans>=INT_MAX) return ans;
+        return solve(x, n, i+1, ans);
+    }
+    double myPow(double x, int n) {
+        if(x==0 || x==1) return x;
+        else if(x==-1) return n%2==0?1:-1;
+        long double a=1;
+        int i=0, m=abs(n);
+        if(m%2!=0) a=x, m--;
+        a=solve(x, m, i, a);
+        if(n<0) return a!=0?(1/a):INT_MAX;
+        return a;
+    }
+};
