@@ -576,3 +576,5 @@ Problem Link - https://leetcode.com/problems/sum-of-beauty-of-all-substrings/
 Problem Link - https://leetcode.com/problems/powx-n/
 319. Count Good Numbers -
 Problem Link - https://leetcode.com/problems/count-good-numbers/
+320. Reverse a Stack -
+Problem Link - https://www.geeksforgeeks.org/problems/reverse-a-stack/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=reverse-a-stack
