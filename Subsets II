@@ -6,10 +6,39 @@ Example -
 Input: nums = [1,2,2]
 Output: [[],[1],[1,2],[1,2,2],[2],[2,2]]
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
 *******************CATCH - SORT THE NUMS ARRAY BEFORE THE ACTUAL SOLVING********************
+NON SET APPROACH - 
+class Solution {
+public:
+    void solve(int i, vector<int>&nums, vector<int>&v, vector<vector<int>>&ans){
+        if(i>=nums.size()){
+            ans.push_back(v);
+            return ;
+        }
+        // PICK
+        v.push_back(nums[i]);
+        solve(i+1, nums, v, ans);
+        v.pop_back();
+        // NOT PICK
+        solve(i+1, nums, v, ans);
+        return ;
+    }
+    vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        vector<int>v;
+        vector<vector<int>>ans;
+        int i=0;
+        solve(i, nums, v, ans);
+        sort(ans.begin(), ans.end());
+        ans.erase(unique(ans.begin(), ans.end()), ans.end());
+        return ans;
+    }
+};
+
+SET APPROACH 
 class Solution {
 public:
     void solve(int i, vector<int>nums, set<vector<int>>& ans, vector<int>v){
