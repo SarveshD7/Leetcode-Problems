@@ -578,3 +578,5 @@ Problem Link - https://leetcode.com/problems/powx-n/
 Problem Link - https://leetcode.com/problems/count-good-numbers/
 320. Reverse a Stack -
 Problem Link - https://www.geeksforgeeks.org/problems/reverse-a-stack/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=reverse-a-stack
+321. Generate all binary strings -
+Problem Link - https://www.geeksforgeeks.org/problems/generate-all-binary-strings/0
