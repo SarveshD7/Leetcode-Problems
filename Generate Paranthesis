@@ -1,0 +1,42 @@
+Problem Statement - 
+Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+
+Example - 
+Input: n = 3
+Output: ["((()))","(()())","(())()","()(())","()()()"]
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    void solve(int &n, int &o, int &c, vector<string>&ans, string t){
+        if(c>=n){
+            // if(o==c && o==n)
+            ans.push_back(t);
+            return ;
+        }
+        // cout<<o<<" "<<c<<" "<<t<<endl;
+        string tp=t;
+        if(o<n){
+            t+='(';
+            o++;
+            solve(n, o, c, ans, t);
+            o--;
+        }
+        if(o-c>0){
+            t=tp;
+            t+=')';
+            c++;
+            solve(n, o, c, ans, t);
+            c--;
+        }
+        return ;
+    }
+    vector<string> generateParenthesis(int n) {
+        vector<string>ans;
+        int o=0, c=0;
+        solve(n, o, c, ans, "");
+        return ans;      
+    }
+};
