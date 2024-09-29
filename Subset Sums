@@ -14,30 +14,25 @@ When only 3 is taken then Sum = 3.
 When element 2 and 3 are taken then 
 Sum = 2+3 = 5.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
-
-class Solution
-{
-public:
-    void solve(int i, int n, vector<int>arr, int s, vector<int>&ans){
-        if(i>=n){
+class Solution {
+  public:
+    void solve(int i, vector<int>&arr, vector<int>&ans, int& s){
+        if(i>=arr.size()){
             ans.push_back(s);
             return ;
         }
-        int ele = arr[i];
-        solve(i+1, n, arr, s, ans);
-        s+=ele;
-        solve(i+1,n,arr,s,ans);
-        s-=ele;
+        s+=arr[i], solve(i+1, arr, ans, s), s-=arr[i];
+        solve(i+1, arr, ans, s);
         return ;
     }
-    vector<int> subsetSums(vector<int> arr, int N)
-    {
+    vector<int> subsetSums(vector<int> arr, int n) {
         // Write Your Code here
         vector<int>ans;
-        solve(0,N,arr,0, ans);
+        int s=0;
+        solve(0, arr, ans, s);
         return ans;
     }
 };
