@@ -1,0 +1,33 @@
+Problem Statement - 
+You are given a stack St. You have to reverse the stack using recursion.
+
+Example - 
+Input:
+St = {3,2,1,7,6}
+Output:
+{6,7,1,2,3}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution{
+public:
+    void pushAtBottom(stack<int>&x, int e) {
+        if(x.empty()){ 
+            x.push(e);
+            return ;
+        }
+        int a=x.top();
+        x.pop();
+        pushAtBottom(x, e);
+        x.push(a);
+    }
+    void Reverse(stack<int> &St){
+        if(St.empty()) return ;
+        int a=St.top();
+        St.pop();
+        Reverse(St);
+        pushAtBottom(St, a);
+        return ;
+    }
+};
