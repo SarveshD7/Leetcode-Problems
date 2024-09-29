@@ -1,0 +1,35 @@
+Problem Statement - 
+Given an integer N , Print all binary strings of size N which do not contain consecutive 1s.
+A binary string is that string which contains only 0 and 1.
+
+Example - 
+Input:
+N = 3
+Output:
+000 , 001 , 010 , 100 , 101
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution{
+public:
+    void solve(int &n, vector<string>&ans, string t){
+        if(t.size()>=n){
+            ans.push_back(t);
+            return ;
+        }
+        t+='0';
+        solve(n, ans, t);
+        if(t.size()==1 || (t.size()>=2 && t[t.size()-2]!='1')) {
+            t[t.size()-1]='1';
+            solve(n, ans, t);
+        }
+        return ;
+    }
+    vector<string> generateBinaryStrings(int num){
+        //Write your code
+        vector<string>ans;
+        solve(num, ans, "");
+        return ans;
+    }
+};
