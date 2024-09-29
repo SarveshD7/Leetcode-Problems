@@ -22,33 +22,27 @@ Solution -
 
 class Solution {
 public:
-
-    void solve(int i, vector<int>&arr, vector<int>v, vector<vector<int>>&ans, int s, int t){
-        
-        if(i>=arr.size()){
+    void solve(int i, vector<int>&nums, vector<int>&v, int& t, int&s, vector<vector<int>>&ans){
+        if(i>=nums.size()){
             if(s==t) ans.push_back(v);
             return ;
         }
-        if(s+arr[i]<=t){
-            v.push_back(arr[i]);
-            solve(i+1, arr, v, ans, s+arr[i], t);
-            v.pop_back();
-        }
-        int j = i+1, k = i;
-        while(j<arr.size() && arr[j]==arr[k])
-                j++, k++;
-        solve(j, arr, v, ans, s, t);
-        
+        if(s+nums[i]<=t) v.push_back(nums[i]),s+=nums[i], solve(i+1, nums, v, t, s, ans), v.pop_back(), s-=nums[i];
+        int j=i;
+        while(j<nums.size() && nums[j]==nums[i]) j++;
+        solve(j, nums, v, t, s, ans);
         return ;
     }
-
     vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
-        sort(candidates.begin(), candidates.end());
         vector<vector<int>>ans;
-        // vector<vector<int>>ans;
         vector<int>v;
-        int i = 0, s = 0;
-        solve(i, candidates, v, ans, s, target);
-        return ans;    
+        cout<<candidates.size()<<endl;
+        sort(candidates.begin(), candidates.end());
+        int s=0;
+        solve(0, candidates, v, target, s, ans);
+        sort(ans.begin(), ans.end());
+        ans.erase(unique(ans.begin(), ans.end()), ans.end());
+        
+        return ans;      
     }
 };
