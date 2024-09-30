@@ -28,62 +28,37 @@ myStack.top(); // return 2
 myStack.pop(); // return 2
 myStack.empty(); // return False
 
-----------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
 class MyStack {
 public:
-    queue<int>q1, q2;
-
+    queue<int>q;
     MyStack() {
-        
-    }
-    
+        // q.clear();
+    }    
     void push(int x) {
-        q1.push(x);    
-    }
-    
+        q.push(x);
+    }    
     int pop() {
-        
-        int ret;
-        while(!q1.empty()){
-            int a = q1.front();
-            if(q1.size()==1) ret = a;
-            else q2.push(a);
-            q1.pop();
+        if(q.empty()) return -1;
+        int s=q.size()-1, a;
+        while(s--){
+            a=q.front();
+            q.pop();
+            q.push(a);
         }
-        while(!q2.empty()){
-            int a = q2.front();
-            q1.push(a);
-            q2.pop();
-        }
-        return ret;
-    }
-    
+        a=q.front();
+        q.pop();
+        return a;
+    }    
     int top() {
-        
-        int ret;
-        while(!q1.empty()){
-            int a = q1.front();
-            if(q1.size()==1) ret = a;
-            q2.push(a);
-            q1.pop();
-        }
-        
-        // q2.pop();
-        while(!q2.empty()){
-            int a = q2.front();
-            q1.push(a);
-            q2.pop();
-        }
-        return ret;
-    }
-    
+        return q.back();
+    }    
     bool empty() {
-        return q1.empty();
+        return q.empty();
     }
 };
-
 /**
  * Your MyStack object will be instantiated and called as such:
  * MyStack* obj = new MyStack();
