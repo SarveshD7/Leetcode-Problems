@@ -592,3 +592,5 @@ Problem Link - https://leetcode.com/problems/count-of-substrings-containing-ever
 Problem Link - https://leetcode.com/problems/word-search/
 327. Valid Parentheses -
 Problem Link - https://leetcode.com/problems/valid-parentheses/
+328. Min Stack -
+Problem Link - https://leetcode.com/problems/min-stack/
