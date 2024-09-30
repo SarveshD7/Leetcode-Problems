@@ -590,3 +590,5 @@ Problem Link - https://leetcode.com/problems/combination-sum-iii/
 Problem Link - https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-i/
 326. Word Search -
 Problem Link - https://leetcode.com/problems/word-search/
+327. Valid Parentheses -
+Problem Link - https://leetcode.com/problems/valid-parentheses/
