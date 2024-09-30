@@ -586,3 +586,5 @@ Problem Link - https://leetcode.com/problems/find-the-k-th-character-in-string-g
 Problem Link - https://leetcode.com/problems/subsets/
 324. Combination Sum III -
 Problem Link - https://leetcode.com/problems/combination-sum-iii/
+325. Count of Substrings Containing Every Vowel and K Consonants I -
+Problem Link - https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-i/
