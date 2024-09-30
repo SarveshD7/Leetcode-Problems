@@ -1,0 +1,54 @@
+Problem Statement - 
+You are given a string word and a non-negative integer k.
+Return the total number of substrings of word that contain every vowel ('a', 'e', 'i', 'o', and 'u') at least once and exactly k consonants.
+
+Example - 
+Example 1:
+Input: word = "aeioqq", k = 1
+Output: 0
+Explanation:
+There is no substring with every vowel.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool isVowel(char x){return x=='a'||x=='e'||x=='i'||x=='o'||x=='u';}
+    int countOfSubstrings(string word, int k) {
+        int s=0, e=0, j=0, ans=0, v=0, val=0, cnt=0;
+        vector<int>m(27, 0);
+        while(e<word.size()){
+            m[word[e]-'a']++;
+            if(isVowel(word[e])){
+                v++; 
+                if(m[word[e]-'a']==1) cnt++;
+            }
+                    while(s<e && e+1-v-s>k){
+                        val=0;
+                        m[word[s]-'a']--;
+                        if(isVowel(word[s])){
+                            v--;
+                            if(m[word[s]-'a']==0) cnt--;
+                        }
+                        s++;
+                    }
+                    
+                    while(s<e && isVowel(word[s]) && cnt==5){
+                        m[word[s]-'a']--;
+                        if(isVowel(word[s])){
+                            v--;
+                            if(m[word[s]-'a']==0){
+                                m[word[s]-'a']=1, v++;
+                                break;
+                            }
+                        }
+                        val++, s++;
+                    }
+            if(cnt==5 && e+1-v-s==k) ans+=val+1;
+            e++;
+        }
+        return ans;
+    }
+};
