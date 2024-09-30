@@ -1,0 +1,59 @@
+Problem Statement - 
+Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+Implement the MinStack class:
+MinStack() initializes the stack object.
+void push(int val) pushes the element val onto the stack.
+void pop() removes the element on the top of the stack.
+int top() gets the top element of the stack.
+int getMin() retrieves the minimum element in the stack.
+You must implement a solution with O(1) time complexity for each function.
+
+Example - 
+Input
+["MinStack","push","push","push","getMin","pop","top","getMin"]
+[[],[-2],[0],[-3],[],[],[],[]]
+Output
+[null,null,null,null,-3,null,0,-2]
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class MinStack {
+public:
+    int m;
+    vector<pair<int, int>>v;
+    MinStack() {
+        v.clear();
+        m=INT_MAX;
+    }
+    
+    void push(int val) {
+        if(v.empty()) m=INT_MAX;
+        m=min(m, val);
+        v.push_back({val, m});
+    }
+    
+    void pop() {
+        v.pop_back();
+        if(!v.empty()) 
+        m=v[v.size()-1].second;        
+    }
+    
+    int top() {
+        return v[v.size()-1].first;
+    }
+    
+    int getMin() {
+        if(!v.empty()) return v[v.size()-1].second;
+        return -1;
+    }
+};
+
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * MinStack* obj = new MinStack();
+ * obj->push(val);
+ * obj->pop();
+ * int param_3 = obj->top();
+ * int param_4 = obj->getMin();
+ */
