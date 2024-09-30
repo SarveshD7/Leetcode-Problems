@@ -596,3 +596,5 @@ Problem Link - https://leetcode.com/problems/valid-parentheses/
 Problem Link - https://leetcode.com/problems/min-stack/
 329. Next Greater Element I -
 Problem Link - https://leetcode.com/problems/next-greater-element-i/
+330. Next Greater Element II -
+Problem Link - https://leetcode.com/problems/next-greater-element-ii/
