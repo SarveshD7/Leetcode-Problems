@@ -594,3 +594,5 @@ Problem Link - https://leetcode.com/problems/word-search/
 Problem Link - https://leetcode.com/problems/valid-parentheses/
 328. Min Stack -
 Problem Link - https://leetcode.com/problems/min-stack/
+329. Next Greater Element I -
+Problem Link - https://leetcode.com/problems/next-greater-element-i/
