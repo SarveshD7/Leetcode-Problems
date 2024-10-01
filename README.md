@@ -598,3 +598,5 @@ Problem Link - https://leetcode.com/problems/min-stack/
 Problem Link - https://leetcode.com/problems/next-greater-element-i/
 330. Next Greater Element II -
 Problem Link - https://leetcode.com/problems/next-greater-element-ii/
+331. Next Smaller Element  -
+Problem Link - https://www.interviewbit.com/problems/nearest-smaller-element/
