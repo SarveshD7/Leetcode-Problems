@@ -1,0 +1,49 @@
+Problem Statement - 
+Given an infix expression in the form of string str. Convert this infix expression to postfix expression.
+Infix expression: The expression of the form a op b. When an operator is in-between every pair of operands.
+Postfix expression: The expression of the form a b op. When an operator is followed for every pair of operands.
+Note: The order of precedence is: ^ greater than * equals to / greater than + equals to -. Ignore the right associativity of ^.
+
+Example - 
+Input: str = "a+b*(c^d-e)^(f+g*h)-i"
+Output: abcd^e-fgh*+^*+i-
+Explanation:
+After converting the infix expression 
+into postfix expression, the resultant 
+expression will be abcd^e-fgh*+^*+i-
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+  public:
+    // Function to convert an infix expression to a postfix expression.
+    int getVal(char x){
+        if(x=='^') return 3;
+        else if(x=='*' || x=='/') return 2;
+        else if(x=='+' || x=='-') return 1;
+        else return 0;
+    }
+    bool isOperator(char x){return x=='+' || x=='-' || x=='*' || x=='/' || x=='(' || x==')' || x=='^';}
+    string infixToPostfix(string s) {
+        // Your code 
+        stack<char>x;
+        string ans="";
+        for(auto i:s){
+            if(!isOperator(i)) ans+=i;
+            else{
+                if(i==')'){
+                    while(!x.empty() && x.top()!='(')ans+=x.top(), x.pop();
+                    x.pop();
+                } 
+                else if(i=='(') x.push(i);
+                else{
+                    while(!x.empty() && getVal(x.top())>=getVal(i)) ans+=x.top(), x.pop();
+                    x.push(i);
+                }
+            }
+        }
+        while(!x.empty()) ans+=x.top(), x.pop();
+        return ans;
+    }
+};
