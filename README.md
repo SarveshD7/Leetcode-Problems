@@ -601,4 +601,4 @@ Problem Link - https://leetcode.com/problems/next-greater-element-ii/
 331. Next Smaller Element  -
 Problem Link - https://www.interviewbit.com/problems/nearest-smaller-element/
 332. Sum of all divisors from 1 to n -
-Problem Link - https://www.geeksforgeeks.org/problems/number-of-nges-to-the-right/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=number-of-nges-to-the-right
+Problem Link - https://www.geeksforgeeks.org/problems/sum-of-all-divisors-from-1-to-n4738/1 
