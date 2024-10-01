@@ -1,0 +1,36 @@
+Problem Statement - 
+You are given a string S of size N that represents the prefix form of a valid mathematical expression. 
+The string S contains only lowercase and uppercase alphabets as operands and the operators are +, -, *, /, %, and ^.Convert it to its infix form.
+
+Example - 
+Input: 
+*-A/BC-/AKL
+Output: 
+((A-(B/C))*((A/K)-L))
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+  public:
+      bool isOperator(char x){return x=='+' || x=='-' || x=='*' || x=='/' || x=='(' || x==')' || x=='^';}
+    string preToInfix(string pre_exp) {
+        // Write your code here
+        string ans="", s1="", s2="", s;
+        char i;
+        stack<string>x;
+        for(int j=pre_exp.size()-1;j>=0;j--){
+            i=pre_exp[j];
+            if(!isOperator(i)) x.push(string(1, i));
+            else{
+                s1=x.top();
+                x.pop();
+                s2=x.top();
+                x.pop();
+                s="("+s1+i+s2+")";
+                x.push(s);
+            }
+        }
+        return x.top();
+    }
+};
