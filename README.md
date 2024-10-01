@@ -602,3 +602,5 @@ Problem Link - https://leetcode.com/problems/next-greater-element-ii/
 Problem Link - https://www.interviewbit.com/problems/nearest-smaller-element/
 332. Sum of all divisors from 1 to n -
 Problem Link - https://www.geeksforgeeks.org/problems/sum-of-all-divisors-from-1-to-n4738/1 
+333. Trapping Rain Water -
+Problem Link - https://leetcode.com/problems/trapping-rain-water/
