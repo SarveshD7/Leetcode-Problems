@@ -616,3 +616,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/postfix-to-prefix-conversi
 Problem Link - https://www.geeksforgeeks.org/problems/postfix-to-infix-conversion/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=postfix-to-prefix-conversion
 339. Number of Substrings Containing All Three Characters -
 Problem Link - https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/
+340. Subarrays with K Different Integers -
+Problem Link - https://leetcode.com/problems/subarrays-with-k-different-integers/
