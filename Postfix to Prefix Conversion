@@ -1,0 +1,33 @@
+Problem Statement - 
+You are given a string that represents the postfix form of a valid mathematical expression. Convert it to its prefix form.
+
+Example - 
+Input: 
+ABC/-AK/L-*
+Output: 
+*-A/BC-/AKL
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+  public:
+  bool isOperator(char x){return x=='+' || x=='-' || x=='*' || x=='/' || x=='(' || x==')' || x=='^';}
+    string postToPre(string post_exp) {
+        // Write your code 
+        stack<string>x;
+        string s1, s2;
+        // char i;
+        for(auto i:post_exp){
+            if(!isOperator(i)) x.push(string(1, i));
+            else{
+                s1=x.top();
+                x.pop();
+                s2=x.top();
+                x.pop();
+                x.push(i+s2+s1);
+            }
+        }
+        return x.top();
+    }
+};
