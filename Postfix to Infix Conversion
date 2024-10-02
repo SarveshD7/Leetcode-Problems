@@ -1,0 +1,29 @@
+Problem Statement - 
+You are given a string that represents the postfix form of a valid mathematical expression. Convert it to its infix form.
+
+Example - 
+Input:
+ab*c+ 
+Output: 
+((a*b)+c)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+  public:
+    bool isOperator(char x){return x=='+' || x=='-' || x=='*' || x=='/' || x=='(' || x==')' || x=='^';}
+    string postToInfix(string exp) {
+        // Write your code here
+        stack<string>x;
+        string s1, s2;
+        for(auto i:exp){
+            if(!isOperator(i)) x.push(string(1, i));
+            else{
+                s1=x.top(), x.pop(), s2=x.top(), x.pop();
+                x.push("("+s2+i+s1+")");
+            }
+        }
+        return x.top();
+    }
+};
