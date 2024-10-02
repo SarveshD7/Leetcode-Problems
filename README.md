@@ -612,3 +612,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/prefix-to-infix-conversion
 Problem Link - https://www.geeksforgeeks.org/problems/prefix-to-postfix-conversion/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=prefix-to-postfix-conversion
 337. Postfix to Prefix Conversion -
 Problem Link - https://www.geeksforgeeks.org/problems/postfix-to-prefix-conversion/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=postfix-to-prefix-conversion
+338. Postfix to Infix Conversion -
+Problem Link - https://www.geeksforgeeks.org/problems/postfix-to-infix-conversion/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=postfix-to-prefix-conversion
