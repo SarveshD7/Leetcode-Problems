@@ -1,0 +1,20 @@
+Problem Statement - 
+Given an integer n representing number of vertices. Find out how many undirected graphs (not necessarily connected) can be constructed out of a given n number of vertices.
+
+Example - 
+Input: 2
+Output: 2
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+  public:
+    long long count(int n) {
+        // your code here
+        long long a, b;
+        b=n*(n-1)/2;
+        a=pow(2, b);
+        return a;
+    }
+};
