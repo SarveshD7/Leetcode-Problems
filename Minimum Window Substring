@@ -1,0 +1,44 @@
+Problem Statement - 
+Given two strings s and t of lengths m and n respectively, return the minimum window 
+substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
+The testcases will be generated such that the answer is unique.
+
+Example - 
+Input: s = "ADOBECODEBANC", t = "ABC"
+Output: "BANC"
+Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool check(vector<int>&v1, vector<int>&v2){
+        for(int i=0;i<60;i++) if(v2[i]!=0 && v1[i]<v2[i]) return false;
+        return true;
+    }
+    string minWindow(string s, string t) {
+        if(t.size()>s.size()) return "";
+        vector<int>v1(60, 0),v2(60, 0);
+        for(auto i:t) v2[i-'A']++;
+        int ans=INT_MAX, st=0, en=0,ans_s=-1, ans_e=-1, ans_sz=INT_MAX, cnt=0, tst=-1;
+        while(en<s.size()){
+            v1[s[en]-'A']++;
+            if(check(v1, v2)){
+                tst=st;
+                while(st<en && check(v1,v2)){
+                    v1[s[st]-'A']--;
+                    if(!check(v1,v2)){
+                        v1[s[st]-'A']++;
+                        break;
+                    }
+                    st++;
+                }            
+                if(en-st+1<ans_sz) ans_sz=en-st+1, ans_s=st, ans_e=en;
+            }
+            en++;
+        }
+        if(ans_s==-1) return "";
+        return s.substr(ans_s, ans_sz);
+    }
+};
