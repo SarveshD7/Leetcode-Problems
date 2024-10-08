@@ -9,41 +9,31 @@ Example -
 Input: isConnected = [[1,1,0],[1,1,0],[0,0,1]]
 Output: 2
 
-----------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
 class Solution {
 public:
-    void printVis(vector<int>v){
-        cout<<"------VIS------"<<endl;
-        for(auto i:v) cout<<i<<" ";
-        cout<<endl<<"------------------"<<endl;
-    }
-    void BFS(int x, vector<vector<int>>& adj, vector<int>&vis){
+    void bfs(vector<vector<int>>&adj, int i, vector<int>&vis){
         queue<int>q;
-        q.push(x);
+        int a;
+        vis[i]=1;
+        q.push(i);
         while(!q.empty()){
-            if(vis[q.front()]==0){
-            vis[q.front()]=1;
-            for(int i = 0;i<adj[q.front()-1].size();i++){
-                if(adj[q.front()-1][i]==1 && vis[i+1]==0) q.push(i+1);
+            a=q.front();            
+            for(int j=0;j<adj[a].size();j++){
+                if(adj[a][j]==1 && vis[j]==0) vis[j]=1, q.push(j);
             }
-            }
-            // cout<<q.front()<<endl;
+            vis[a]=1;
             q.pop();
         }
         return ;
     }
     int findCircleNum(vector<vector<int>>& isConnected) {
-        int ans = 0;
-        vector<int>vis(isConnected[0].size()+1, 0);
-        for(int i = 1;i<=isConnected.size();i++){
-            if(vis[i]==0){
-                cout<<i<<endl;
-                ans++;
-                BFS(i, isConnected, vis);
-                printVis(vis);
-            }
+        int ans=0;
+        vector<int>vis(isConnected.size(), 0);
+        for(int i=0;i<isConnected.size();i++){
+            if(vis[i]==0) bfs(isConnected, i, vis), ans++;
         }
         return ans;
     }
