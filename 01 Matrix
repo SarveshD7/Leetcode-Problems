@@ -1,0 +1,45 @@
+Problem Statement - 
+Given an m x n binary matrix mat, return the distance of the nearest 0 for each cell.
+The distance between two adjacent cells is 1.
+
+Example - 
+Input: mat = [[0,0,0],[0,1,0],[0,0,0]]
+Output: [[0,0,0],[0,1,0],[0,0,0]]
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int a[4] = {1, 0, -1, 0};
+    int b[4] = {0, 1, 0, -1};
+    void solve(vector<vector<int>>& adj, vector<vector<int>>& vis, vector<vector<int>>& dist, queue<pair<int, int>>&q){
+        int d=0, s, tr, nr, tc, nc;
+        while(!q.empty()){
+            s=q.size();
+            for(int i=0;i<s;i++){
+                tr=q.front().first, tc=q.front().second;
+                dist[tr][tc]=min(dist[tr][tc], d);
+                for(int j=0;j<4;j++){
+                    nr=tr+a[j], nc=tc+b[j];
+                    if(nr>=0 && nc>=0 && nr<adj.size() && nc<adj[0].size() && vis[nr][nc]==0 && adj[nr][nc]==1) vis[nr][nc]=1, q.push({nr, nc});
+                }    
+                q.pop();
+            }
+            d++;
+        }
+        return ;
+    }
+    vector<vector<int>> updateMatrix(vector<vector<int>>& mat) {
+        queue<pair<int, int>>q;
+        vector<vector<int>>dist(mat.size(), vector<int>(mat[0].size(), INT_MAX));
+        vector<vector<int>>vis(mat.size(), vector<int>(mat[0].size(), 0));
+        for(int i=0;i<mat.size();i++){
+            for(int j=0;j<mat[i].size();j++){
+                if(mat[i][j]==0) dist[i][j]=0, q.push({i, j});
+            }
+        }
+        solve(mat, vis, dist, q);
+        return dist;
+    }
+};
