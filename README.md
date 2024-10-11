@@ -622,3 +622,5 @@ Problem Link - https://leetcode.com/problems/subarrays-with-k-different-integers
 Problem Link - https://leetcode.com/problems/minimum-window-substring/
 342. Graph and Vertices -
 Problem Link - https://www.geeksforgeeks.org/problems/graph-and-vertices/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=graph-and-vertices
+343. 01 Matrix -
+Problem Link - https://leetcode.com/problems/01-matrix/
