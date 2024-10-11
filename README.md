@@ -626,3 +626,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/graph-and-vertices/1?utm_s
 Problem Link - https://leetcode.com/problems/01-matrix/
 344. Surrounded Regions -
 Problem Link - https://leetcode.com/problems/surrounded-regions/
+345. Number of Enclaves -
+Problem Link - https://leetcode.com/problems/number-of-enclaves/
