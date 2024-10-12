@@ -628,4 +628,8 @@ Problem Link - https://leetcode.com/problems/01-matrix/
 Problem Link - https://leetcode.com/problems/surrounded-regions/
 345. Number of Enclaves -
 Problem Link - https://leetcode.com/problems/number-of-enclaves/
-346. Word Ladder - https://leetcode.com/problems/word-ladder/
+346. Word Ladder -
+Problem Link - https://leetcode.com/problems/word-ladder/
+347. Online Stock Span -
+Problem Link - https://leetcode.com/problems/online-stock-span/
+
