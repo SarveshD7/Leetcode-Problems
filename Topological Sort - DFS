@@ -12,7 +12,7 @@ would be 1 for all test cases.
 One possible Topological order for the
 graph is 3, 2, 1, 0.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
 class Solution
@@ -30,15 +30,35 @@ class Solution
 	    ans.insert(ans.begin(), i);
 	    return ;
 	}
+	void findInDegree(vector<int>adj[], int V, vector<int>&ind){
+	    for(int i=0;i<V;i++){
+	        for(auto j:adj[i]) ind[j]++;
+	    }
+	    return ;
+	}
 	vector<int> topoSort(int V, vector<int> adj[]) 
 	{
 	    // code here
-	    vector<int>vis(V, 0), ans;
+	    vector<int>vis(V, 0), ans, ind(V, 0);
+	   // --------------------------------------- Kahns (BFS) ------------------------------------ 
+	    findInDegree(adj, V, ind);
+	    queue<int>q;
+	    int a;
+	    for(int i=0;i<V;i++) if(ind[i]==0) q.push(i);
+	    
+	    while(!q.empty()){
+	        a=q.front();
+	        for(auto i:adj[a]){
+	                ind[i]--;
+	                if(ind[i]==0) q.push(i);
+	        }
+	        ans.push_back(a);
+	        q.pop();
+	    }
+	   // --------------------------- DFS ----------------------------
 	    for(int i=0;i<V;i++){
 	        if(vis[i]==0) dfs(i, adj, V, ans, vis);
 	    }
-	    for(auto i:ans)  cout<<i<<" ";
-	    cout<<endl;
 	    return ans;
 	}
 };
