@@ -18,50 +18,27 @@ Solution -
 class Solution
 {
 	public:
-	    
-	 void dfs(int i, int v, vector<int>adj[], stack<int>&x,vector<int>&vis){
-	     vis[i] = 1;
-	     for(auto a:adj[i]){
-	         if(vis[a]==0){
-	             dfs(a,v, adj, x, vis);
-	     }
-	     }
-	     x.push(i);
-	     return ;
-	 }
-	    
-	
 	//Function to return list containing vertices in Topological order. 
-	void findIndegree(vector<int>adj[], vector<int>&ind, int V){
-	    for(int i = 0;i<V;i++)
-	        for(auto j:adj[i]) ind[j]++;
+	void dfs(int i, vector<int>adj[], int V, vector<int>&ans, vector<int>&vis){
+	   // if(i>=V) return ;
+	    vis[i]=1;
+	    
+	    for(auto j:adj[i]){
+	        if(vis[j]==0) dfs(j, adj, V, ans, vis);
+	    }
+	   // cout<<i<<endl;
+	    ans.insert(ans.begin(), i);
+	    return ;
 	}
 	vector<int> topoSort(int V, vector<int> adj[]) 
 	{
 	    // code here
-	    vector<int>ans;
-	    vector<int>vis(V,0);
-	   // vector<int> ind(V,0);
-	   // findIndegree(adj, ind,V);
-	   // queue<int>q;
-	   // for(int i = 0;i<V;i++)
-	   //     if(ind[i]==0) q.push(i);
-	   //while(!q.empty()){
-	   //    int a = q.front();
-	   //    for(auto i:adj[a]){
-	   //        ind[i]--;
-	   //        if(ind[i]==0) q.push(i);
-	   //    }
-	   //    ans.push_back(a);
-	   //    q.pop();
-	   //}
-	   stack<int>x;
-	   for(int i = 0;i<V;i++)
-	        if(vis[i]==0) dfs(i, V, adj, x, vis);
-	   while(!x.empty()){
-	       ans.push_back(x.top());
-	       x.pop();
-	   }
-	   return ans;
+	    vector<int>vis(V, 0), ans;
+	    for(int i=0;i<V;i++){
+	        if(vis[i]==0) dfs(i, adj, V, ans, vis);
+	    }
+	    for(auto i:ans)  cout<<i<<" ";
+	    cout<<endl;
+	    return ans;
 	}
 };
