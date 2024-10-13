@@ -640,3 +640,5 @@ Problem Link - https://leetcode.com/problems/course-schedule/
 Problem Link - https://leetcode.com/problems/course-schedule-ii/
 351. The Number of the Smallest Unoccupied Chair -
 Problem Link - https://leetcode.com/problems/find-eventual-safe-states/
+352. Shortest path in Undirected Graph -
+Problem Link - https://www.geeksforgeeks.org/problems/shortest-path-in-undirected-graph-having-unit-distance/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=shortest-path-in-undirected-graph-having-unit-distance
