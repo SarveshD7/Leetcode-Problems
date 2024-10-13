@@ -632,4 +632,5 @@ Problem Link - https://leetcode.com/problems/number-of-enclaves/
 Problem Link - https://leetcode.com/problems/word-ladder/
 347. Online Stock Span -
 Problem Link - https://leetcode.com/problems/online-stock-span/
-
+348. Directed Graph Cycle -
+Problem Link - https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1
