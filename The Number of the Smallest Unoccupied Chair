@@ -1,0 +1,64 @@
+Problem Statement - 
+There is a party where n friends numbered from 0 to n - 1 are attending. There is an infinite number of chairs in this party that are numbered from 0 to infinity. 
+When a friend arrives at the party, they sit on the unoccupied chair with the smallest number.
+For example, if chairs 0, 1, and 5 are occupied when a friend comes, they will sit on chair number 2.
+When a friend leaves the party, their chair becomes unoccupied at the moment they leave. If another friend arrives at that same moment, they can sit in that chair.
+You are given a 0-indexed 2D integer array times where times[i] = [arrivali, leavingi], indicating the arrival and leaving times of the ith friend respectively, and an integer targetFriend. 
+All arrival times are distinct.
+Return the chair number that the friend numbered targetFriend will sit on.
+
+Example - 
+Input: times = [[1,4],[2,3],[4,6]], targetFriend = 1
+Output: 1
+Explanation: 
+- Friend 0 arrives at time 1 and sits on chair 0.
+- Friend 1 arrives at time 2 and sits on chair 1.
+- Friend 1 leaves at time 3 and chair 1 becomes empty.
+- Friend 0 leaves at time 4 and chair 0 becomes empty.
+- Friend 2 arrives at time 4 and sits on chair 0.
+Since friend 1 sat on chair 1, we return 1.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool solve(int &i, vector<vector<int>>&adj, vector<int>&vis, vector<int>&pathVis, vector<int>&ans){
+        if(ans[i]!=-1) return ans[i]==1?true:false;
+        for(auto j:adj[i]){
+            if(vis[j]==0){
+                if(pathVis[j]==0){
+                    pathVis[j]=1;
+                    if(!solve(j, adj, vis, pathVis, ans)){
+                        ans[i]=0;
+                        // cout<<"Here1 "<<i<<endl;
+                        return false;
+                    }
+                }else{
+                    ans[i]=0;
+                    // cout<<"Here2 "<<i<<endl;
+                    return false;
+                }
+            }else{
+                if(ans[j]==0){ 
+                    // cout<<"Here3 "<<i<<endl; 
+                    return false;
+                }
+            }
+        }
+        vis[i]=1;
+        ans[i]=1;
+        // cout<<i<<" "<<ans[i]<<endl;
+        return true;
+    }
+    vector<int> eventualSafeNodes(vector<vector<int>>& graph) {
+        vector<int>vis(graph.size(), 0), pathVis(graph.size(), 0), ans(graph.size(), -1);
+        unordered_map<int, int>m;
+        for(int i=0;i<graph.size();i++){
+            if(vis[i]==0) solve(i, graph, vis, pathVis, ans);
+        }
+        vis.clear();
+        for(int i=0;i<ans.size();i++) if(ans[i]==1) vis.push_back(i);
+        return vis;
+    }
+};
