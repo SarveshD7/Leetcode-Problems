@@ -1,0 +1,65 @@
+Problem Statement - 
+Given a weighted, undirected and connected graph of V vertices and an adjacency list adj where adj[i] is a list of lists containing two integers 
+where the first integer of each list j denotes there is edge between i and j , second integers corresponds to the weight of that  edge . 
+You are given the source vertex S and You to Find the shortest distance of all the vertex's from the source vertex S. 
+You have to return a list of integers denoting shortest distance between each node and Source vertex S.
+Note: The Graph doesn't contain any negative weight cycle.
+The structure of adjacency list is as follows :-
+For Example : adj = {  {{1, 1}, {2, 6}}  , {{2, 3}, {0, 1}}  , {{1, 3}, {0, 6}}  }
+Here adj[i] contains a list which contains all the nodes which are connected to the ith vertex. 
+Here adj[0] = {{1, 1}, {2, 6}} means there are two nodes conneced to the 0th node, node 1 with an edge weight of 1 and node 2 with an edge weight of 6 and similarly for other vertices.
+
+Example - 
+Input:
+V = 2
+adj [] = {{{1, 9}}, {{0, 9}}}
+S = 0
+Output:
+0 9
+Explanation:
+The source vertex is 0. Hence, the shortest 
+distance of node 0 is 0 and the shortest 
+distance from node 1 is 9.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution
+{
+	public:
+    struct compare {
+        bool operator()(const pair<int, int>& p1, const pair<int, int>& p2) {
+            return p1.second > p2.second;
+        }
+    };
+    int findMinDist(vector<int>&dist, vector<int>&vis){
+        int m=INT_MAX, mid=-1;
+        for(int i=0;i<dist.size();i++){
+            if(vis[i]==0 && dist[i]<m) m=dist[i], mid=i;
+        }
+        return mid;
+    }
+    vector <int> dijkstra(int V, vector<vector<int>> adj[], int S)
+    {
+        vector<int>dist(V, INT_MAX),vis(V, 0);
+        dist[S]=0;
+        int m, md;
+        set<pair<int, int>>s;
+        s.insert({0, S});
+        while(!s.empty()){
+            auto it=*(s.begin());
+            md=it.first;
+            m=it.second;
+            s.erase(s.begin());
+            vis[m]=1;
+            for(auto j:adj[m]){
+                if(md+j[1]<dist[j[0]] && vis[j[0]]==0){ 
+                    if(dist[j[0]]!=INT_MAX) s.erase({dist[j[0]], j[0]});
+                    dist[j[0]]=md+j[1];
+                    s.insert({dist[j[0]], j[0]});
+                }
+            }
+        }
+        return dist;
+    }
+};
