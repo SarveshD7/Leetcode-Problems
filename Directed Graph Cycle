@@ -1,0 +1,38 @@
+Problem Statement - 
+Given a Directed Graph with V vertices (Numbered from 0 to V-1) and E edges, check whether it contains any cycle or not.
+
+Example - 
+Input: 
+4 4
+0 1
+1 2
+2 3
+3 3
+Output: 1
+Explanation: 3 -> 3 is a cycle
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+  public:
+    bool solve(int i, int V, vector<int>adj[], int cnt, vector<int>&vis, vector<int>&pathVis){
+        for(auto j:adj[i]){
+            if(vis[j]==0 && pathVis[j]==0) {
+                pathVis[i]=1;
+                if(solve(j, V, adj, cnt+1, vis, pathVis)) return true;
+                pathVis[i]=0;
+            }
+            else if(pathVis[j]==1) return true;
+        }
+        vis[i]=1;
+        return false;
+    }
+    bool isCyclic(int V, vector<int> adj[]) {
+        vector<int>vis(V, 0), pathVis(V, 0);
+        for(int i=0;i<V;i++){
+            if(vis[i]==0) if(solve(i, V, adj, 0, vis, pathVis)) return true;
+        }
+        return false;
+    }
+};
