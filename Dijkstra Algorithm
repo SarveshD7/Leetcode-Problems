@@ -24,6 +24,7 @@ distance from node 1 is 9.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
+----------------------------------------------------------- USING SET ---------------------------------------------------------------------
 class Solution
 {
 	public:
@@ -57,6 +58,51 @@ class Solution
                     if(dist[j[0]]!=INT_MAX) s.erase({dist[j[0]], j[0]});
                     dist[j[0]]=md+j[1];
                     s.insert({dist[j[0]], j[0]});
+                }
+            }
+        }
+        return dist;
+    }
+};
+
+---------------------------------------------------------------- USING PRIORITY QUEUE ------------------------------------------------------------------------------
+class Solution
+{
+	public:
+    struct compare {
+        bool operator()(const pair<int, int>& p1, const pair<int, int>& p2) {
+            return p1.second > p2.second;
+        }
+    };
+    int findMinDist(vector<int>&dist, vector<int>&vis){
+        int m=INT_MAX, mid=-1;
+        for(int i=0;i<dist.size();i++){
+            if(vis[i]==0 && dist[i]<m) m=dist[i], mid=i;
+        }
+        return mid;
+    }
+    vector <int> dijkstra(int V, vector<vector<int>> adj[], int S)
+    {
+        vector<int>dist(V, INT_MAX),vis(V, 0);
+        dist[S]=0;
+        int m, md;
+        // set<pair<int, int>>s;
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+        // s.insert({0, S});
+        pq.push({0, S});
+        while(!pq.empty()){
+            // auto it=*(s.begin());
+            md= pq.top().first; //it.first;
+            m=pq.top().second; //it.second;
+            pq.pop();
+            // s.erase(s.begin());
+            vis[m]=1;
+            for(auto j:adj[m]){
+                if(md+j[1]<dist[j[0]] && vis[j[0]]==0){ 
+                    // if(dist[j[0]]!=INT_MAX) s.erase({dist[j[0]], j[0]});
+                    dist[j[0]]=md+j[1];
+                    // s.insert({dist[j[0]], j[0]});
+                    pq.push({dist[j[0]], j[0]});
                 }
             }
         }
