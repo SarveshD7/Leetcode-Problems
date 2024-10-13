@@ -1,0 +1,31 @@
+Problem Statement - 
+Given a Directed Acyclic Graph of n vertices from 0 to n-1 and a 2D Integer array(or vector) edges[ ][ ] of length m, where there is a directed edge from edge[i][0] to edge[i][1] with a distance of edge[i][2] for all i.
+Find the shortest path from src(0) vertex to all the vertices and if it is impossible to reach any vertex, then return -1 for that vertex.
+
+Example - 
+Input: n = 4, m = 2, edge = [[0,1,2],[0,2,1]]
+Output: 0 2 1 -1
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+  public:
+     vector<int> shortestPath(int N,int M, vector<vector<int>>& edges){
+        queue<int>q;
+        vector<int>dist(N, INT_MAX), vis(N, 0);
+        vector<vector<int>>adj(N, vector<int>(N, 0));
+        for(int i=0;i<edges.size();i++) adj[edges[i][0]][edges[i][1]]=edges[i][2]; 
+        dist[0]=0;
+        q.push(0);
+        int d=0,s;
+        while(!q.empty()){
+            for(int i=0;i<N;i++){
+                if(adj[q.front()][i]!=0) if(dist[i]>dist[q.front()]+adj[q.front()][i]) dist[i]=dist[q.front()]+adj[q.front()][i], q.push(i);
+            }
+            q.pop();
+        }
+        for(auto &i:dist) if(i==INT_MAX) i=-1;
+        return dist;
+    }
+};
