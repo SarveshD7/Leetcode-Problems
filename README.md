@@ -638,3 +638,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed
 Problem Link - https://leetcode.com/problems/course-schedule/
 350. Course Schedule II -
 Problem Link - https://leetcode.com/problems/course-schedule-ii/
+351. The Number of the Smallest Unoccupied Chair -
+Problem Link - https://leetcode.com/problems/find-eventual-safe-states/
