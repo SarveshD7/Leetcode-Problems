@@ -28,11 +28,32 @@ class Solution {
         vis[i]=1;
         return false;
     }
+    
+	void findInDegree(vector<int>adj[], int V, vector<int>&ind){
+	    for(int i=0;i<V;i++){
+	        for(auto j:adj[i]) ind[j]++;
+	    }
+	    return ;
+	}
     bool isCyclic(int V, vector<int> adj[]) {
-        vector<int>vis(V, 0), pathVis(V, 0);
+        vector<int>vis(V, 0), pathVis(V, 0), ind(V, 0);        
+        // ------------------------- DFS ---------------------------
         for(int i=0;i<V;i++){
             if(vis[i]==0) if(solve(i, V, adj, 0, vis, pathVis)) return true;
+        }        
+        // ------------------------- BFS ---------------------------
+        queue<int>q;
+        findInDegree(adj, V, ind);
+        for(int i=0;i<V;i++) if(ind[i]==0)q.push(i);
+        if(q.empty()) return true;
+        while(!q.empty()){
+            for(auto i:adj[q.front()]){
+                ind[i]--;
+                if(ind[i]==0) q.push(i);
+            }
+            q.pop();
         }
+        for(auto i:ind) if(i!=0) return true;      
         return false;
     }
 };
