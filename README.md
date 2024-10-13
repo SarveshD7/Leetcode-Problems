@@ -636,3 +636,5 @@ Problem Link - https://leetcode.com/problems/online-stock-span/
 Problem Link - https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1
 349. Course Schedule -
 Problem Link - https://leetcode.com/problems/course-schedule/
+350. Course Schedule II -
+Problem Link - https://leetcode.com/problems/course-schedule-ii/
