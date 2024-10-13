@@ -646,3 +646,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/shortest-path-in-undirecte
 Problem Link - https://www.geeksforgeeks.org/problems/shortest-path-in-undirected-graph/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=shortest-path-in-undirected-graph
 354. Dijkstra Algorithm -
 Problem Link - https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1
+355. Shortest Path in Binary Matrix -
+Problem Link - https://leetcode.com/problems/shortest-path-in-binary-matrix/
