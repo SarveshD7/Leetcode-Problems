@@ -634,3 +634,5 @@ Problem Link - https://leetcode.com/problems/word-ladder/
 Problem Link - https://leetcode.com/problems/online-stock-span/
 348. Directed Graph Cycle -
 Problem Link - https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1
+349. Course Schedule -
+Problem Link - https://leetcode.com/problems/course-schedule/
