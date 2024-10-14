@@ -648,3 +648,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/shortest-path-in-undirecte
 Problem Link - https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1
 355. Shortest Path in Binary Matrix -
 Problem Link - https://leetcode.com/problems/shortest-path-in-binary-matrix/
+356. Distance from the Source (Bellman-Ford Algorithm) -
+Problem Link - https://www.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1
