@@ -1,0 +1,52 @@
+Problem Statement - 
+Given a weighted and directed graph of V vertices and E edges, Find the shortest distance of all the vertex's from the source vertex S. 
+If a vertices can't be reach from the S then mark the distance as 10^8. Note: If the Graph contains a negative cycle then return an array consisting of only -1.
+
+Example - 
+E = [[0,1,9]]
+S = 0
+Output:
+0 9
+Explanation:
+Shortest distance of all nodes from
+source is printed.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+  public:
+    /*  Function to implement Bellman Ford
+    *   edges: vector of vectors which represents the graph
+    *   S: source vertex to start traversing graph with
+    *   V: number of vertices
+    */
+    int findMinDist(vector<int>&dist, vector<int>&vis){
+        int m=INT_MAX, mid=-1;
+        for(int i=0;i<dist.size();i++){
+            if(vis[i]==0 && dist[i]<m) m=dist[i], mid=i;
+        }
+        return mid;
+    }
+    vector<int> bellman_ford(int V, vector<vector<int>>& edges, int S) {
+        // Code here
+        vector<int>dist(V, 1e8), vis(V, 0);
+        vector<vector<pair<int,int>>>adj(V);
+        for(auto i:edges) adj[i[0]].push_back({i[1], i[2]});
+        dist[S]=0;
+        int m;
+        for(int i=0;i<V;i++){
+            m=findMinDist(dist, vis);
+            vis[m]=1;
+            // cout<<m<<endl;
+            // if(dist[m]<0) return {-1};
+            for(auto j:adj[m]){
+                if(dist[m]+j.second<dist[j.first]){ 
+                    if(vis[j.first]==0 && dist[m]!=1e8)  dist[j.first]=dist[m]+j.second;
+                    else if(vis[j.first]==1 ) return {-1};
+                }
+            }
+        }
+        return dist;
+    }
+};
