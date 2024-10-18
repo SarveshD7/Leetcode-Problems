@@ -652,3 +652,5 @@ Problem Link - https://leetcode.com/problems/shortest-path-in-binary-matrix/
 Problem Link - https://www.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1
 357. Path With Minimum Effort -
 Problem Link - https://leetcode.com/problems/path-with-minimum-effort/
+358. Network Delay Time -
+Problem Link - https://leetcode.com/problems/network-delay-time/
