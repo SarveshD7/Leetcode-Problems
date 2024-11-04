@@ -656,3 +656,5 @@ Problem Link - https://leetcode.com/problems/path-with-minimum-effort/
 Problem Link - https://leetcode.com/problems/network-delay-time/
 359. Flip Equivalent Binary Trees -
 Problem Link - https://leetcode.com/problems/flip-equivalent-binary-trees/description/?envType=daily-question&envId=2024-10-24
+360. String Compression III -
+Problem Link - https://leetcode.com/problems/string-compression-iii/description/?envType=daily-question&envId=2024-11-04
