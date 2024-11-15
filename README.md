@@ -658,3 +658,5 @@ Problem Link - https://leetcode.com/problems/network-delay-time/
 Problem Link - https://leetcode.com/problems/flip-equivalent-binary-trees/description/?envType=daily-question&envId=2024-10-24
 360. String Compression III -
 Problem Link - https://leetcode.com/problems/string-compression-iii/description/?envType=daily-question&envId=2024-11-04
+361. Minimized Maximum of Products Distributed to Any Store -
+Problem Link - https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/?envType=daily-question&envId=2024-11-14
