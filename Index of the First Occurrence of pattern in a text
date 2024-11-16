@@ -1,0 +1,27 @@
+Problem Statement - 
+Given two strings text and pattern, find the first index where pattern exactly matches with any substring of text. 
+Return -1 if pattern doesn't exist as a substring in text.
+
+Example - 
+Input:
+text = gffgfg
+pattern = gfg
+Output: 3
+Explanation:  Considering 0-based indexing, substring of text from 3rd to last index is gfg.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+  public:
+    int findMatching(string text, string pat) {
+        // Code here
+        int j,k;
+        for(int i=0;i<text.size();i++){
+            j=i, k=0;
+            while(k<pat.size() && j<text.size() && text[j]==pat[k]) j++, k++;
+            if(k==pat.size()) return i;
+        }
+        return -1;
+    }
+};
