@@ -662,3 +662,5 @@ Problem Link - https://leetcode.com/problems/string-compression-iii/description/
 Problem Link - https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/?envType=daily-question&envId=2024-11-14
 362. Index of the First Occurrence of pattern in a text -
 Problem Link - https://www.geeksforgeeks.org/problems/index-of-the-first-occurrence-of-pattern-in-a-text/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=index-of-the-first-occurrence-of-pattern-in-a-text%2F
+363. Reverse Integer -
+Problem Link - https://leetcode.com/problems/reverse-integer/
