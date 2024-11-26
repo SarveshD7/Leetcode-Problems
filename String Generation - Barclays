@@ -1,0 +1,63 @@
+Problem Statement - 
+String S1 of length L1 consisting of uppercase alphabets only.
+String S2 of length L2 consisting of characters 'T' and 'F' only.
+Generate a lexicographically smallest string S of length (L1 + L2 - 1) such that a substring of length L1 in string S starting at index (0 <= i < L2) is equal to S1
+if and only if ith element of S2 is 'T'. If generating a string is not possible return -1.
+
+Example - 
+Input:
+S1 = "ABCA"
+S2 = "TFFF"
+Output:
+"ABCAAAA"
+Explanation:
+S="ABCAAAA" is lexicographically smallest string that satisfies the given condition:-
+• Character at index 0 of S2 = 'T' and Substring starting at index 0: "ABCA" is equal to S1 .
+• Character at index 1 of S2 = 'F'
+• Character at index 2 of S2 = 'F'
+• Character at index 3 of S2 = 'F'
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+#include <iostream>
+using namespace std;
+int main() {
+    string s1, s2;
+    char x;
+    cin>>s1;
+    cin>>s2;
+    string ans="", t, t2;
+    int j, k;
+    for(int i=0;i<s1.size()+s2.size()-1;i++) ans+='*';
+    for(int i=0;i<s2.size();i++){
+        t="";
+        if(s2[i]=='T'){
+            for(int j=0;j<s1.size();j++){
+                if(ans[i+j]!='*' && ans[i+j]!=s1[j]){  
+                    cout<<(-1)<<endl;
+                    return -1;
+                }
+                ans[i+j]=s1[j];
+            }
+        }else{
+            j=0;
+            while(j<s1.size()){
+                  if(ans[i+j]=='*'){
+                      for(int k=0;i<27;k++){
+                          x='A'+k;
+                          t2=t, t2+=x;
+                          if(t2!=s1){ 
+                              ans[i+j]=x;
+                              break;
+                          }
+                      }
+                  }
+                  t+=ans[i+j];
+                  j++;
+            }
+        }
+    }
+    cout<<ans<<endl;
+    return 0;
+}
