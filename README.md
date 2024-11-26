@@ -666,3 +666,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/index-of-the-first-occurre
 Problem Link - https://leetcode.com/problems/reverse-integer/
 364. Minimum Additions to Make Valid String -
 Problem Link - https://leetcode.com/problems/minimum-additions-to-make-valid-string/
+365. Furthest Point From Origin -
+Problem Link - https://leetcode.com/problems/furthest-point-from-origin/
