@@ -664,3 +664,5 @@ Problem Link - https://leetcode.com/problems/minimized-maximum-of-products-distr
 Problem Link - https://www.geeksforgeeks.org/problems/index-of-the-first-occurrence-of-pattern-in-a-text/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=index-of-the-first-occurrence-of-pattern-in-a-text%2F
 363. Reverse Integer -
 Problem Link - https://leetcode.com/problems/reverse-integer/
+364. Minimum Additions to Make Valid String -
+Problem Link - https://leetcode.com/problems/minimum-additions-to-make-valid-string/
