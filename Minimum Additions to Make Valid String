@@ -1,0 +1,31 @@
+Problem Statement - 
+Given a string word to which you can insert letters "a", "b" or "c" anywhere and any number of times, return the minimum number of letters that must be inserted so that word becomes valid.
+A string is called valid if it can be formed by concatenating the string "abc" several times.
+
+Example - 
+Input: word = "b"
+Output: 2
+Explanation: Insert the letter "a" right before "b", and the letter "c" right next to "b" to obtain the valid string "abc".
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int addMinimum(string word) {
+        int ans=0, i=0;
+        char prev;
+        if(word[0]!='a') ans++;
+        else i++;
+        prev='a';
+        while(i<word.size()){
+            if(prev=='a' && word[i]!='b') ans++, prev='b';
+            else if(prev=='b' && word[i]!='c') ans++, prev='c';
+            else if(prev=='c' && word[i]!='a') ans++, prev='a';
+            else prev=word[i], i++;
+        }
+        if(prev=='a') ans+=2;
+        else if(prev=='b') ans++;
+        return ans;
+    }
+};
