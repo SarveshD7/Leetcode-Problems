@@ -1,0 +1,30 @@
+Problem Statement - 
+Given an integer array nums, find a subarray that has the largest product, and return the product.
+The test cases are generated so that the answer will fit in a 32-bit integer.
+
+Example - 
+Input: nums = [2,3,-2,4]
+Output: 6
+Explanation: [2,3] has the largest product 6.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int maxProduct(vector<int>& nums) {
+        int i=0, ans=INT_MIN, p=1, lm=INT_MIN;
+        while(i<nums.size()){
+            p*=nums[i];
+            if(p<0){
+                if(lm!=INT_MIN) ans=max(ans, p/lm);
+                else ans=max(ans, p);
+                lm=max(lm, p);
+            }else if(p==0){
+                ans=max(ans, p), p=1, lm=INT_MIN;
+            }else ans=max(ans, p);
+            i++;
+        }
+        return ans;
+    }
+};
