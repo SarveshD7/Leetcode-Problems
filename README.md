@@ -674,3 +674,5 @@ Problem Link - https://leetcode.com/problems/fibonacci-number/
 Problem Link - https://leetcode.com/problems/maximum-product-subarray/
 368. Adding Spaces to a String -
 Problem Link - https://leetcode.com/problems/adding-spaces-to-a-string/description/?envType=daily-question&envId=2024-12-03
+369. Prison Cells After N Days -
+Problem Link - https://leetcode.com/problems/prison-cells-after-n-days/
