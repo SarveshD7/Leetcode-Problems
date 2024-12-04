@@ -676,3 +676,5 @@ Problem Link - https://leetcode.com/problems/maximum-product-subarray/
 Problem Link - https://leetcode.com/problems/adding-spaces-to-a-string/description/?envType=daily-question&envId=2024-12-03
 369. Prison Cells After N Days -
 Problem Link - https://leetcode.com/problems/prison-cells-after-n-days/
+370. Make String a Subsequence Using Cyclic Increments -
+Problem Link - https://leetcode.com/problems/make-string-a-subsequence-using-cyclic-increments/description/?envType=daily-question&envId=2024-12-04
