@@ -678,3 +678,5 @@ Problem Link - https://leetcode.com/problems/adding-spaces-to-a-string/descripti
 Problem Link - https://leetcode.com/problems/prison-cells-after-n-days/
 370. Make String a Subsequence Using Cyclic Increments -
 Problem Link - https://leetcode.com/problems/make-string-a-subsequence-using-cyclic-increments/description/?envType=daily-question&envId=2024-12-04
+371. Insert Delete GetRandom O(1) -
+Problem Link - https://leetcode.com/problems/insert-delete-getrandom-o1/
