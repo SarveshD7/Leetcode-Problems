@@ -1,0 +1,26 @@
+Problem Statement - 
+Your friend is typing his name into a keyboard. Sometimes, when typing a character c, the key might get long pressed, and the character will be typed 1 or more times.
+You examine the typed characters of the keyboard. Return True if it is possible that it was your friends name, with some characters (possibly none) being long pressed.
+
+Example - 
+Input: name = "alex", typed = "aaleex"
+Output: true
+Explanation: 'a' and 'e' in 'alex' were long pressed.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool isLongPressedName(string name, string typed) {
+        if(name[0]!=typed[0]) return false;
+        long long i=1, j=1;
+        while(i<name.size() && j<typed.size()){
+            if(name[i]==typed[j]) i++, j++;
+            else if(name[i-1]==typed[j]) j++;
+            else return false;
+        }
+        while(j<typed.size() && typed[j]==name[i-1]) j++;
+        return i==name.size() && j==typed.size();
+    }
+};
