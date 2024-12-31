@@ -686,3 +686,5 @@ Problem Link - https://leetcode.com/problems/long-pressed-name/
 Problem Link - https://leetcode.com/problems/decode-string/
 374. Successful Pairs of Spells and Potions -
 Problem Link - https://leetcode.com/problems/successful-pairs-of-spells-and-potions/
+375. Armstrong Numbers -
+Problem Link - https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1
