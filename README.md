@@ -680,3 +680,5 @@ Problem Link - https://leetcode.com/problems/prison-cells-after-n-days/
 Problem Link - https://leetcode.com/problems/make-string-a-subsequence-using-cyclic-increments/description/?envType=daily-question&envId=2024-12-04
 371. Insert Delete GetRandom O(1) -
 Problem Link - https://leetcode.com/problems/insert-delete-getrandom-o1/
+372. Long Pressed Name -
+Problem Link - https://leetcode.com/problems/long-pressed-name/
