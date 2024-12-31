@@ -1,0 +1,44 @@
+Problem Statement - 
+Given an encoded string, return its decoded string.
+The encoding rule is: k[encoded_string], where the encoded_string inside the square brackets is being repeated exactly k times. Note that k is guaranteed to be a positive integer.
+You may assume that the input string is always valid; there are no extra white spaces, square brackets are well-formed, etc. Furthermore, you may assume that the original data does not contain any digits and that digits are only for those repeat numbers, k. For example, there will not be input like 3a or 2[4].
+The test cases are generated so that the length of the output will never exceed 105.
+
+Example - 
+Input: s = "3[a]2[bc]"
+Output: "aaabcbc"
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool isNum(char x){
+        if(x>='0' && x<='9')  return true;
+        return false;
+    }
+    string decodeString(string s) {
+        stack<string>x;
+        string t, ans;
+        int i=0, n;
+        while(i<s.size()){
+            if(s[i]==']'){
+                t="";
+                while(x.top()!="[") t=x.top()+t, x.pop();
+                x.pop(),n=stoi(x.top()), x.pop();
+                ans="";
+                while(n--) ans+=t;
+                x.push(ans);
+                i++;
+            }else if(isNum(s[i])){
+                t="";
+                while(i<s.size() && isNum(s[i])) t+=s[i++];
+                x.push(t);
+            }else t="", t+=s[i], x.push(t), i++;
+        }
+        ans="";
+        while(!x.empty()) ans=x.top()+ans, x.pop();
+
+        return ans;
+    }
+};
