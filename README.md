@@ -684,3 +684,5 @@ Problem Link - https://leetcode.com/problems/insert-delete-getrandom-o1/
 Problem Link - https://leetcode.com/problems/long-pressed-name/
 373. Decode String -
 Problem Link - https://leetcode.com/problems/decode-string/
+374. Successful Pairs of Spells and Potions -
+Problem Link - https://leetcode.com/problems/successful-pairs-of-spells-and-potions/
