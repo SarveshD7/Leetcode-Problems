@@ -1,0 +1,32 @@
+Problem Staement - 
+Given the root of a binary tree, return an array of the largest value in each row of the tree (0-indexed).
+
+Example - 
+Input: root = [1,3,2,5,3,null,9]
+Output: [1,3,9]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int depth(TreeNode* root){
+        if(!root) return 0;
+        int lh=depth(root->left);
+        int rh=depth(root->right);
+        return 1+max(lh, rh);
+    }
+    void solve(TreeNode* root, vector<int>&v, int lev){
+        if(!root) return ;
+        v[lev] = max(v[lev], root->val);
+        solve(root->left, v, lev+1);
+        solve(root->right, v, lev+1);
+        return ;
+    }
+    vector<int> largestValues(TreeNode* root) {
+        int d=depth(root);
+        vector<int>ans(d, INT_MIN);
+        solve(root, ans, 0);
+        return ans;
+    }
+};
