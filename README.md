@@ -692,3 +692,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1
 Problem Link - https://leetcode.com/problems/find-largest-value-in-each-tree-row/
 377. Maximum Score After Splitting a String -
 Problem Link - https://leetcode.com/problems/maximum-score-after-splitting-a-string/
+378. Maximize the Confusion of an Exam -
+Problem Link - https://leetcode.com/problems/maximize-the-confusion-of-an-exam/
