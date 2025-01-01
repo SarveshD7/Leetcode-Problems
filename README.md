@@ -688,3 +688,5 @@ Problem Link - https://leetcode.com/problems/decode-string/
 Problem Link - https://leetcode.com/problems/successful-pairs-of-spells-and-potions/
 375. Armstrong Numbers -
 Problem Link - https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1
+376. Find Largest Value in Each Tree Row -
+Problem Link - https://leetcode.com/problems/find-largest-value-in-each-tree-row/
