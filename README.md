@@ -694,3 +694,5 @@ Problem Link - https://leetcode.com/problems/find-largest-value-in-each-tree-row
 Problem Link - https://leetcode.com/problems/maximum-score-after-splitting-a-string/
 378. Maximize the Confusion of an Exam -
 Problem Link - https://leetcode.com/problems/maximize-the-confusion-of-an-exam/
+379. Count Vowel Strings in Ranges -
+Problem Link - https://leetcode.com/problems/count-vowel-strings-in-ranges/
