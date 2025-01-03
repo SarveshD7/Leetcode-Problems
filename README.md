@@ -700,3 +700,5 @@ Problem Link - https://leetcode.com/problems/count-vowel-strings-in-ranges/
 Problem Link - https://leetcode.com/problems/number-of-ways-to-split-array/
 381. Number of Recent Calls -
 Problem Link - https://leetcode.com/problems/number-of-recent-calls/
+382. Dota2 Senate -
+Problem Link - https://leetcode.com/problems/dota2-senate/
