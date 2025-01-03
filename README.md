@@ -698,3 +698,5 @@ Problem Link - https://leetcode.com/problems/maximize-the-confusion-of-an-exam/
 Problem Link - https://leetcode.com/problems/count-vowel-strings-in-ranges/
 380. Number of Ways to Split Array -
 Problem Link - https://leetcode.com/problems/number-of-ways-to-split-array/
+381. Number of Recent Calls -
+Problem Link - https://leetcode.com/problems/number-of-recent-calls/
