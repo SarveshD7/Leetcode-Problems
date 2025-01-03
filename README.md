@@ -696,3 +696,5 @@ Problem Link - https://leetcode.com/problems/maximum-score-after-splitting-a-str
 Problem Link - https://leetcode.com/problems/maximize-the-confusion-of-an-exam/
 379. Count Vowel Strings in Ranges -
 Problem Link - https://leetcode.com/problems/count-vowel-strings-in-ranges/
+380. Number of Ways to Split Array -
+Problem Link - https://leetcode.com/problems/number-of-ways-to-split-array/
