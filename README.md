@@ -702,3 +702,5 @@ Problem Link - https://leetcode.com/problems/number-of-ways-to-split-array/
 Problem Link - https://leetcode.com/problems/number-of-recent-calls/
 382. Dota2 Senate -
 Problem Link - https://leetcode.com/problems/dota2-senate/
+383. Number of Dice Rolls With Target Sum -
+Problem Link - https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
