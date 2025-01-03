@@ -704,3 +704,5 @@ Problem Link - https://leetcode.com/problems/number-of-recent-calls/
 Problem Link - https://leetcode.com/problems/dota2-senate/
 383. Number of Dice Rolls With Target Sum -
 Problem Link - https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
+384. Merge k Sorted Arrays -
+Problem Link - https://www.geeksforgeeks.org/problems/merge-k-sorted-arrays/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=merge-k-sorted-arrays
