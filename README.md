@@ -712,3 +712,5 @@ Problem Link - https://leetcode.com/problems/merge-k-sorted-lists/
 Problem Link - https://www.geeksforgeeks.org/problems/introduction-to-dp/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=introduction-to-dp
 387. Climbing Stairs -
 Problem Link - https://leetcode.com/problems/climbing-stairs/
+388. Unique Length-3 Palindromic Subsequences -
+Problem Link - https://leetcode.com/problems/unique-length-3-palindromic-subsequences/
