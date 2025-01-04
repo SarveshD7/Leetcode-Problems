@@ -718,3 +718,5 @@ Problem Link - https://leetcode.com/problems/unique-length-3-palindromic-subsequ
 Problem Link - https://www.geeksforgeeks.org/problems/geek-jump/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=geek-jump
 390. House Robber -
 Problem Link - https://leetcode.com/problems/house-robber/
+391. N-th Tribonacci Number -
+Problem Link - https://leetcode.com/problems/n-th-tribonacci-number/
