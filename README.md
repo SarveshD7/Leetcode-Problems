@@ -714,3 +714,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/introduction-to-dp/1?utm_s
 Problem Link - https://leetcode.com/problems/climbing-stairs/
 388. Unique Length-3 Palindromic Subsequences -
 Problem Link - https://leetcode.com/problems/unique-length-3-palindromic-subsequences/
+389. Geek Jump -
+Problem Link - https://www.geeksforgeeks.org/problems/geek-jump/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=geek-jump
