@@ -1,0 +1,44 @@
+Problem Statement -
+Given a string s, return the number of unique palindromes of length three that are a subsequence of s.
+Note that even if there are multiple ways to obtain the same subsequence, it is still only counted once.
+A palindrome is a string that reads the same forwards and backwards.
+A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.
+For example, "ace" is a subsequence of "abcde".
+
+Example - 
+Input: s = "aabca"
+Output: 3
+Explanation: The 3 palindromic subsequences of length 3 are:
+- "aba" (subsequence of "aabca")
+- "aaa" (subsequence of "aabca")
+- "aca" (subsequence of "aabca")
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int countPalindromicSubsequence(string s) {
+        int ans=0, cnt;
+        vector<vector<int>>m(s.size(), vector<int>(27, 0));
+        vector<vector<int>>v(27, vector<int>{INT_MAX, INT_MIN, 0});
+        vector<int>v2(27, 0);
+        for(int i=0;i<s.size();i++){
+            v2[s[i]-'a']++;
+            v[s[i]-'a'][0]=min(v[s[i]-'a'][0], i);
+            v[s[i]-'a'][1]=max(v[s[i]-'a'][1], i);
+            v[s[i]-'a'][2]=s[i]-'a';
+            for(int j=0;j<27;j++) m[i][j]=v2[j];
+        }
+        for(auto i:v){
+            if(i[0]!=i[1] && i[0]!=INT_MAX){
+                cnt=0;
+                for(int j=0;j<27;j++){          
+                    if((j==i[2] && m[i[1]][j]-m[i[0]][j]>1) || (j!=i[2] && m[i[1]][j]-m[i[0]][j]>0)) cnt++;
+                }
+                ans+=cnt;            
+            }
+        }
+        return ans;
+    }
+};
