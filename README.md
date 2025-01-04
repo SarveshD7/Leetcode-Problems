@@ -710,3 +710,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/merge-k-sorted-arrays/1?ut
 Problem Link - https://leetcode.com/problems/merge-k-sorted-lists/
 386. Introduction to DP -
 Problem Link - https://www.geeksforgeeks.org/problems/introduction-to-dp/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=introduction-to-dp
+387. Climbing Stairs -
+Problem Link - https://leetcode.com/problems/climbing-stairs/
