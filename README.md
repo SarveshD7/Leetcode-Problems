@@ -720,3 +720,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/geek-jump/1?utm_source=you
 Problem Link - https://leetcode.com/problems/house-robber/
 391. N-th Tribonacci Number -
 Problem Link - https://leetcode.com/problems/n-th-tribonacci-number/
+392. Minimum Number of Operations to Move All Balls to Each Box - 
+Problem Link - https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/
