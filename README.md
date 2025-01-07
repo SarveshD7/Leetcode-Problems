@@ -722,3 +722,5 @@ Problem Link - https://leetcode.com/problems/house-robber/
 Problem Link - https://leetcode.com/problems/n-th-tribonacci-number/
 392. Minimum Number of Operations to Move All Balls to Each Box - 
 Problem Link - https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/
+393. Longest Happy Prefix -
+Problem Link - https://leetcode.com/problems/longest-happy-prefix/
