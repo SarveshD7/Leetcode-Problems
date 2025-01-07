@@ -1,0 +1,42 @@
+Problem Statement -
+Given an array of string words, return all strings in words that is a substring of another word. You can return the answer in any order.
+A substring is a contiguous sequence of characters within a string
+
+Example - 
+Input: words = ["mass","as","hero","superhero"]
+Output: ["as","hero"]
+Explanation: "as" is substring of "mass" and "hero" is substring of "superhero".
+["hero","as"] is also a valid answer.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    vector<string> stringMatching(vector<string>& words) {
+        vector<int>m(words.size(), 0), v;
+        vector<string>ans;
+        string s1, s2;
+        int k, l, a, b;
+        for(int i=0;i<words.size();i++){
+            for(int j=i+1;j<words.size();j++){
+                if(words[j].size()>words[i].size()) a=j, b=i;
+                else a=i, b=j;
+                s1=words[a], s2=words[b];
+                if(m[b]==0){
+                    v.clear();
+                    for(int p=0;p<s1.size();p++) if(s1[p]==s2[0]) v.push_back(p);
+                    for(auto p:v){
+                        k=p, l=0;                        
+                        while(k<s1.size() && l<s2.size() && s1[k]==s2[l]) k++, l++;
+                        if(l==s2.size()){ 
+                            ans.push_back(s2), m[b]++;
+                            break;
+                        }
+                    }
+                }           
+            }
+        }        
+        return ans;
+    }
+};
