@@ -732,3 +732,5 @@ Problem Link - https://www.geeksforgeeks.org/problems/minimal-cost/1?utm_source=
 Problem Link - https://leetcode.com/problems/min-cost-climbing-stairs/
 397. Nearest Exit from Entrance in Maze -
 Problem Link - https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/
+398. Smallest Number in Infinite Set -
+Problem Link - https://leetcode.com/problems/smallest-number-in-infinite-set/
