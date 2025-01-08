@@ -728,3 +728,5 @@ Problem Link - https://leetcode.com/problems/longest-happy-prefix/
 Problem Link - https://leetcode.com/problems/house-robber-ii/
 395. Minimal Cost -
 Problem Link - https://www.geeksforgeeks.org/problems/minimal-cost/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=minimal-cost
+396. Min Cost Climbing Stairs -
+Problem Link - https://leetcode.com/problems/min-cost-climbing-stairs/
