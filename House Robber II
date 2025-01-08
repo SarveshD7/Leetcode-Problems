@@ -1,0 +1,43 @@
+Problem Statement - 
+You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. 
+That means the first house is the neighbor of the last one. 
+Meanwhile, adjacent houses have a security system connected, and it will automatically contact the police if two adjacent houses were broken into on the same night.
+Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.
+
+Example - 
+Input: nums = [2,3,2]
+Output: 3
+Explanation: You cannot rob house 1 (money = 2) and then rob house 3 (money = 2), because they are adjacent houses.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int solve(int i, vector<int>&nums, vector<vector<int>>&dp, int first){
+        if(i>=nums.size()) return 0;
+        if(dp[i][first]!=-1) return dp[i][first];        
+        if(i==0) return dp[i][first]=max(nums[i]+solve(i+2, nums, dp, 1), solve(i+1, nums, dp, 0));
+        else if(i==nums.size()-1) {
+            if(first) return dp[i][first]=0;
+            else return dp[i][first]=max(nums[i]+solve(i+2, nums, dp, first), solve(i+1, nums, dp, first));
+        }
+        return dp[i][first]=max(nums[i]+solve(i+2, nums, dp, first), solve(i+1, nums, dp, first));
+    }
+
+    int rob(vector<int>& nums) {
+        if(nums.size()==1) return nums[0];
+        if(nums.size()==2) return max(nums[0], nums[1]);
+        // MEMOIZATION 
+        // vector<vector<int>>dp(nums.size(), vector<int>(2, -1));
+        // return solve(0, nums, dp, 0);
+
+        // TABULATION
+        int c, a=nums[0], b=nums[0],ans;
+        for(int i=2;i<nums.size()-1;i++) c=a, a=b, b=max(nums[i]+c, b); //, cout<<a<<" "<<b<<endl;
+        ans=b, a=0, b=nums[1];
+        for(int i=2;i<nums.size();i++) c=a, a=b, b=max(nums[i]+c, b);
+        return max(ans, b);
+
+    }
+};
