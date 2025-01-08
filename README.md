@@ -730,3 +730,5 @@ Problem Link - https://leetcode.com/problems/house-robber-ii/
 Problem Link - https://www.geeksforgeeks.org/problems/minimal-cost/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=minimal-cost
 396. Min Cost Climbing Stairs -
 Problem Link - https://leetcode.com/problems/min-cost-climbing-stairs/
+397. Nearest Exit from Entrance in Maze -
+Problem Link - https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/
