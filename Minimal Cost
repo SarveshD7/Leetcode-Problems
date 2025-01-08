@@ -22,6 +22,16 @@ class Solution {
     }
     int minimizeCost(int k, vector<int>& arr) {
         vector<int>dp(arr.size(), -1);
-        return solve(0, k, arr, dp);
+        // MEMOIZATION
+        // return solve(0, k, arr, dp);        
+        // TABULATION
+        int mn;
+        dp[arr.size()-1]=0;
+        for(int i=arr.size()-2;i>=0;i--){
+            mn=INT_MAX;
+            for(int j=1;j<=k;j++) if(i+j<arr.size()) mn=min(mn, abs(arr[i]-arr[i+j])+dp[i+j]);
+            dp[i]=mn;
+        }
+        return dp[0];
     }
 };
