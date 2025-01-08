@@ -724,3 +724,5 @@ Problem Link - https://leetcode.com/problems/n-th-tribonacci-number/
 Problem Link - https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/
 393. Longest Happy Prefix -
 Problem Link - https://leetcode.com/problems/longest-happy-prefix/
+394. House Robber II -
+Problem Link - https://leetcode.com/problems/house-robber-ii/
