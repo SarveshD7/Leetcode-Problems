@@ -734,3 +734,5 @@ Problem Link - https://leetcode.com/problems/min-cost-climbing-stairs/
 Problem Link - https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/
 398. Smallest Number in Infinite Set -
 Problem Link - https://leetcode.com/problems/smallest-number-in-infinite-set/
+399. Total Cost to Hire K Workers -
+Problem Link - https://leetcode.com/problems/total-cost-to-hire-k-workers/
