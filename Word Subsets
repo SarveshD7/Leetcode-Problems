@@ -1,0 +1,41 @@
+Problem Statement - 
+You are given two string arrays words1 and words2.
+A string b is a subset of string a if every letter in b occurs in a including multiplicity.
+For example, "wrr" is a subset of "warrior" but is not a subset of "world".
+A string a from words1 is universal if for every string b in words2, b is a subset of a.
+Return an array of all the universal strings in words1. You may return the answer in any order.
+
+Example - 
+Input: words1 = ["amazon","apple","facebook","google","leetcode"], words2 = ["e","o"]
+Output: ["facebook","google","leetcode"]
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    vector<string> wordSubsets(vector<string>& words1, vector<string>& words2) {
+        vector<int>v1(27, 0), v2(27, 0);
+        vector<string>ans;
+        bool chk;        
+        for(auto i:words2){
+            fill(v1.begin(), v1.end(), 0);
+            for(auto j:i) v1[j-'a']++;
+            for(int j=0;j<27;j++) v2[j]=max(v2[j], v1[j]);
+        }
+        for(auto i:words1){
+            fill(v1.begin(), v1.end(), 0);
+            for(auto j:i) v1[j-'a']++;
+            chk=true;
+            for(int j=0;j<27;j++){
+                if(v1[j]<v2[j]){
+                    chk=false;
+                    break;
+                }
+            }
+            if(chk) ans.push_back(i);
+        }
+        return ans;
+
+    }
+};
