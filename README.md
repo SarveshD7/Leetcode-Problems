@@ -736,3 +736,5 @@ Problem Link - https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/
 Problem Link - https://leetcode.com/problems/smallest-number-in-infinite-set/
 399. Total Cost to Hire K Workers -
 Problem Link - https://leetcode.com/problems/total-cost-to-hire-k-workers/
+400. Word Subsets -
+Problem Link - https://leetcode.com/problems/word-subsets/
