@@ -1,0 +1,23 @@
+Problem Statement - 
+Given a string s and an integer k, return true if you can use all the characters in s to construct k palindrome strings or false otherwise.
+
+Example - 
+Input: s = "annabelle", k = 2
+Output: true
+Explanation: You can construct two palindromes using all characters in s.
+Some possible constructions "anna" + "elble", "anbna" + "elle", "anellena" + "b"
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool canConstruct(string s, int k) {
+        vector<int>v(27, 0);
+        int o=0;
+        for(auto i:s) v[i-'a']++;        
+        for(auto i:v) if(i%2!=0) o++;
+        if(k>s.size() || o>k) return false;
+        return true;
+    }
+};
