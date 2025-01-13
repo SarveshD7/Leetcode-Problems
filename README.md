@@ -740,3 +740,5 @@ Problem Link - https://leetcode.com/problems/total-cost-to-hire-k-workers/
 Problem Link - https://leetcode.com/problems/word-subsets/
 401. Construct K Palindrome Strings -
 Problem Link - https://leetcode.com/problems/construct-k-palindrome-strings/
+402. Minimum Length of String After Operations -
+Problem Link - https://leetcode.com/problems/minimum-length-of-string-after-operations/
