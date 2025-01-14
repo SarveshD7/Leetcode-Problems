@@ -1,0 +1,28 @@
+Problem Statement - 
+Given a string s, return the number of palindromic substrings in it.
+A string is a palindrome when it reads the same backward as forward.
+A substring is a contiguous sequence of characters within the string.
+
+Example - 
+Input: s = "abc"
+Output: 3
+Explanation: Three palindromic strings: "a", "b", "c".
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int countSubstrings(string s) {
+        int ans=0, j, k;
+        for(int i=0;i<s.size()-1;i++){
+            // ODD PALINDROME
+            j=k=i;
+            while(j>=0 && k<s.size() && s[j]==s[k]) j--, k++, ans++;
+            // EVEN PALINDROME
+            j=i, k=i+1;
+            while(j>=0 && k<s.size() && s[j]==s[k]) j--, k++, ans++;
+        }
+        return ans+1; // +1 for the last character since our loop doesn't cover it
+    }
+};
