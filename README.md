@@ -744,3 +744,5 @@ Problem Link - https://leetcode.com/problems/construct-k-palindrome-strings/
 Problem Link - https://leetcode.com/problems/minimum-length-of-string-after-operations/
 403. Reorder Routes to Make All Paths Lead to the City Zero -
 Problem Link - https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/
+404. Palindromic Substrings -
+Problem Link - https://leetcode.com/problems/palindromic-substrings/
