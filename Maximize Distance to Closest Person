@@ -1,0 +1,33 @@
+Problem Statement - 
+You are given an array representing a row of seats where seats[i] = 1 represents a person sitting in the ith seat, and seats[i] = 0 represents that the ith seat is empty (0-indexed).
+There is at least one empty seat, and at least one person sitting.
+Alex wants to sit in the seat such that the distance between him and the closest person to him is maximized. 
+Return that maximum distance to the closest person.
+
+Example - 
+Input: seats = [1,0,0,0,1,0,1]
+Output: 2
+Explanation: 
+If Alex sits in the second open seat (i.e. seats[2]), then the closest person has distance 2.
+If Alex sits in any other open seat, the closest person has distance 1.
+Thus, the maximum distance to the closest person is 2.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int maxDistToClosest(vector<int>& s) {
+        int i=0, j=0, cnt=0, ans=INT_MIN, a2=INT_MIN;
+        while(i<s.size()){
+            cnt=0, j=i;
+            while(i<s.size() && s[i]==0) cnt++, i++;
+            if(j==0 || i==s.size()) a2=max(a2, i-j);
+            ans=max(ans, cnt);
+            while(i<s.size() && s[i]==1) i++;            
+        }
+        ans=(ans%2==0)?(ans/2):(ans/2+1);
+        ans=max(ans, a2);
+        return ans;
+    }
+};
