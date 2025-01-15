@@ -750,3 +750,5 @@ Problem Link - https://leetcode.com/problems/palindromic-substrings/
 Problem Link - https://leetcode.com/problems/minimize-xor/
 406. Maximize Distance to Closest Person -
 Problem Link - https://leetcode.com/problems/maximize-distance-to-closest-person/
+407. Rotated Digits -
+Problem Link - https://leetcode.com/problems/rotated-digits/
