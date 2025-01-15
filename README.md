@@ -748,3 +748,5 @@ Problem Link - https://leetcode.com/problems/reorder-routes-to-make-all-paths-le
 Problem Link - https://leetcode.com/problems/palindromic-substrings/
 405. Minimize XOR -
 Problem Link - https://leetcode.com/problems/minimize-xor/
+406. Maximize Distance to Closest Person -
+Problem Link - https://leetcode.com/problems/maximize-distance-to-closest-person/
