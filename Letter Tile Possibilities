@@ -1,0 +1,30 @@
+Problem Statement - 
+You have n  tiles, where each tile has one letter tiles[i] printed on it.
+Return the number of possible non-empty sequences of letters you can make using the letters printed on those tiles.
+
+Example - 
+Input: tiles = "AAB"
+Output: 8
+Explanation: The possible sequences are "A", "B", "AA", "AB", "BA", "AAB", "ABA", "BAA".
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    void solve(vector<int>&v, int &ans){        
+        for(int j=0;j<27;j++){
+            if(v[j]!=0){
+                v[j]--, ans++, solve(v,ans), v[j]++;
+            }
+        }
+        return ;
+    }
+    int numTilePossibilities(string tiles) {
+        vector<int>v(27, 0);
+        int ans=0;
+        for(auto i:tiles) v[i-'A']++;
+        solve(v, ans);    
+        return ans;
+    }
+};
