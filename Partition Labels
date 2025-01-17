@@ -17,26 +17,19 @@ Solution -
 class Solution {
 public:
     vector<int> partitionLabels(string s) {
-        int n = s.size();
-        unordered_map<char, int>m;
+        vector<int>v1(26, 0), v2(26, 0);
         vector<int>ans;
-        int cnt = 0, start =0;
-        for(auto i:s) m[i]++;
-        for(int i = 0;i<n;i++){
-            m[s[i]]--;
-            bool flag = true;
-            for(int j = 0;j<=i;j++){
-                if(m[s[j]]!=0){
-                    flag = false;
-                    break;
-                }
+        for(auto i:s) v1[i-'a']++;
+        int a, b, i=0, j, st=0;
+        while(i<s.size()){
+            v2[s[i]-'a']++;
+            a=b=j=0;
+            while(j<26){                
+                if(v2[j]!=0 && v1[j]!=v2[j]) break;
+                j++;
             }
-            if(flag){
-                ans.push_back(i-start+1);
-                
-                // cout<<i<<" "<<start<<" "<<s[start]<<" "<<s[i]<<endl;
-                start = i+1;
-            }
+            if(j==26) ans.push_back(i-st+1), st=i+1;
+            i++;
         }
         return ans;
     }
