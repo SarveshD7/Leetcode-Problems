@@ -1,0 +1,30 @@
+Problem Statement - 
+An axis-aligned rectangle is represented as a list [x1, y1, x2, y2], where (x1, y1) is the coordinate of its bottom-left corner, and (x2, y2) is the coordinate of its top-right corner. 
+Its top and bottom edges are parallel to the X-axis, and its left and right edges are parallel to the Y-axis.
+Two rectangles overlap if the area of their intersection is positive. To be clear, two rectangles that only touch at the corner or edges do not overlap.
+Given two axis-aligned rectangles rec1 and rec2, return true if they overlap, otherwise return false.
+
+Example -
+Input: rec1 = [0,0,2,2], rec2 = [1,1,3,3]
+Output: true
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool isRectangleOverlap(vector<int>& rec1, vector<int>& rec2) {
+        int x1_1=rec1[0], y1_1=rec1[1], x2_1=rec1[2], y2_1=rec1[3], x1_2=rec2[0], y1_2=rec2[1], x2_2=rec2[2], y2_2=rec2[3];
+        
+        if(y2_2<y1_1 // Second rectangle is vertically lower than first such that they cannot overlap
+        || y2_1<y1_2 // First rectangle is vertically lower than second such that they cannot overlap
+        || x2_2<x1_1 // Second rectangle is horizontally to left than first such that they cannot overlap
+        || x2_1<x1_2 // First rectangle is horizontally to left than second such that they cannot overlap
+        || (x1_2==x2_1 && ((y1_2>=y1_1 && y1_2<=y2_1) || (y2_2>=y1_1 && y2_2<=y2_1))) // Left edge of second rectangle overlapping with Right edge of first 
+        || (x1_1==x2_2 && ((y1_2>=y1_1 a&& y1_2<=y2_1) || (y2_2>=y1_1 && y2_2<=y2_1)))  // Left edge of first rectangle overlapping with Right edge of second 
+        || (y2_2==y1_1 && ((x2_2<=x2_1 && x2_2>=x1_1) || (x1_2<=x2_1 && x1_2>=x1_1))) // Top edge of second overlapping with Bottom edge of first
+        || (y1_2==y2_1 && ((x2_2<=x2_1 && x2_2>=x1_1) || (x1_2<=x2_1 && x1_2>=x1_1))) // Top edge of first overlapping with Bottom edge of second
+        ) return false; 
+        return true;
+    }
+};
