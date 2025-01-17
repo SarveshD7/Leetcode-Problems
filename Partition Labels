@@ -11,25 +11,20 @@ The partition is "ababcbaca", "defegde", "hijhklij".
 This is a partition so that each letter appears in at most one part.
 A partition like "ababcbacadefegde", "hijhklij" is incorrect, because it splits s into less parts.
 
-----------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
 class Solution {
 public:
     vector<int> partitionLabels(string s) {
-        vector<int>v1(26, 0), v2(26, 0);
+        vector<int>v1(26, 0);
         vector<int>ans;
-        for(auto i:s) v1[i-'a']++;
-        int a, b, i=0, j, st=0;
+        for(int i=0;i<s.size();i++) v1[s[i]-'a']=i;
+        int a, i=0;
         while(i<s.size()){
-            v2[s[i]-'a']++;
-            a=b=j=0;
-            while(j<26){                
-                if(v2[j]!=0 && v1[j]!=v2[j]) break;
-                j++;
-            }
-            if(j==26) ans.push_back(i-st+1), st=i+1;
-            i++;
+            a=v1[s[i]-'a'];
+            while(i<=a && i<s.size()) a=max(a, v1[s[i]-'a']), i++;
+            if(a<i) ans.push_back(a-st+1), st=i;
         }
         return ans;
     }
