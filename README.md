@@ -758,3 +758,5 @@ Problem Link - https://leetcode.com/problems/sort-the-matrix-diagonally/
 Problem Link - https://leetcode.com/problems/remove-k-digits/
 410. Bitwise XOR of All Pairings -
 Problem Link - https://leetcode.com/problems/bitwise-xor-of-all-pairings/
+411. Neighboring Bitwise XOR -
+Problem Link - https://leetcode.com/problems/neighboring-bitwise-xor/
