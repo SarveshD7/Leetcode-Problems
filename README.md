@@ -764,3 +764,5 @@ Problem Link - https://leetcode.com/problems/neighboring-bitwise-xor/
 Problem Link - https://leetcode.com/problems/letter-tile-possibilities/
 413. Rectangle Overlap -
 Problem Link - https://leetcode.com/problems/rectangle-overlap/
+414. Minimum Cost to Make at Least One Valid Path in a Grid -
+Problem Link - https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/
