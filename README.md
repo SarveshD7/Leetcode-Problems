@@ -766,3 +766,5 @@ Problem Link - https://leetcode.com/problems/letter-tile-possibilities/
 Problem Link - https://leetcode.com/problems/rectangle-overlap/
 414. Minimum Cost to Make at Least One Valid Path in a Grid -
 Problem Link - https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/
+415. First Completely Painted Row or Column -
+Problem Link - https://leetcode.com/problems/first-completely-painted-row-or-column/
