@@ -768,3 +768,5 @@ Problem Link - https://leetcode.com/problems/rectangle-overlap/
 Problem Link - https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/
 415. First Completely Painted Row or Column -
 Problem Link - https://leetcode.com/problems/first-completely-painted-row-or-column/
+416. Trim a Binary Search Tree -
+Problem Link - https://leetcode.com/problems/trim-a-binary-search-tree/
