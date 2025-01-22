@@ -1,0 +1,51 @@
+Problem Statement - 
+You are given an integer matrix isWater of size m x n that represents a map of land and water cells.
+If isWater[i][j] == 0, cell (i, j) is a land cell.
+If isWater[i][j] == 1, cell (i, j) is a water cell.
+You must assign each cell a height in a way that follows these rules:
+The height of each cell must be non-negative.
+If the cell is a water cell, its height must be 0.
+Any two adjacent cells must have an absolute height difference of at most 1. A cell is adjacent to another cell if the former is directly north, east, south, or west of the latter 
+(i.e., their sides are touching).
+Find an assignment of heights such that the maximum height in the matrix is maximized.
+Return an integer matrix height of size m x n where height[i][j] is cell (i, j)'s height. If there are multiple solutions, return any of them.
+
+Example -
+Input: isWater = [[0,1],[0,0]]
+Output: [[1,0],[2,1]]
+Explanation: The image shows the assigned heights of each cell.
+The blue cell is the water cell, and the green cells are the land cells.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    vector<vector<int>> highestPeak(vector<vector<int>>& w) {
+        queue<pair<int, int>>q;
+        vector<vector<int>>ans(w.size(), vector<int>(w[0].size(), INT_MAX));
+        for(int i=0;i<w.size();i++){
+            for(int j=0;j<w[0].size();j++){
+                if(w[i][j]==1) q.push({i, j}), ans[i][j]=0;
+            }
+        }
+        int arr[4]={1, 0, -1, 0};
+        int brr[4]={0, 1, 0, -1};
+        int a, b, c, na, nb, s;
+        while(!q.empty()){            
+            s=q.size();
+            while(s--){
+                a=q.front().first, b=q.front().second;
+                q.pop();
+                for(int i=0;i<4;i++){
+                    na=a+arr[i], nb=b+brr[i];
+                    if(na>=0 && nb>=0 && na<w.size() && nb<w[0].size() && abs(ans[a][b]-ans[na][nb])>1){
+                        ans[na][nb]=ans[a][b]+1;
+                        q.push({na, nb});
+                    }
+                }
+            }
+        }
+        return ans;
+    }
+};
