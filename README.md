@@ -772,3 +772,5 @@ Problem Link - https://leetcode.com/problems/first-completely-painted-row-or-col
 Problem Link - https://leetcode.com/problems/trim-a-binary-search-tree/
 417. Map of Highest Peak - 
 Problem Link - https://leetcode.com/problems/map-of-highest-peak/
+418. Count Servers that Communicate -
+Problem Link - https://leetcode.com/problems/count-servers-that-communicate/
