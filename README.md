@@ -774,3 +774,5 @@ Problem Link - https://leetcode.com/problems/trim-a-binary-search-tree/
 Problem Link - https://leetcode.com/problems/map-of-highest-peak/
 418. Count Servers that Communicate -
 Problem Link - https://leetcode.com/problems/count-servers-that-communicate/
+419. Count Mentions Per User -
+Problem Link - https://leetcode.com/problems/count-mentions-per-user/
