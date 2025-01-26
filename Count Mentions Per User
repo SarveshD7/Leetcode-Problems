@@ -1,0 +1,66 @@
+Problem Statement - 
+You are given an integer numberOfUsers representing the total number of users and an array events of size n x 3.
+Each events[i] can be either of the following two types:
+Message Event: ["MESSAGE", "timestampi", "mentions_stringi"]
+This event indicates that a set of users was mentioned in a message at timestampi.
+The mentions_stringi string can contain one of the following tokens:
+id<number>: where <number> is an integer in range [0,numberOfUsers - 1]. There can be multiple ids separated by a single whitespace and may contain duplicates. This can mention even the offline users.
+ALL: mentions all users.
+HERE: mentions all online users.
+Offline Event: ["OFFLINE", "timestampi", "idi"]
+This event indicates that the user idi had become offline at timestampi for 60 time units. The user will automatically be online again at time timestampi + 60.
+Return an array mentions where mentions[i] represents the number of mentions the user with id i has across all MESSAGE events.
+All users are initially online, and if a user goes offline or comes back online, their status change is processed before handling any message event that occurs at the same timestamp.
+Note that a user can be mentioned multiple times in a single message event, and each mention should be counted separately.
+
+Example - 
+Input: numberOfUsers = 2, events = [["MESSAGE","10","id1 id0"],["OFFLINE","11","0"],["MESSAGE","71","HERE"]]
+Output: [2,2]
+Explanation:
+Initially, all users are online.
+At timestamp 10, id1 and id0 are mentioned. mentions = [1,1]
+At timestamp 11, id0 goes offline.
+At timestamp 71, id0 comes back online and "HERE" is mentioned. mentions = [2,2]
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+struct Compare{
+    bool operator()(vector<string>&v1, vector<string>&v2){
+        if(v1[1]!=v2[1]) return stoi(v1[1])<stoi(v2[1]);
+        return v1[0]=="OFFLINE";
+    }
+};
+    vector<int> countMentions(int n, vector<vector<string>>& e) {
+        sort(e.begin(), e.end(), Compare());
+        vector<int>v(n, -1), ans(n, 0);
+        int j;
+        string t;
+        for(auto i:e){
+            if(i[0]=="MESSAGE"){
+                if(i[2]=="HERE"){
+                    for(int j=0;j<ans.size();j++){
+                        if(v[j]==-1 || v[j]<=stoi(i[1])-60) ans[j]++;
+                    }
+                }else if(i[2]=="ALL"){
+                    for(int j=0;j<ans.size();j++) ans[j]++;
+                }else{
+                    j=0;
+                    t="";
+                    while(j<i[2].size()){
+                        if(i[2][j]=='i' || i[2][j]=='d') j++;
+                        else if(i[2][j]==' ') ans[stoi(t)]++, t="", j++;
+                        else{
+                            t+=i[2][j];
+                            j++;
+                        }
+                    }
+                    ans[stoi(t)]++;
+                }
+            }else v[stoi(i[2])]=stoi(i[1]);
+        }
+        return ans;
+    }
+};
