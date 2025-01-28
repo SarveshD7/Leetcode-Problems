@@ -1,0 +1,52 @@
+Problem Statement - 
+There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. 
+You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course ai first if you want to take course bi.
+For example, the pair [0, 1] indicates that you have to take course 0 before you can take course 1.
+Prerequisites can also be indirect. If course a is a prerequisite of course b, and course b is a prerequisite of course c, then course a is a prerequisite of course c.
+You are also given an array queries where queries[j] = [uj, vj]. For the jth query, you should answer whether course uj is a prerequisite of course vj or not.
+Return a boolean array answer, where answer[j] is the answer to the jth query.
+
+Example - 
+Input: numCourses = 2, prerequisites = [[1,0]], queries = [[0,1],[1,0]]
+Output: [false,true]
+Explanation: The pair [1, 0] indicates that you have to take course 1 before you can take course 0.
+Course 0 is not a prerequisite of course 1, but the opposite is true.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    vector<int> solve(int i, vector<vector<int>>&adj, vector<int>&vis, vector<vector<int>>&ans){
+        vector<int>v;
+        for(auto j:adj[i]){
+            ans[i][j]=1;
+            if(vis[j]==0){
+                vis[j]=1;
+                v=solve(j, adj, vis, ans);
+                for(int k=0;k<v.size();k++){
+                    if(v[k]==1) ans[i][k]=1;
+                }
+            }else{
+                for(int k=0;k<ans[j].size();k++){
+                    if(ans[j][k]==1) ans[i][k]=1;
+                }
+            }
+        }
+        return ans[i];
+    }
+    vector<bool> checkIfPrerequisite(int n, vector<vector<int>>& p, vector<vector<int>>& q) {
+        vector<vector<int>>adj(n), ans(n, vector<int>(n, 0));
+        vector<int>vis(n, 0), ind(n, 0);
+        vector<bool>ret;
+        for(auto i:p) adj[i[0]].push_back(i[1]), ind[i[1]]++;
+        for(int i=0;i<n;i++){
+            if(vis[i]==0 && ind[i]==0) vis[i]=1, solve(i, adj, vis, ans);
+        }
+        for(auto i:q){
+            if(ans[i[0]][i[1]]==1) ret.push_back(true);
+            else ret.push_back(false);
+        }
+        return ret;
+    }
+};
