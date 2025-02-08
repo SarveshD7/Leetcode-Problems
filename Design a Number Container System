@@ -1,0 +1,43 @@
+Problem Statement- 
+Design a number container system that can do the following:
+Insert or Replace a number at the given index in the system.
+Return the smallest index for the given number in the system.
+Implement the NumberContainers class:
+NumberContainers() Initializes the number container system.
+void change(int index, int number) Fills the container at index with the number. If there is already a number at that index, replace it.
+int find(int number) Returns the smallest index for the given number, or -1 if there is no index that is filled by number in the system.
+
+Example - 
+Input
+["NumberContainers", "find", "change", "change", "change", "change", "find", "change", "find"]
+[[], [10], [2, 10], [1, 10], [3, 10], [5, 10], [10], [1, 20], [10]]
+Output
+[null, -1, null, null, null, null, 1, null, 2]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class NumberContainers {
+public:
+    unordered_map<int, int>m1;
+    unordered_map<int, priority_queue<int, vector<int>, greater<int>>>m2;
+    NumberContainers() {
+    }    
+    void change(int index, int number) {
+        m1[index]=number, m2[number].push(index);
+    }
+    int find(int number) {
+        if(m2.find(number)!=m2.end()){
+            while(!m2[number].empty() && m1[m2[number].top()]!=number) m2[number].pop();
+            if(!m2[number].empty()) return m2[number].top();
+        }
+        return -1;
+    }
+};
+
+/**
+ * Your NumberContainers object will be instantiated and called as such:
+ * NumberContainers* obj = new NumberContainers();
+ * obj->change(index,number);
+ * int param_2 = obj->find(number);
+ */
