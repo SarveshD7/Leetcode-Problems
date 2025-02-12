@@ -782,3 +782,5 @@ Problem Link - https://leetcode.com/problems/course-schedule-iv/
 Problem Link - https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/
 422. Design a Number Container System -
 Problem Link - https://leetcode.com/problems/design-a-number-container-system/
+423. Max Sum of a Pair With Equal Sum of Digits -
+Problem Link - https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits/
