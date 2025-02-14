@@ -784,3 +784,5 @@ Problem Link - https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/
 Problem Link - https://leetcode.com/problems/design-a-number-container-system/
 423. Max Sum of a Pair With Equal Sum of Digits -
 Problem Link - https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits/
+424. Find Peak Element -
+Problem Link - https://leetcode.com/problems/find-peak-element/
