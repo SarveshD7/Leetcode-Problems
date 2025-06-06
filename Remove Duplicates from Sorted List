@@ -1,0 +1,56 @@
+Problem Statement -
+Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
+
+Example - 
+Input: head = [1,1,2]
+Output: [1,2]
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+Python - 
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        n, nxt, t = None, None, head
+        while t:
+            nxt=t.next
+            while nxt and nxt.val==t.val:
+                n=nxt.next
+                nxt.next=None
+                nxt=n
+            t.next=nxt
+            t=t.next
+        return head
+C++ -
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* deleteDuplicates(ListNode* head) {
+        ListNode* n=NULL, *t=head, *nxt=NULL;
+        while(t){
+            nxt=t;
+            while(nxt and nxt->val==t->val){
+                n=nxt->next;
+                nxt->next=NULL;
+                nxt=n;
+            }
+            t->next=nxt;
+            t=t->next;
+        }   
+        return head;
+    }
+};
