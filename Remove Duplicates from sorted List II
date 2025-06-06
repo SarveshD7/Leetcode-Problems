@@ -6,7 +6,7 @@ Example -
 Input: head = [1,2,3,3,4,4,5]
 Output: [1,2,5]
 
------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
 /**
@@ -22,26 +22,29 @@ Solution -
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
-        map<int,int>m;
-        ListNode* temp = head;
-        while(temp){
-            m[temp->val]++;
-            temp = temp->next;
-        }
-        ListNode* res = NULL;
-        temp =NULL;
-        for(auto i:m){
-            if(i.second==1){
-                if(res==NULL){
-                    res = new ListNode(i.first);
-                    temp = res;
-                }
-                else{   
-                    temp->next =new ListNode(i.first);
-                    temp = temp->next;
-                }
+        ListNode* n=NULL, *t=head, *nxt=NULL, *p=NULL;
+        bool chk=false;
+        while(t){
+            nxt=t->next, chk=false;
+            while(nxt and nxt->val==t->val){
+                n=nxt->next;
+                nxt->next=NULL;
+                nxt=n;
+                chk=true;
             }
-        }
-        return res;
+            if(chk){
+                t->next=NULL;
+                if(p){
+                    p->next=nxt;
+                }else{
+                    head=nxt;
+                }
+            }else{
+                p=t;
+                t->next=nxt;
+            }
+            t=nxt;
+        }   
+        return head;
     }
 };
