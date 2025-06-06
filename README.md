@@ -788,3 +788,5 @@ Problem Link - https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of
 Problem Link - https://leetcode.com/problems/find-peak-element/
 425. Evaluate Division -
 Problem Link - https://leetcode.com/problems/evaluate-division/
+426. Remove Duplicates from Sorted List -
+Problem Link - https://leetcode.com/problems/remove-duplicates-from-sorted-list/
