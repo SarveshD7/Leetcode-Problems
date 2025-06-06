@@ -792,3 +792,5 @@ Problem Link - https://leetcode.com/problems/evaluate-division/
 Problem Link - https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 427. Remove Duplicates from Sorted Array II -
 Problem Link - https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
+428. Find the Duplicate Number -
+Problem Link - https://leetcode.com/problems/find-the-duplicate-number/
