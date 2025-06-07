@@ -794,3 +794,5 @@ Problem Link - https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 Problem Link - https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
 428. Find the Duplicate Number -
 Problem Link - https://leetcode.com/problems/find-the-duplicate-number/
+429. Duplicate Zeros -
+Problem Link - https://leetcode.com/problems/duplicate-zeros/
