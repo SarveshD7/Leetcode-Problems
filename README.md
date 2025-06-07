@@ -796,3 +796,5 @@ Problem Link - https://leetcode.com/problems/remove-duplicates-from-sorted-array
 Problem Link - https://leetcode.com/problems/find-the-duplicate-number/
 429. Duplicate Zeros -
 Problem Link - https://leetcode.com/problems/duplicate-zeros/
+430. Squares of a Sorted Array -
+Problem Link - https://leetcode.com/problems/squares-of-a-sorted-array/
