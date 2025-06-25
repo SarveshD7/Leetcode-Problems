@@ -800,3 +800,5 @@ Problem Link - https://leetcode.com/problems/duplicate-zeros/
 Problem Link - https://leetcode.com/problems/squares-of-a-sorted-array/
 431. 3Sum Closest -
 Problem Link - https://leetcode.com/problems/3sum-closest/
+432. 3Sum Smaller -
+Problem Link - https://www.lintcode.com/problem/3sum-smaller/description
