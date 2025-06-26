@@ -804,3 +804,5 @@ Problem Link - https://leetcode.com/problems/3sum-closest/
 Problem Link - https://www.lintcode.com/problem/3sum-smaller/description
 433. Subarray Product Less Than K -
 Problem Link - https://leetcode.com/problems/subarray-product-less-than-k/
+434. Backspace String Compare -
+Problem Link - https://leetcode.com/problems/backspace-string-compare/
