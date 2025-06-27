@@ -20,17 +20,14 @@ public:
     }
 
     vector<string> decode(string s) {
-        string t="", t1;
         vector<string> ans;
-        int i=0, v;
-        while(i<s.size()){            
-            if(s[i]=='#'){
-                t1="", i++, v=stoi(t);
-                while(v--) t1+=s[i++];
-                ans.push_back(t1), t="";
-            }
-            t+=s[i];
-            i++;
+        int i=0, v, j;
+        while(i<s.size()){        
+            j=i;
+            while(j<s.size() && s[j]!='#') j++;
+            v=stoi(s.substr(i, j-i));
+            ans.push_back(s.substr(j+1, v));
+            i=j+v+1;
         }
         return ans;
     }
