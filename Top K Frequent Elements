@@ -12,19 +12,20 @@ Solution -
 class Solution {
 public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
+        unordered_map<int, int>m;
+        unordered_map<int, vector<int>>m2;
         vector<int>ans;
-        vector<vector<int>>v(nums.size()+1,vector<int>());
-        unordered_map<int ,int>m;
-        for(auto i:nums) m[i]++;
-        for(auto i:m){
-            // cout<<i.first<<" "<<i.second<<endl;
-            v[i.second].push_back(i.first);
-        }
-        for(int i = v.size()-1;i>=0 && ans.size()<k;i--){
-            if(!v[i].empty()){
-                for(auto j:v[i]) ans.push_back(j);  
-            } 
+        int mx=INT_MIN, i;
+        for(auto i:nums) m[i]++, mx=max(mx, m[i]);
+        for(auto i:m) m2[i.second].push_back(i.first);
+        while(k>0 && mx>0){
+            if(m2.find(mx)!=m2.end()){
+                i=0;
+                while(k>0 && i<m2[mx].size()) ans.push_back(m2[mx][i++]), k--;
+            }
+            mx--;
         }
         return ans;
     }
 };
+
