@@ -1,0 +1,37 @@
+Problem Statement - 
+Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.
+Please implement encode and decode
+
+Example - 
+Input: ["neet","code","love","you"]
+Output:["neet","code","love","you"]
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    unordered_map<string, string>m;
+    string encode(vector<string>& strs) {
+        string ans="";
+        int i=0, cnt=0;
+        for(auto s:strs) ans+=to_string(s.size())+"#"+s;
+        return ans;
+    }
+
+    vector<string> decode(string s) {
+        string t="", t1;
+        vector<string> ans;
+        int i=0, v;
+        while(i<s.size()){            
+            if(s[i]=='#'){
+                t1="", i++, v=stoi(t);
+                while(v--) t1+=s[i++];
+                ans.push_back(t1), t="";
+            }
+            t+=s[i];
+            i++;
+        }
+        return ans;
+    }
+};
