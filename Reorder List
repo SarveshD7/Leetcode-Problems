@@ -9,7 +9,7 @@ Example -
 Input: head = [1,2,3,4]
 Output: [1,4,2,3]
 
------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
 /**
@@ -24,26 +24,22 @@ Solution -
  */
 class Solution {
 public:
+    ListNode* rev(ListNode* h){
+        ListNode* c=h, *p=NULL, *t;
+        while(c) t=c->next, c->next=p, p=c, c=t;
+        return p;
+    }
     void reorderList(ListNode* head) {
-        stack<ListNode* >x;
-        ListNode* fast = head, *slow = head;
-        while(fast && fast->next)
-            fast = fast->next->next, slow = slow->next;
-        ListNode* t = slow;
-        while(t){
-            x.push(t);
-            t = t->next;
+        ListNode* s=head, *f=head, *h1=NULL, *h2=NULL, *t1=NULL, *t2=NULL, *n1=NULL, *n2=NULL;
+        while(f && f->next) s=s->next, f=f->next->next;
+        h2=rev(s);
+        t1=head, t2=h2;
+        while(t1 && t2){
+            n1=t1->next, n2=t2->next;
+            if(t1!=t2) t1->next=t2;
+            if(t2!=n1) t2->next=n1;
+            t1=n1, t2=n2;
         }
-        t = head;
-        while(t!=slow){
-            ListNode* add = x.top();
-            ListNode* tNext = t->next;
-            t->next = add;
-            // add->next = NULL;
-            add->next = tNext;
-            t = tNext;
-            x.pop();
-        }
-        t->next=NULL;
+        return ;
     }
 };
