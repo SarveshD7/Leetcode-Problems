@@ -812,3 +812,5 @@ Problem Link - https://neetcode.io/problems/string-encode-and-decode?list=neetco
 Problem Link - https://leetcode.com/problems/shortest-unsorted-continuous-subarray/
 437. Circular Array Loop -
 Problem Link - https://leetcode.com/problems/circular-array-loop/
+438. Maximum Sum of Distinct Subarrays With Length K - 
+Problem Link - https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/
