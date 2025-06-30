@@ -14,14 +14,11 @@ Solution -
 class Solution {
 public:
     bool canJump(vector<int>& nums) {
-        int goal = nums.size()-1;
-        bool reach = true;
-        int i = nums.size()-2;
+        int a=0, b=nums.size()-1, i=nums.size()-1;
         while(i>=0){
-            if(i+nums[i]>=goal) goal = i, reach = true;
-            else reach =  false;
+            if(i+nums[i]>=b) b=i;
             i--;
         }
-        return reach;
+        return b==0;
     }
 };
