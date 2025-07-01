@@ -1,0 +1,29 @@
+Problem Statement - 
+Given a string s containing only three types of characters: '(', ')' and '*', return true if s is valid.
+The following rules define a valid string:
+Any left parenthesis '(' must have a corresponding right parenthesis ')'.
+Any right parenthesis ')' must have a corresponding left parenthesis '('.
+Left parenthesis '(' must go before the corresponding right parenthesis ')'.
+'*' could be treated as a single right parenthesis ')' or a single left parenthesis '(' or an empty string "".
+
+Example - 
+Input: s = "()"
+Output: true
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool checkValidString(string s) {
+        int l=0, h=0;
+        for(auto i:s){
+            if(i=='(') l++, h++;
+            else if(i==')'){
+                if(h==0) return false;
+                l=max(0,l-1), h--;
+            }else l=max(0, l-1), h++;
+        }
+        return l==0;
+    }
+};
