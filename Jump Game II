@@ -16,15 +16,12 @@ Solution -
 class Solution {
 public:
     int jump(vector<int>& nums) {
-        int i = 0, l=0, r=0, ans = 0;
-        while(r<nums.size()-1){
-
-            int farthest = 0;
-            for(int j = l;j<=r;j++) farthest = max(farthest, nums[j] + j);
-            ans++;
-            l = r+1;
-            r = farthest;
+        int i=0, jumps=0, curr_max=0, global_max=0;
+        while(i<nums.size()-1){
+            if(i==curr_max) jumps++, curr_max=max(i+nums[i], global_max);
+            global_max=max(global_max, i+nums[i]);
+            i++;
         }
-        return ans;
+        return jumps;
     }
 };
