@@ -14,18 +14,13 @@ Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We retu
 Solution - 
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& nums, int val) {
-        vector<int>ans(2,0);
-        int st = 0, en = nums.size()-1,n = nums.size();
-        while(st<n && en>=0 && st<en){
-            // cout<<st<<" "<<en<<endl;
-            if(nums[st]+nums[en]>val) en--;
-            else if(nums[st]+nums[en]<val) st++;
-            else{
-                ans[0] = st+1, ans[1] = en+1;
-                return ans;
-            }
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int idx;
+        for(int i=0;i<nums.size();i++){
+            auto it = lower_bound(nums.begin()+i+1, nums.end(), target-nums[i]);
+            idx=it-nums.begin();
+            if(idx<nums.size() && nums[idx]==target-nums[i]) return {i+1, idx+1};
         }
-        return ans;
+        return {};
     }
 };
