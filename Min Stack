@@ -20,32 +20,26 @@ Output
 Solution - 
 class MinStack {
 public:
-    int m;
-    vector<pair<int, int>>v;
+    stack<pair<int, int>>x;
     MinStack() {
-        v.clear();
-        m=INT_MAX;
     }
-    
     void push(int val) {
-        if(v.empty()) m=INT_MAX;
-        m=min(m, val);
-        v.push_back({val, m});
+        if(x.empty()){ 
+            x.push({val, val}); 
+            return ;
+        }
+        x.push({val, min(x.top().second, val)});
     }
-    
     void pop() {
-        v.pop_back();
-        if(!v.empty()) 
-        m=v[v.size()-1].second;        
+        x.pop();
     }
-    
     int top() {
-        return v[v.size()-1].first;
-    }
-    
+        return x.top().first;        
+    } 
     int getMin() {
-        if(!v.empty()) return v[v.size()-1].second;
-        return -1;
+        // cout<<"After GetMin -> "<<endl;
+        // printStack();
+        return x.top().second;
     }
 };
 
