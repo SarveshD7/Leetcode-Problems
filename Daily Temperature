@@ -8,20 +8,15 @@ Output: [1,1,4,2,1,1,0,0]
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Solution - 
 class Solution {
 public:
-    vector<int> dailyTemperatures(vector<int>& temperatures) {
-        stack<int>x;
-        vector<int>ans(temperatures.size(), 0);
-        int i = 0;
-        while(i<temperatures.size()){
-            if(x.empty() || temperatures[i]<=temperatures[x.top()]) x.push(i);
-            else if(temperatures[i]>temperatures[x.top()]){
-                while(!x.empty() && temperatures[i]>temperatures[x.top()]) ans[x.top()] = i-x.top(), x.pop();
-                x.push(i);
-            }
-            i++;
-            
+    vector<int> dailyTemperatures(vector<int>& temp) {
+        stack<pair<int, int>>x;
+        vector<int>ans(temp.size(), 0);
+        for(int i=0;i<temp.size();i++){
+            while(!x.empty() && temp[i]>x.top().first) ans[x.top().second]=i-x.top().second, x.pop();
+            x.push({temp[i], i});
         }
         return ans;
     }
