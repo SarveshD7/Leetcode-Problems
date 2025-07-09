@@ -12,27 +12,18 @@ Input: nums = [3,4,5,1,2]
 Output: 1
 Explanation: The original array was [1,2,3,4,5] rotated 3 times.
 
------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
 class Solution {
 public:
     int findMin(vector<int>& nums) {
-        int l=0, r=nums.size()-1, m, ans=INT_MAX;
-        while(l<=r){
+        int l=0, r=nums.size()-1, m;
+        while(l<r){
             m=(r-l)/2+l;
-            ans=min(ans, nums[m]);
-            if(nums[m]>=nums[l] && nums[m]<=nums[r]){
-                // NOT ROTATED SORTED CASE
-                r=m-1;
-            }else if(nums[m]<=nums[l] && nums[m]<=nums[r]){
-                // RIGHT PART SORTED
-                r=m-1;
-            }else if(nums[m]>=nums[l] && nums[m]>=nums[r]){
-                // LEFT PART SORTED
-                l=m+1;
-            }
+            if(nums[m]>=nums[r])l=m+1;
+            else r=m;
         }
-        return ans;
+        return nums[l];
     }
 };
