@@ -826,3 +826,5 @@ Problem Link - https://leetcode.com/problems/gas-station/
 Problem Link - https://leetcode.com/problems/car-fleet/
 444. Time Based Key-Value Store -
 Problem Link - https://leetcode.com/problems/time-based-key-value-store/
+445. Copy List with Random Pointer -
+Problem Link - https://leetcode.com/problems/copy-list-with-random-pointer/
