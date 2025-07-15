@@ -12,33 +12,30 @@ Output: [2,1,4,3,5]
 Solution - 
 class Solution {
 public:
-    ListNode* reverse(ListNode* &head){
-        ListNode* curr=head, *prev=NULL, *nxt=NULL, *t=head;
-        while(curr) nxt=curr->next, curr->next=prev, prev=curr, curr=nxt;
-        head=prev;
-        return t;
+    ListNode* solve(ListNode* h, int k){
+        ListNode* c=h, *p=NULL, *n=NULL;
+        while(c && k>0) n=c->next, c->next=p, p=c, c=n, k--;
+        return p;
     }
-    ListNode* reverseKGroup(ListNode* head, int k) {
-        if(!head || !head->next) return head;
-        ListNode* t=head, *ans=NULL, *tl=NULL, *n=t->next, *h=head, *ttl=NULL;
-        int i=0;
+    ListNode* reverseKGroup(ListNode* head, int k) {      
+        ListNode* t=head, *n=NULL, *th=NULL, *nh=NULL, *p=NULL, *st=NULL;
+        int i=0, s=0;
+        while(t) s++, t=t->next;
+        s/=k, t=head;
         while(t){
-            i++;
-            n=t->next;
-            if(i%k==0){
-                if(t->next) t->next=NULL;
-                if(!ans && !tl){ 
-                    tl=reverse(h);
-                    ans=h;
-                }else{
-                    ttl=reverse(h);
-                    tl->next=h, tl=ttl;
-                }
-                h=n;
+            st=t;
+            i=0;
+            if(s<=0) p->next=t;
+            while(t && i<k) i++, t=t->next;
+            if(s>0){
+                nh = solve(st, k);
+                if(st==head) head=nh;
+                if(p)p->next=nh;
+                p=st;
+                s--;
             }
-            t=n;
         }
-        if(h) tl->next=h;
-        return ans;
+        return head;
+
     }
 };
