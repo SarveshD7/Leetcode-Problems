@@ -1,0 +1,112 @@
+Problem Statement - 
+Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
+Implement the LRUCache class:
+LRUCache(int capacity) Initialize the LRU cache with positive size capacity.
+int get(int key) Return the value of the key if the key exists, otherwise return -1.
+void put(int key, int value) Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. 
+If the number of keys exceeds the capacity from this operation, evict the least recently used key.
+The functions get and put must each run in O(1) average time complexity.
+
+Example - 
+Input
+["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"]
+[[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]
+Output
+[null, null, null, 1, null, -1, null, -1, 3, 4]
+Explanation
+LRUCache lRUCache = new LRUCache(2);
+lRUCache.put(1, 1); // cache is {1=1}
+lRUCache.put(2, 2); // cache is {1=1, 2=2}
+lRUCache.get(1);    // return 1
+lRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3}
+lRUCache.get(2);    // returns -1 (not found)
+lRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}
+lRUCache.get(1);    // return -1 (not found)
+lRUCache.get(3);    // return 3
+lRUCache.get(4);    // return 4
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class DLLNode{
+    public:
+    int val;
+    int key;
+    DLLNode* next;
+    DLLNode* prev;
+    DLLNode(int key, int val ){
+        this->val=val, this->key=key;
+        next=NULL, prev=NULL;
+    }
+};
+class LRUCache {
+public:
+    unordered_map<int, DLLNode* >m;
+    DLLNode* lru, *mru;
+    int cap, siz;
+    void printList(){
+        DLLNode* t=lru;
+        if(lru) cout<<"LRU: "<<lru->val<<endl;
+        else cout<<"No LRU"<<endl;
+        if(lru) cout<<"MRU: "<<mru->val<<endl;
+        else cout<<"No MRU"<<endl;
+
+        while(t) cout<<t->val<<" ", t=t->next;
+        cout<<endl<<"========================"<<endl;
+    }
+    LRUCache(int capacity) {
+        m.clear();
+        cap=capacity, siz=0;
+        lru=NULL, mru=NULL;
+
+    }    
+    int get(int key) {
+        if(m.find(key)==m.end()) return -1;
+        DLLNode * p = m[key]->prev, *n=m[key]->next;
+        if(mru!=m[key]){
+            m[key]->prev=NULL, m[key]->next=NULL;
+            if(p) p->next=n;
+            if(n) n->prev=p;
+            if(m[key]==lru && n) lru=n;
+            mru->next=m[key], m[key]->prev=mru, mru=m[key];
+        }
+        // cout<<"GET: "<<key<<endl;
+        // printList();
+        
+        return m[key]->val;
+    }
+    void put(int key, int value) {
+        if(m.find(key)==m.end()){
+            DLLNode* n = new DLLNode(key, value);
+            m[key]=n;
+            if(!lru) lru=n;
+            if(!mru) mru=n;
+            if(siz==cap){                
+                n->prev=mru,mru->next=n, mru=n;
+                DLLNode* lru_nxt = lru->next;
+                lru->next=NULL;
+                if(lru_nxt) lru_nxt->prev=NULL;
+                m.erase(lru->key), lru=lru_nxt;
+            }else{
+                if(mru!=n) mru->next=n, n->prev=mru,mru=n;
+                siz++;
+            }
+        }else{
+            // make the key node as mru and establish the new order
+            DLLNode * p = m[key]->prev, *n=m[key]->next;
+           if(mru!=m[key]){
+                m[key]->prev=NULL, m[key]->next=NULL;
+                if(p) p->next=n;
+                if(n) n->prev=p;
+                if(m[key]==lru && n) lru=n;
+                mru->next=m[key], m[key]->prev=mru, mru=m[key];
+            } 
+        }
+        
+        // cout<<"PUT: "<<key<<" "<<value<<endl;
+        // printList();
+        m[key]->val=value;
+        return ;
+    }
+};
+```
