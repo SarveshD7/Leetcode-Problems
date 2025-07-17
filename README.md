@@ -828,3 +828,5 @@ Problem Link - https://leetcode.com/problems/car-fleet/
 Problem Link - https://leetcode.com/problems/time-based-key-value-store/
 445. Copy List with Random Pointer -
 Problem Link - https://leetcode.com/problems/copy-list-with-random-pointer/
+446. LRU Cache -
+Problem Link - https://leetcode.com/problems/lru-cache/
