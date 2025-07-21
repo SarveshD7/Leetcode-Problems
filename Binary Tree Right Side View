@@ -8,33 +8,24 @@ Output: [1,3,4]
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution - 
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
 class Solution {
 public:
-    void solve(TreeNode* root, int lev, int& thresh, vector<int>&ans){
-        if(!root){
-            thresh = max(thresh, lev-1);
-            return ;
-        }
-        if(lev>thresh) ans.push_back(root->val);
-        solve(root->right, lev+1, thresh, ans);
-        solve(root->left, lev+1, thresh, ans);
-        return ;
-    }
     vector<int> rightSideView(TreeNode* root) {
+        if(!root) return{};
         vector<int>ans;
-        int lev=-1;
-        solve(root, 0, lev, ans);
+        queue<TreeNode*>q;
+        q.push(root);
+        int lev=1;
+        while(!q.empty()){
+            int s=q.size();
+            while(s--){
+                if(ans.size()<lev) ans.push_back(q.front()->val);
+                if(q.front()->right) q.push(q.front()->right);
+                if(q.front()->left) q.push(q.front()->left);
+                q.pop();
+            }
+            lev++;
+        }
         return ans;
     }
 };
