@@ -1,0 +1,70 @@
+Problem Statement - 
+You are part of a university admissions office and need to keep track of the kth highest test score from applicants in real-time. This helps to determine cut-off marks for interviews and admissions dynamically as new applicants submit their scores.
+You are tasked to implement a class which, for a given integer k, maintains a stream of test scores and continuously returns the kth highest test score after a new score has been submitted. More specifically, we are looking for the kth highest score in the sorted list of all scores.
+Implement the KthLargest class:
+KthLargest(int k, int[] nums) Initializes the object with the integer k and the stream of test scores nums.
+int add(int val) Adds a new test score val to the stream and returns the element representing the kth largest element in the pool of test scores so far.
+
+Example - 
+Input:
+["KthLargest", "add", "add", "add", "add", "add"]
+[[3, [4, 5, 8, 2]], [3], [5], [10], [9], [4]]
+Output: [null, 4, 5, 5, 8, 8]
+Explanation:
+KthLargest kthLargest = new KthLargest(3, [4, 5, 8, 2]);
+kthLargest.add(3); // return 4
+kthLargest.add(5); // return 5
+kthLargest.add(10); // return 5
+kthLargest.add(9); // return 8
+kthLargest.add(4); // return 8
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class KthLargest {
+public:
+    vector<int>heap;
+    int mx,k;
+    void heapify_down(int i, vector<int>&v){
+        int smallest=i, l=2*i+1, r=2*i+2;
+        if(l<v.size() && v[l]<v[smallest]) smallest=l;
+        if(r<v.size() && v[r]<v[smallest]) smallest=r;
+        if(smallest!=i){
+            swap(v[i], v[smallest]);
+            heapify_down(smallest, v);
+        } 
+        return ;
+    }
+    void heapify_up(int i, vector<int>&v){
+        // cout<<"Heapify Up"<<endl;
+        while(i>0 && v[(i-1)/2]>v[i]) swap(v[i], v[(i-1)/2]), i=(i-1)/2;
+        return ;
+    }
+    int deleteTop(vector<int>&v){
+        if(v.size()<=k) return -1;
+        int ret=v[0];
+        swap(v[0], v.back());
+        v.pop_back();
+        heapify_down(0, v);
+        return ret;
+    }    
+    KthLargest(int k, vector<int>& nums) {
+        this->k=k;
+        heap={};
+        if(nums.empty()) return ;
+        heap=nums;
+        for(int i=heap.size()-1;i>=0;i--) heapify_down(i, heap);
+        int cnt=heap.size()-k;
+        while(cnt>0) deleteTop(heap), cnt--;
+        
+    }
+    void insertVal(vector<int>&v, int val){
+        v.push_back(val);
+        heapify_up(v.size()-1, v);
+    }
+    int add(int val) {
+        insertVal(heap,val);
+        deleteTop(heap);
+        return heap[0];
+    }
+};
