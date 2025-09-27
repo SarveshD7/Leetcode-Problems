@@ -852,3 +852,5 @@ Problem Link - https://leetcode.com/problems/unique-paths/
 Problem Link - https://leetcode.com/problems/unique-paths-ii/
 457. Minimum Path Sum -
 Problem Link - https://leetcode.com/problems/minimum-path-sum/
+458. Triangle -
+Problem Link - https://leetcode.com/problems/triangle/
