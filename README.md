@@ -856,3 +856,5 @@ Problem Link - https://leetcode.com/problems/minimum-path-sum/
 Problem Link - https://leetcode.com/problems/triangle/
 459. Minimum Falling Path Sum -
 Problem Link - https://leetcode.com/problems/minimum-falling-path-sum/
+460. Partition Equal Subset Sum -
+Problem Link - https://leetcode.com/problems/partition-equal-subset-sum/
