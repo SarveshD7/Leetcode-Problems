@@ -1,0 +1,29 @@
+Problem Statement - 
+A peak element in a 2D grid is an element that is strictly greater than all of its adjacent neighbors to the left, right, top, and bottom.
+Given a 0-indexed m x n matrix mat where no two adjacent cells are equal, find any peak element mat[i][j] and return the length 2 array [i,j].
+You may assume that the entire matrix is surrounded by an outer perimeter with the value -1 in each cell.
+You must write an algorithm that runs in O(m log(n)) or O(n log(m)) time.
+
+Example - 
+Input: mat = [[1,4],[3,2]]
+Output: [0,1]
+Explanation: Both 3 and 4 are peak elements so [1,0] and [0,1] are both acceptable answers.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    vector<int> findPeakGrid(vector<vector<int>>& mat) {
+        int l=0, r=mat.size()-1,mx, mxid,m;
+        while(l<=r){
+            m=(r-l)/2+l;
+            mx=INT_MIN, mxid=-1;
+            for(int i=0;i<mat[m].size();i++) if(mat[m][i]>mx) mx=mat[m][i], mxid=i;
+            if((m==0 || (mat[m-1][mxid]<mx)) && (m==mat.size()-1 || (mat[m+1][mxid]<mx))) return {m, mxid};
+            else if(m>0 && mat[m-1][mxid]>mx) r=m-1;
+            else l=m+1;
+        }
+        return {};
+    }
+};
