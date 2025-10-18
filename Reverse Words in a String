@@ -15,20 +15,34 @@ Solution -
 class Solution {
 public:
     string reverseWords(string s) {
-        int i=0, n=s.size();
-        string t="", ans="";
-        while(i<n && s[i]==' ')i++;
-        while(i<n){
-            if(s[i]!=' ') t+=s[i];
-            else if(t!=""){ 
-                if(ans.empty()) ans=t+ans;
-                else t+=" ", ans=t+ans;
-                t="";
+        reverse(s.begin(), s.end());
+        int st=0,e=0,cnt=0,x;
+        while(e<s.size()){
+            if(s[e]==' '){
+                if(st!=e){
+                    reverse(s.begin()+st, s.begin()+e);
+                }
+                st=e+1;
             }
-            i++;
+            e++;
         }
-        if(ans=="") return t;
-        if(t!="") t+=" ", ans=t+ans;
-        return ans;
+        if(st!=e){
+            reverse(s.begin()+st, s.begin()+e);
+        }
+        cnt=0, x=0;
+        e=0;
+        while(e<s.size() && s[e]==' ') cnt++, e++;
+        while(e<s.size()){
+            if(s[e]==' '){
+                x=0;
+                while(e<s.size() && s[e]==' ') e++, x++;
+                if(e==s.size()){ cnt+=x; break;}
+                cnt+=(x>1)?(x-1):(0);
+                e--;
+            }
+            s[e-cnt]=s[e];
+            e++;
+        }
+        return s.substr(0, s.size()-cnt);
     }
 };
