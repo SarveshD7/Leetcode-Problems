@@ -866,3 +866,5 @@ Problem Link - https://leetcode.com/problems/split-array-largest-sum/
 Problem Link - https://leetcode.com/problems/median-of-two-sorted-arrays/
 464. Find a Peak Element II -
 Problem Link - https://leetcode.com/problems/find-a-peak-element-ii/
+465. Binary Prefix Divisible By 5 -
+Problem Link - https://leetcode.com/problems/binary-prefix-divisible-by-5/?envType=daily-question&envId=2025-11-24
