@@ -868,3 +868,5 @@ Problem Link - https://leetcode.com/problems/median-of-two-sorted-arrays/
 Problem Link - https://leetcode.com/problems/find-a-peak-element-ii/
 465. Binary Prefix Divisible By 5 -
 Problem Link - https://leetcode.com/problems/binary-prefix-divisible-by-5/?envType=daily-question&envId=2025-11-24
+466. Palindrome Partitioning -
+Problem Link - https://leetcode.com/problems/palindrome-partitioning/
