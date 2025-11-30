@@ -1,0 +1,61 @@
+Problem Statement - 
+Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.
+
+Example - 
+Input: s = "aab"
+Output: [["a","a","b"],["aa","b"]]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+# Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
+
+# Approach
+<!-- Describe your approach to solving the problem. -->
+
+# Complexity
+- Time complexity:
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+
+- Space complexity:
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+
+# Code
+```cpp []
+class Solution {
+public:
+
+void solve(string& s, int i, int lsi, vector<vector<string>>&ans, vector<string>&temp, vector<vector<bool>>&dp){
+    if(i>=s.size()){
+        if(lsi<s.size() && dp[lsi][i-1]){
+            temp.push_back(s.substr(lsi, i-lsi+1));
+            ans.push_back(temp);
+            temp.pop_back();
+        }
+        return ;
+    }
+    // NO SPLIT
+    solve(s, i+1, lsi, ans, temp, dp);
+    // SPLIT
+    if(dp[lsi][i]) temp.push_back(s.substr(lsi, i-lsi+1)), solve(s, i+1, i+1, ans, temp, dp), temp.pop_back();
+    return ;
+}
+    vector<vector<string>> partition(string s) {
+        vector<vector<bool>>dp(s.size(), vector<bool>(s.size(),false));
+        int st,en;
+        vector<string>temp;
+        vector<vector<string>>ans;
+        for(int i=0;i<s.size();i++){
+            // ODD PALINDROME
+            st=i, en=i;
+            while(st>=0 && en<s.size() && s[st]==s[en])  dp[st--][en++]=true;
+            // EVEN PALINDROME 
+            st=i, en=i+1;
+            while(st>=0 && en<s.size() && s[st]==s[en])  dp[st--][en++]=true;
+        }
+        solve(s, 0, 0, ans, temp, dp);
+        return ans;
+    }
+};
+```
