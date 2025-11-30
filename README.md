@@ -870,3 +870,5 @@ Problem Link - https://leetcode.com/problems/find-a-peak-element-ii/
 Problem Link - https://leetcode.com/problems/binary-prefix-divisible-by-5/?envType=daily-question&envId=2025-11-24
 466. Palindrome Partitioning -
 Problem Link - https://leetcode.com/problems/palindrome-partitioning/
+467. Similar String Groups -
+Problem Link - https://leetcode.com/problems/similar-string-groups/
