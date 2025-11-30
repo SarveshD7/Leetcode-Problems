@@ -1,0 +1,53 @@
+Problem Statement - 
+Two strings, X and Y, are considered similar if either they are identical or we can make them equivalent by swapping at most two letters (in distinct positions) within the string X.
+For example, "tars" and "rats" are similar (swapping at positions 0 and 2), and "rats" and "arts" are similar, but "star" is not similar to "tars", "rats", or "arts".
+Together, these form two connected groups by similarity: {"tars", "rats", "arts"} and {"star"}.  Notice that "tars" and "arts" are in the same group even though they are not similar.  
+Formally, each group is such that a word is in the group if and only if it is similar to at least one other word in the group.
+We are given a list strs of strings where every string in strs is an anagram of every other string in strs. How many groups are there?
+
+Example - 
+Input: strs = ["tars","rats","arts","star"]
+Output: 2
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class DSU{
+    public:
+    vector<int>parent, rank;
+    DSU(int n){
+        rank.resize(n, 0);
+        for(int i=0;i<n;i++) parent.push_back(i);
+    }
+    int find(int a){
+        if(parent[a]==a) return a;
+        return parent[a]=find(parent[a]);
+    }
+    void set_union(int a, int b){
+        int pa=find(a), pb=find(b);
+        if(rank[pa]>rank[pb]) parent[pb]=pa;
+        else if(rank[pa]<rank[pb]) parent[pa]=pb;
+        else parent[pb]=pa, rank[pa]++;
+        return ;
+    }
+};
+
+class Solution {
+public:
+    int numSimilarGroups(vector<string>& strs) {
+        DSU* obj = new DSU(strs.size());
+        int s,ans=0;
+        for(int i=0;i<strs.size();i++){
+            for(int j=i+1;j<strs.size();j++){
+                s=0;
+                for(int k=0;k<strs[i].size();k++){
+                    if(s>2) break;
+                    if(strs[i][k]!=strs[j][k]) s++;
+                }
+                if(s<=2) obj->set_union(i,j);
+            }
+        }
+        for(int i=0;i<strs.size();i++) if(obj->find(i)==i) ans++;
+        return ans;
+    }
+};
