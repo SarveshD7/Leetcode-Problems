@@ -1,0 +1,44 @@
+Problem Statement - 
+Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.
+Note that the same word in the dictionary may be reused multiple times in the segmentation.
+
+Example - 
+Input: s = "leetcode", wordDict = ["leet","code"]
+Output: true
+Explanation: Return true because "leetcode" can be segmented as "leet code".
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool solve(string& s, int i,int lsi, vector<int>&dp,string& t,unordered_map<string, int>&m){
+        // cout<<i<<" "<<t<<endl;
+        if(i>=s.size()){
+            if(m.find(t)!=m.end()) return true;
+            return false;
+        }
+        bool r1=false, r2=false;
+        string t2=t;
+        // NO SPLIT
+        t2+=s[i], r1=solve(s, i+1, lsi, dp,t2,m), t2=t;
+        if(r1) return true;
+        // SPLIT 
+        if(m.find(t)!=m.end()) {
+            if(dp[i]!=-1) r2=dp[i];
+            else{
+                t2=s[i], r2=solve(s, i+1, i+1, dp,t2,m), t2=t;
+                dp[i]=r2;
+            }
+        }
+        return r1 || r2;
+    }
+    bool wordBreak(string s, vector<string>& wordDict) {
+        cout<<s.size()<<endl;
+        vector<int>dp(s.size(), -1);
+        unordered_map<string, int>m;
+        string t="";
+        for(auto i:wordDict) m[i]++;
+        return solve(s, 0,0,dp, t,m);
+    }
+};
