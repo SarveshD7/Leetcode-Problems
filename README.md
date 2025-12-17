@@ -872,3 +872,5 @@ Problem Link - https://leetcode.com/problems/binary-prefix-divisible-by-5/?envTy
 Problem Link - https://leetcode.com/problems/palindrome-partitioning/
 467. Similar String Groups -
 Problem Link - https://leetcode.com/problems/similar-string-groups/
+468. Minimum Moves to Balance Circular Array -
+Problem Link - https://leetcode.com/problems/minimum-moves-to-balance-circular-array/
