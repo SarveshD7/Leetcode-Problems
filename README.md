@@ -878,3 +878,5 @@ Problem Link - https://leetcode.com/problems/minimum-moves-to-balance-circular-a
 Problem Link - https://leetcode.com/problems/minimum-deletions-to-make-alternating-substring/
 470. Sort Integers by Binary Reflection -
 Problem Link - https://leetcode.com/problems/sort-integers-by-binary-reflection/
+471. Largest Prime from Consecutive Prime Sum -
+Problem Link - https://leetcode.com/problems/largest-prime-from-consecutive-prime-sum/
