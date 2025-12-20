@@ -1,0 +1,33 @@
+Problem Statement - 
+You are given an integer n.
+Return the largest prime number less than or equal to n that can be expressed as the sum of one or more consecutive prime numbers starting from 2. If no such number exists, return 0.
+
+Example - 
+Input: n = 20
+Output: 17
+Explanation:
+The prime numbers less than or equal to n = 20 which are consecutive prime sums are:
+2 = 2
+5 = 2 + 3
+17 = 2 + 3 + 5 + 7
+The largest is 17, so it is the answer.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int largestPrime(int n) {
+        if(n<=1) return 0;
+        vector<int>primes(n+1, 1);
+        long long s=0, ans=-1;
+        for(int i=2;i<=n;i++){
+            if(primes[i]==1){
+                s+=i;
+                for(int j=2*i;j<=n;j+=i) primes[j]=0;
+                if(s<=n && primes[s]==1) ans=s;
+            }
+        }
+        return ans;
+    }   
+};
