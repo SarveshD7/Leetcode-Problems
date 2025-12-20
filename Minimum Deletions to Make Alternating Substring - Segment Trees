@@ -1,0 +1,70 @@
+Problem Statement - 
+You are given a string s of length n consisting only of the characters 'A' and 'B'.
+You are also given a 2D integer array queries of length q, where each queries[i] is one of the following:
+[1, j]: Flip the character at index j of s i.e. 'A' changes to 'B' (and vice versa). This operation mutates s and affects subsequent queries.
+[2, l, r]: Compute the minimum number of character deletions required to make the substring s[l..r] alternating. This operation does not modify s; the length of s remains n.
+A substring is alternating if no two adjacent characters are equal. A substring of length 1 is always alternating.
+Return an integer array answer, where answer[i] is the result of the ith query of type [2, l, r].
+
+Example - 
+Input: s = "ABA", queries = [[2,1,2],[1,1],[2,0,2]]
+Output: [0,2]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int build(int i, int l, int r, string& s, vector<int>&seg){
+        if(l==r){
+            if(l==0) seg[i]=0;
+            else seg[i]=(s[l]==s[l-1])?1:0;
+            return seg[i];
+        }
+        int m = (r-l)/2+l;
+        return seg[i]=build(2*i+1,l, m, s, seg)+build(2*i+2,m+1, r, s, seg);
+    }
+
+    int search(int i, int l, int r, int tl, int tr, vector<int>&seg){
+        if(l>=tl && r<=tr) return seg[i];
+        if(r<tl || l>tr) return 0;
+        int m = (r-l)/2+l;
+        return search(2*i+1, l, m, tl,tr,seg)+search(2*i+2,m+1,r,tl,tr,seg);
+    }
+    void update(int i, int pos, int l, int r, vector<int>&seg, int val){
+        if(pos==l && l==r){
+            seg[i]=val;
+            return ;
+        }
+        int m = (r-l)/2+l;
+        if(pos<=m) update(2*i+1,pos,l,m,seg,val);
+        else update(2*i+2,pos,m+1,r,seg,val);
+        seg[i]=seg[2*i+1]+seg[2*i+2];
+        return ;
+    }
+    vector<int> minDeletions(string s, vector<vector<int>>& queries) {
+        vector<int>ans;
+        vector<int>seg(4*s.size(), 0);    
+        build(0,0,s.size()-1,s,seg);
+        int val=0;
+        for(auto i:queries){
+            if(i[0]==1){
+
+                if(i[1]>0){
+                    val=s[i[1]]==s[i[1]-1]?0:1;
+
+                    update(0,i[1],0,s.size()-1,seg,val);
+                }
+                if(i[1]+1<s.size()){
+                    val=s[i[1]+1]==s[i[1]]?0:1;
+                    update(0,i[1]+1,0,s.size()-1,seg,val);
+                }
+                s[i[1]] = (s[i[1]]=='A')?('B'):('A');
+            }else{
+                val=search(0,0,s.size()-1,i[1]+1,i[2],seg);
+                ans.push_back(val);
+            }
+        }
+        return ans;
+    }
+};
