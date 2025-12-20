@@ -874,3 +874,5 @@ Problem Link - https://leetcode.com/problems/palindrome-partitioning/
 Problem Link - https://leetcode.com/problems/similar-string-groups/
 468. Minimum Moves to Balance Circular Array -
 Problem Link - https://leetcode.com/problems/minimum-moves-to-balance-circular-array/
+469. Minimum Deletions to Make Alternating Substring - Segment Trees -
+Problem Link - https://leetcode.com/problems/minimum-deletions-to-make-alternating-substring/
