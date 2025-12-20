@@ -876,3 +876,5 @@ Problem Link - https://leetcode.com/problems/similar-string-groups/
 Problem Link - https://leetcode.com/problems/minimum-moves-to-balance-circular-array/
 469. Minimum Deletions to Make Alternating Substring - Segment Trees -
 Problem Link - https://leetcode.com/problems/minimum-deletions-to-make-alternating-substring/
+470. Sort Integers by Binary Reflection -
+Problem Link - https://leetcode.com/problems/sort-integers-by-binary-reflection/
