@@ -1,0 +1,44 @@
+Problem Statement - 
+You are given two integer arrays, nums and forbidden, each of length n.
+You may perform the following operation any number of times (including zero):
+Choose two distinct indices i and j, and swap nums[i] with nums[j].
+Return the minimum number of swaps required such that, for every index i, the value of nums[i] is not equal to forbidden[i]. If no amount of swaps can ensure that every index avoids its forbidden value, return -1.
+
+Example - 
+Input: nums = [1,2,3], forbidden = [3,2,1]
+Output: 1
+Explanation:
+One optimal set of swaps:
+Select indices i = 0 and j = 1 in nums and swap them, resulting in nums = [2, 1, 3].
+After this swap, for every index i, nums[i] is not equal to forbidden[i].
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int minSwaps(vector<int>& nums, vector<int>& forbidden) {
+        unordered_map<int,int>m1, m2,m3;
+        for(auto i:nums) m1[i]++;
+        for(auto i:forbidden) m2[i]++;
+        int cnt=0;
+        for(int i=0;i<forbidden.size();i++){
+            if(nums[i]==forbidden[i] && m1[nums[i]]>nums.size()-m2[nums[i]]) return -1;
+        }
+        unordered_map<int,int> badFreq;
+        int n = nums.size();
+        for (int i = 0; i < n; i++) {
+            if (nums[i] == forbidden[i]) {
+                badFreq[nums[i]]++;
+            }
+        }
+        int bad = 0, mx = 0;
+        for (auto &p : badFreq) {
+            bad += p.second;
+            mx = max(mx, p.second);
+        }
+        int good = n - bad;
+        if (mx > (bad - mx) + good) return -1;
+        return max(mx, (bad + 1) / 2);
+    }
+};
