@@ -882,3 +882,5 @@ Problem Link - https://leetcode.com/problems/sort-integers-by-binary-reflection/
 Problem Link - https://leetcode.com/problems/largest-prime-from-consecutive-prime-sum/
 472. Sum of Distances in Tree -
 Problem Link - https://leetcode.com/problems/sum-of-distances-in-tree/
+473. Number of Nodes in the Sub-Tree With the Same Label -
+Problem Link - https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/
