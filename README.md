@@ -880,3 +880,5 @@ Problem Link - https://leetcode.com/problems/minimum-deletions-to-make-alternati
 Problem Link - https://leetcode.com/problems/sort-integers-by-binary-reflection/
 471. Largest Prime from Consecutive Prime Sum -
 Problem Link - https://leetcode.com/problems/largest-prime-from-consecutive-prime-sum/
+472. Sum of Distances in Tree -
+Problem Link - https://leetcode.com/problems/sum-of-distances-in-tree/
