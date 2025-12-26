@@ -884,3 +884,5 @@ Problem Link - https://leetcode.com/problems/largest-prime-from-consecutive-prim
 Problem Link - https://leetcode.com/problems/sum-of-distances-in-tree/
 473. Number of Nodes in the Sub-Tree With the Same Label -
 Problem Link - https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/
+474. Minimum Penalty for a Shop -
+Problem Link - https://leetcode.com/problems/minimum-penalty-for-a-shop/
