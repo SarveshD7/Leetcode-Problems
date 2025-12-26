@@ -886,3 +886,5 @@ Problem Link - https://leetcode.com/problems/sum-of-distances-in-tree/
 Problem Link - https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/
 474. Minimum Penalty for a Shop -
 Problem Link - https://leetcode.com/problems/minimum-penalty-for-a-shop/
+475. Total Sum of Interaction Cost in Tree Groups -
+Problem Link - https://leetcode.com/problems/total-sum-of-interaction-cost-in-tree-groups/
