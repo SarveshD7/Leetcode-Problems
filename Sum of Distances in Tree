@@ -1,0 +1,43 @@
+Problem Statement - 
+There is an undirected connected tree with n nodes labeled from 0 to n - 1 and n - 1 edges.
+You are given the integer n and the array edges where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the tree.
+Return an array answer of length n where answer[i] is the sum of the distances between the ith node in the tree and all other nodes.
+
+Example - 
+Input: n = 6, edges = [[0,1],[0,2],[2,3],[2,4],[2,5]]
+Output: [8,12,6,10,10,10]
+Explanation: The tree is shown above.
+We can see that dist(0,1) + dist(0,2) + dist(0,3) + dist(0,4) + dist(0,5)
+equals 1 + 1 + 2 + 2 + 2 = 8.
+Hence, answer[0] = 8, and so on.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    pair<int,int> solve(int i, vector<vector<int>>&adj, int lev, vector<int>& children, int parent){
+        int res=0, res2=0;
+        pair<int,int>val={};
+        for(auto j:adj[i]){ 
+            if(j!=parent) val=solve(j,adj, lev+1, children, i), res+=val.first, res2+=val.second;
+        }
+        children[i]=res2;
+        return {res+lev, res2+1};
+    }
+    void solve2(int node, vector<vector<int>>&adj, vector<int>&children, vector<int>&dist, int parent){
+        if(parent!=node) dist[node]=(dist[parent]-children[node])+children.size()-children[node]-2;
+        for(auto j:adj[node]){ if(j!=parent) solve2(j, adj, children, dist, node);}
+        return ;
+    }
+    vector<int> sumOfDistancesInTree(int n, vector<vector<int>>& edges) {
+        vector<vector<int>>adj(n);
+        vector<int>children(n, 0), dist(n,0);
+        if(edges.empty()) return dist;
+        int root = 0;
+        for(auto i:edges) adj[i[0]].push_back(i[1]), adj[i[1]].push_back(i[0]);
+        dist[root]=solve(root,adj, 0,children,root).first;
+        solve2(root, adj, children, dist, root);
+        return dist;
+    }
+};
