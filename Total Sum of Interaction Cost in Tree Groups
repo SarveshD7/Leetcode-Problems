@@ -1,0 +1,69 @@
+Problem Statement - 
+You are given an integer n and an undirected tree with n nodes numbered from 0 to n - 1. 
+This is represented by a 2D array edges of length n - 1, where edges[i] = [ui, vi] indicates an undirected edge between nodes ui and vi.
+You are also given an integer array group of length n, where group[i] denotes the group label assigned to node i.
+Two nodes u and v are considered part of the same group if group[u] == group[v].
+The interaction cost between u and v is defined as the number of edges on the unique path connecting them in the tree.
+Return an integer denoting the sum of interaction costs over all unordered pairs (u, v) with u != v such that group[u] == group[v].
+
+Example - 
+Input: n = 3, edges = [[0,1],[1,2]], group = [1,1,1]
+Output: 4
+All nodes belong to group 1. The interaction costs between the pairs of nodes are:
+Nodes (0, 1): 1
+Nodes (1, 2): 1
+Nodes (0, 2): 2
+Thus, the total interaction cost is 1 + 1 + 2 = 4.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    vector<vector<long long>> solve1(long long i, vector<vector<long long>>&adj, vector<int>&groups, int lev, int parent,vector<vector<long long>>&children){
+
+        vector<vector<long long>>res(2, vector<long long>(21, 0));
+        for(auto j:adj[i]){
+            if(j!=parent){
+                vector<vector<long long>>ret=solve1(j, adj, groups, lev+1, i,children);
+                for(int k=0;k<21;k++) res[0][k]+=ret[0][k];
+                for(int k=0;k<21;k++) res[1][k]+=ret[1][k];
+            }
+        }
+        for(int k=0;k<21;k++) children[i][k]=res[0][k];
+        res[0][groups[i]]++;
+         res[1][groups[i]]+=lev;
+        return res;
+
+    }
+
+    void solve2(int i, vector<vector<long long>>& adj, vector<vector<long long>>& children, vector<int>&groups, int parent, vector<long long>&groupNodes, vector<vector<long long>>&ans){
+        if(i!=parent){
+            for(int j=0;j<21;j++){
+                if(groupNodes[j]!=0){
+                    ans[i][j]=ans[parent][j]-children[i][j]-(groups[i]==j);
+                }
+            }
+        }
+        for(auto j:adj[i]){
+            if(j!=parent) solve2(j, adj, children, groups, i, groupNodes, ans);
+        }
+        return ;
+    }
+
+    long long interactionCosts(int n, vector<vector<int>>& edges, vector<int>& group) {
+        vector<vector<long long>>adj(n), children(n, vector<long long>(21, 0)), ans(n, vector<long long>(21, 0));
+        vector<long long>groupNodes(21, 0);
+        for(auto e:edges) adj[e[0]].push_back(e[1]), adj[e[1]].push_back(e[0]);
+        vector<vector<long long>>res1 = solve1(0,adj, group,0,0,children); 
+        long long ret=0;
+        res1[0][group[0]]--;
+        for(int i=0;i<21;i++){
+            for(int j=0;j<n;j++) groupNodes[i]+=children[j][i];
+        }
+        for(int i=0;i<21;i++) ans[0][i]=res1[1][i]; 
+        solve2(0,adj, children, group, 0, groupNodes, ans);
+        for(int i=0;i<n;i++) ret+=ans[i][group[i]];
+        return ret;
+    }
+};
