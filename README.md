@@ -890,3 +890,5 @@ Problem Link - https://leetcode.com/problems/minimum-penalty-for-a-shop/
 Problem Link - https://leetcode.com/problems/total-sum-of-interaction-cost-in-tree-groups/
 476. Meeting Rooms III -
 Problem Link - https://leetcode.com/problems/meeting-rooms-iii/
+477. Binary Tree Maximum Path Sum -
+Problem Link - https://leetcode.com/problems/binary-tree-maximum-path-sum/
