@@ -892,3 +892,5 @@ Problem Link - https://leetcode.com/problems/total-sum-of-interaction-cost-in-tr
 Problem Link - https://leetcode.com/problems/meeting-rooms-iii/
 477. Binary Tree Maximum Path Sum -
 Problem Link - https://leetcode.com/problems/binary-tree-maximum-path-sum/
+478. Decode Ways -
+Problem Link - https://leetcode.com/problems/decode-ways/
