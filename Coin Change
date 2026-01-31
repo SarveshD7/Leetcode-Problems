@@ -1,0 +1,52 @@
+Problem Statement - 
+You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
+Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+You may assume that you have an infinite number of each kind of coin.
+
+Example - 
+Input: coins = [1,2,5], amount = 11
+Output: 3
+Explanation: 11 = 5 + 5 + 1
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    static const int INF = 1e9;
+    int solve(int i, int target, vector<int>& coins, vector<vector<int>>& dp) {
+        if (target == 0) return 0;
+        if (i == coins.size()) return INF;
+        if (dp[i][target] != -1)
+            return dp[i][target];
+        int ans = INF;
+        if (target >= coins[i]) {
+            ans = min(ans, 1 + solve(i, target - coins[i], coins, dp));
+        }
+        ans = min(ans, solve(i + 1, target, coins, dp));
+        return dp[i][target] = ans;
+    }
+
+    int coinChange(vector<int>& coins, int amount) {
+        
+        // MEMOIZATION
+        int n = coins.size();
+        vector<vector<int>> dp(n, vector<int>(amount + 1, -1));
+        int res = solve(0, amount, coins, dp);
+        return (res >= INF ? -1 : res);
+
+        // TABULATION
+        vector<int>dp2(amount+1, INT_MAX);
+        for(int i=0;i<coins.size();i++){
+            for(int j=0;j<=amount;j++){
+                if(i==0){
+                    if(j%coins[i]==0) dp2[j]=j/coins[i];
+                }else{
+                    if(j>=coins[i] && dp2[j-coins[i]]!=INT_MAX) dp2[j]=min(dp2[j-coins[i]]+1, dp2[j]);
+                }
+            }
+        }
+        return dp2[amount]!=INT_MAX?dp2[amount]:-1;
+
+    }
+};
