@@ -1,0 +1,33 @@
+Problem Statement - 
+Given an integer n, count the total number of digit 1 appearing in all non-negative integers less than or equal to n.
+
+Example - 
+Input: n = 13
+Output: 6
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    pair<int,int> dp[10][2];
+    pair<int,int> solve(string& s, int i, bool tight){
+        if(i>=s.size()) return {0, 1};
+        if(dp[i][tight].first!=-1) return dp[i][tight];
+        int lb=0, ub = (tight)?(s[i]-'0'):(9);    
+        pair<int, int>ret;
+        int no_of_ones=0, no_of_nos=0;
+        for(int dig=lb;dig<=ub;dig++){
+            ret=solve(s, i+1, (tight && ub==dig));
+            no_of_ones+=ret.first, no_of_nos+=ret.second;
+            if(dig==1) no_of_ones+=ret.second;
+        }
+
+        return dp[i][tight] = {no_of_ones, no_of_nos};
+    }
+    int countDigitOne(int n) {
+        string s=to_string(n);
+        memset(dp, -1, sizeof(dp));
+        return solve(s, 0, true).first;
+    }
+};
