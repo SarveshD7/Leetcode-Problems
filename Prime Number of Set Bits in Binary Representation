@@ -1,0 +1,50 @@
+Problem Statement - 
+Given two integers left and right, return the count of numbers in the inclusive range [left, right] having a prime number of set bits in their binary representation.
+Recall that the number of set bits an integer has is the number of 1's present when written in binary.
+For example, 21 written in binary is 10101, which has 3 set bits.
+
+Example -
+Input: left = 6, right = 10
+Output: 4
+Explanation:
+6  -> 110 (2 set bits, 2 is prime)
+7  -> 111 (3 set bits, 3 is prime)
+8  -> 1000 (1 set bit, 1 is not prime)
+9  -> 1001 (2 set bits, 2 is prime)
+10 -> 1010 (2 set bits, 2 is prime)
+4 numbers have a prime number of set bits.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    int dp[21][2][21];
+    bool isPrime(int x){
+        if(x<2) return false;
+        for(int i=2;i*i<=x;i++){
+            if(x%i==0) return false;
+        }
+        return true;       
+    }
+    int solve(bitset<20>& s, int i, bool tight, int set_bit_count){
+        if(i<0){
+            return isPrime(set_bit_count);
+        }
+        if(dp[i][tight][set_bit_count]!=-1) return dp[i][tight][set_bit_count];
+        int lb=0, ub=(tight)?(s[i]):(1);
+        int ret=0;
+        for(int bit=lb;bit<=ub;bit++){
+            ret+=solve(s, i-1, (tight && bit==ub), set_bit_count+(bit==1));
+        }
+        return dp[i][tight][set_bit_count] = ret;
+    }
+    int countPrimeSetBits(int left, int right) {
+        bitset<20>b1(left-1), b2(right);
+        memset(dp, -1, sizeof(dp));
+        int l_val = solve(b1, 20, true, 0);
+        memset(dp, -1, sizeof(dp));
+        int r_val = solve(b2, 20, true, 0);
+        return r_val-l_val;
+    }
+};
