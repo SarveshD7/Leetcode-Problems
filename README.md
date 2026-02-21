@@ -896,3 +896,5 @@ Problem Link - https://leetcode.com/problems/binary-tree-maximum-path-sum/
 Problem Link - https://leetcode.com/problems/decode-ways/
 479. Coin Change -
 Problem Link - https://leetcode.com/problems/coin-change/
+480. Number of Digit Ones -
+Problem Link - https://leetcode.com/problems/number-of-digit-one/
