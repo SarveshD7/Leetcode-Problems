@@ -898,3 +898,5 @@ Problem Link - https://leetcode.com/problems/decode-ways/
 Problem Link - https://leetcode.com/problems/coin-change/
 480. Number of Digit Ones -
 Problem Link - https://leetcode.com/problems/number-of-digit-one/
+481. Prime Number of Set Bits in Binary Representation -
+Problem Link - https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/
