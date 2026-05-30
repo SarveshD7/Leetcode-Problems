@@ -900,3 +900,5 @@ Problem Link - https://leetcode.com/problems/coin-change/
 Problem Link - https://leetcode.com/problems/number-of-digit-one/
 481. Prime Number of Set Bits in Binary Representation -
 Problem Link - https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/
+482. Jump Game VII -
+Problem Link - https://leetcode.com/problems/jump-game-vii/
