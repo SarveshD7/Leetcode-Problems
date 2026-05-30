@@ -1,0 +1,32 @@
+You are given a 0-indexed binary string s and two integers minJump and maxJump. In the beginning, you are standing at index 0, which is equal to '0'. 
+You can move from index i to index j if the following conditions are fulfilled:
+i + minJump <= j <= min(i + maxJump, s.length - 1), and
+s[j] == '0'.
+Return true if you can reach index s.length - 1 in s, or false otherwise.
+
+Example -
+Input: s = "011010", minJump = 2, maxJump = 3
+Output: true
+Explanation:
+In the first step, move from index 0 to index 3. 
+In the second step, move from index 3 to index 5.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution - 
+class Solution {
+public:
+    bool canReach(string s, int minJump, int maxJump) {
+        vector<int>v(s.size(), 0);
+        int sm=1, st, en, ans=0;
+        v[0]=sm;
+        for(int i=1;i<s.size();i++){
+            if(i>=minJump && s[i]=='0'){
+                st=i-maxJump-1, en=i-minJump;
+                if((st>=0 && v[en]-v[st]>0) || (st<0)) sm++, ans=i;
+            }
+            v[i]=sm;
+        }
+        return ans==s.size()-1;
+    }
+};
